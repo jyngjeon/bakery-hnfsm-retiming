@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+~$*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Scratch / generated outputs (keep large experiment outputs out of git)
+scratch/
+outputs/
+results/raw/
+*.log
+
+# Tooling
+.pytest_cache/

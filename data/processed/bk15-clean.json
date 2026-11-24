@@ -1,0 +1,2990 @@
+{
+  "machines": [
+    {
+      "k": 1,
+      "orig_machine_id": 1,
+      "machine_name": "Kneader 1",
+      "machine_category": "Rotating kneader",
+      "machine_type": "SINGLE"
+    },
+    {
+      "k": 2,
+      "orig_machine_id": 2,
+      "machine_name": "Kneader 2",
+      "machine_category": "Lifting kneader",
+      "machine_type": "SINGLE"
+    },
+    {
+      "k": 3,
+      "orig_machine_id": 4,
+      "machine_name": "Divider",
+      "machine_category": "Divider",
+      "machine_type": "SINGLE"
+    },
+    {
+      "k": 4,
+      "orig_machine_id": 7,
+      "machine_name": "Cutter",
+      "machine_category": "Cutter",
+      "machine_type": "SINGLE"
+    },
+    {
+      "k": 5,
+      "orig_machine_id": 8,
+      "machine_name": "Shaper",
+      "machine_category": "Shaper",
+      "machine_type": "SINGLE"
+    },
+    {
+      "k": 6,
+      "orig_machine_id": 9,
+      "machine_name": "Proving chamber",
+      "machine_category": "Proving chamber",
+      "machine_type": "UNLIMITED"
+    },
+    {
+      "k": 7,
+      "orig_machine_id": 10,
+      "machine_name": "Oven A1",
+      "machine_category": "Stone oven",
+      "machine_type": "OVEN"
+    },
+    {
+      "k": 8,
+      "orig_machine_id": 11,
+      "machine_name": "Oven A2",
+      "machine_category": "Stone oven",
+      "machine_type": "OVEN"
+    },
+    {
+      "k": 9,
+      "orig_machine_id": 12,
+      "machine_name": "Oven A3",
+      "machine_category": "Stone oven",
+      "machine_type": "OVEN"
+    },
+    {
+      "k": 10,
+      "orig_machine_id": 13,
+      "machine_name": "Oven B",
+      "machine_category": "Baking chamber",
+      "machine_type": "OVEN"
+    }
+  ],
+  "employees": [
+    {
+      "l": 1,
+      "employee_name": "Employee 1",
+      "start_l": 0,
+      "end_l": 540
+    },
+    {
+      "l": 2,
+      "employee_name": "Employee 2",
+      "start_l": 0,
+      "end_l": 540
+    },
+    {
+      "l": 3,
+      "employee_name": "Employee 3",
+      "start_l": 260,
+      "end_l": 700
+    }
+  ],
+  "operations": [
+    {
+      "g": 1,
+      "p": 1,
+      "s": 1,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 2,
+      "PT": 21,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        2
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Kneading",
+      "resource_category": "Lifting kneader"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 3,
+      "PT": 16,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 4,
+      "PT": 105,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 5,
+      "PT": 14,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 6,
+      "PT": 56,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 7,
+      "PT": 17,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 1,
+      "p": 1,
+      "s": 8,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A",
+      "stage_name": "Cooling",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 1,
+      "p": 2,
+      "s": 1,
+      "PT": 56,
+      "WT": 82,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A-2",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 1,
+      "p": 3,
+      "s": 1,
+      "PT": 56,
+      "WT": 82,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 1,
+      "batch_no": 1,
+      "product_name": "Product 1A-3",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 1,
+      "PT": 9,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 2,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Load kneader",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 3,
+      "PT": 18,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 4,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Kneading disch.",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 5,
+      "PT": 9,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 6,
+      "PT": 25,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 7,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 8,
+      "PT": 50,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        10
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Baking",
+      "resource_category": "Baking chamber"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 9,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Discharge baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 10,
+      "PT": 25,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 1,
+      "s": 11,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2A",
+      "stage_name": "Unmolding",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 1,
+      "PT": 10,
+      "WT": 40,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 2,
+      "PT": 30,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 3,
+      "PT": 80,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 4,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 5,
+      "PT": 60,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        10
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Baking",
+      "resource_category": "Baking chamber"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 6,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Discharge baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 7,
+      "PT": 36,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 2,
+      "s": 8,
+      "PT": 7,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2B",
+      "stage_name": "Unmolding",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 1,
+      "PT": 15,
+      "WT": 50,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 2,
+      "PT": 45,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 3,
+      "PT": 115,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 4,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 5,
+      "PT": 58,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        10
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Baking",
+      "resource_category": "Baking chamber"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 6,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Discharge baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 7,
+      "PT": 30,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 2,
+      "p": 3,
+      "s": 8,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 2,
+      "batch_no": 1,
+      "product_name": "Product 2C",
+      "stage_name": "Unmolding",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 1,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 2,
+      "PT": 7,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        2
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Kneading",
+      "resource_category": "Lifting kneader"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 3,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Discharge kneading",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 4,
+      "PT": 18,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Load dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 5,
+      "PT": 13,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 6,
+      "PT": 32,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 7,
+      "PT": 11,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 3,
+      "p": 1,
+      "s": 8,
+      "PT": 54,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 3,
+      "batch_no": 1,
+      "product_name": "Product 3A",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 1,
+      "PT": 7,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 2,
+      "PT": 18,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 3,
+      "PT": 11,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 4,
+      "PT": 35,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        4
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Cutting-forming",
+      "resource_category": "Cutter"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 5,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Transfer to Proofing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 6,
+      "PT": 120,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 7,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 8,
+      "PT": 70,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        10
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Baking",
+      "resource_category": "Baking chamber"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 9,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 10,
+      "PT": 31,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 4,
+      "p": 1,
+      "s": 11,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 4,
+      "batch_no": 1,
+      "product_name": "Product 4",
+      "stage_name": "Packaging",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 1,
+      "PT": 11,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 2,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 3,
+      "PT": 35,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 4,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 5,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        5
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Shaping",
+      "resource_category": "Shaper"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 6,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Transfer to Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 7,
+      "PT": 100,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 8,
+      "PT": 6,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Load baking",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 9,
+      "PT": 42,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 10,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 11,
+      "PT": 32,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 5,
+      "p": 1,
+      "s": 12,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 5,
+      "batch_no": 1,
+      "product_name": "Product 5",
+      "stage_name": "Packaging",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 6,
+      "p": 1,
+      "s": 1,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 6,
+      "batch_no": 1,
+      "product_name": "Product 6",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 6,
+      "p": 1,
+      "s": 2,
+      "PT": 9,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 1,
+      "product_name": "Product 6",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 6,
+      "p": 1,
+      "s": 3,
+      "PT": 26,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 1,
+      "product_name": "Product 6",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 6,
+      "p": 1,
+      "s": 4,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 1,
+      "product_name": "Product 6",
+      "stage_name": "Dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 6,
+      "p": 1,
+      "s": 5,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 1,
+      "product_name": "Product 6",
+      "stage_name": "Freezing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 1,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 2,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 3,
+      "PT": 21,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 4,
+      "PT": 48,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        4
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Cutting-forming",
+      "resource_category": "Cutter"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 5,
+      "PT": 105,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 6,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 7,
+      "PT": 25,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 8,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 7,
+      "p": 1,
+      "s": 9,
+      "PT": 20,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 7,
+      "batch_no": 1,
+      "product_name": "Product 7",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 1,
+      "PT": 6,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 2,
+      "PT": 23,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 3,
+      "PT": 30,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        4
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Cutting-forming",
+      "resource_category": "Cutter"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 4,
+      "PT": 36,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 5,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 6,
+      "PT": 15,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 8,
+      "p": 1,
+      "s": 7,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 8,
+      "batch_no": 1,
+      "product_name": "Product 8",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 1,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 2,
+      "PT": 11,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 3,
+      "PT": 12,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 4,
+      "PT": 19,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 5,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Shaping",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 6,
+      "PT": 120,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 7,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 8,
+      "PT": 42,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 9,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 9,
+      "p": 1,
+      "s": 10,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 9,
+      "batch_no": 1,
+      "product_name": "Product 9",
+      "stage_name": "Cold-storage",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 1,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 2,
+      "PT": 16,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 3,
+      "PT": 56,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        4
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Cutting-forming",
+      "resource_category": "Cutter"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 4,
+      "PT": 24,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 5,
+      "PT": 12,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Shaping",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 6,
+      "PT": 80,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 7,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 8,
+      "PT": 42,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 9,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 10,
+      "PT": 80,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 10,
+      "p": 1,
+      "s": 11,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 10,
+      "batch_no": 1,
+      "product_name": "Product 10",
+      "stage_name": "Packaging",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 11,
+      "p": 1,
+      "s": 1,
+      "PT": 6,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 11,
+      "batch_no": 1,
+      "product_name": "Product 11",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 11,
+      "p": 1,
+      "s": 2,
+      "PT": 23,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 11,
+      "batch_no": 1,
+      "product_name": "Product 11",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 11,
+      "p": 1,
+      "s": 3,
+      "PT": 50,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        4
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 11,
+      "batch_no": 1,
+      "product_name": "Product 11",
+      "stage_name": "Cutting-forming",
+      "resource_category": "Cutter"
+    },
+    {
+      "g": 11,
+      "p": 1,
+      "s": 4,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 11,
+      "batch_no": 1,
+      "product_name": "Product 11",
+      "stage_name": "Tr. To Cold-storage",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 12,
+      "p": 1,
+      "s": 1,
+      "PT": 80,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12A",
+      "stage_name": "Defrost",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 12,
+      "p": 1,
+      "s": 2,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12A",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 12,
+      "p": 1,
+      "s": 3,
+      "PT": 18,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12A",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 12,
+      "p": 1,
+      "s": 4,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12A",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 12,
+      "p": 2,
+      "s": 1,
+      "PT": 3,
+      "WT": 83,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12B",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 12,
+      "p": 2,
+      "s": 2,
+      "PT": 18,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12B",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 12,
+      "p": 2,
+      "s": 3,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12B",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 12,
+      "p": 3,
+      "s": 1,
+      "PT": 3,
+      "WT": 86,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12C",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 12,
+      "p": 3,
+      "s": 2,
+      "PT": 18,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12C",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 12,
+      "p": 3,
+      "s": 3,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 12,
+      "batch_no": 1,
+      "product_name": "Product 12C",
+      "stage_name": "Unload baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 1,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 2,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Load kneader",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 3,
+      "PT": 14,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 4,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Kneading disch.",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 5,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 6,
+      "PT": 30,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 7,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 8,
+      "PT": 45,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        10
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Baking",
+      "resource_category": "Baking chamber"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 9,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Discharge baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 10,
+      "PT": 20,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 13,
+      "p": 1,
+      "s": 11,
+      "PT": 4,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 13,
+      "batch_no": 1,
+      "product_name": "Product 13",
+      "stage_name": "Unmolding",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 1,
+      "PT": 12,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 2,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Load kneader",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 3,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 4,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Kneading disch.",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 5,
+      "PT": 7,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 6,
+      "PT": 46,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 7,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 8,
+      "PT": 48,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        10
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Baking",
+      "resource_category": "Baking chamber"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 9,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Discharge baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 10,
+      "PT": 28,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 14,
+      "p": 1,
+      "s": 11,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 14,
+      "batch_no": 1,
+      "product_name": "Product 14",
+      "stage_name": "Unmolding",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 1,
+      "PT": 3,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 2,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Load kneader",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 3,
+      "PT": 15,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 4,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Kneading disch.",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 5,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Dividing",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 6,
+      "PT": 20,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 7,
+      "PT": 15,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        5
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Shaping",
+      "resource_category": "Shaper"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 8,
+      "PT": 90,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Proofing",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 9,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Load baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 10,
+      "PT": 38,
+      "WT": 0,
+      "resource_type": "OVEN",
+      "eligible_k": [
+        7,
+        8,
+        9
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Baking",
+      "resource_category": "Stone oven"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 11,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Discharge baking",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 12,
+      "PT": 28,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Cooling",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 15,
+      "p": 1,
+      "s": 13,
+      "PT": 2,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 15,
+      "batch_no": 1,
+      "product_name": "Product 15",
+      "stage_name": "Unmolding",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 16,
+      "p": 1,
+      "s": 1,
+      "PT": 5,
+      "WT": 0,
+      "resource_type": "EMPLOYEE",
+      "eligible_k": [],
+      "eligible_l": [
+        1,
+        2,
+        3
+      ],
+      "orig_pr_group": 6,
+      "batch_no": 2,
+      "product_name": "Product 6",
+      "stage_name": "Preparation",
+      "resource_category": "Manual"
+    },
+    {
+      "g": 16,
+      "p": 1,
+      "s": 2,
+      "PT": 9,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        1
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 2,
+      "product_name": "Product 6",
+      "stage_name": "Kneading",
+      "resource_category": "Rotating kneader"
+    },
+    {
+      "g": 16,
+      "p": 1,
+      "s": 3,
+      "PT": 26,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 2,
+      "product_name": "Product 6",
+      "stage_name": "Dough rest",
+      "resource_category": "NONE"
+    },
+    {
+      "g": 16,
+      "p": 1,
+      "s": 4,
+      "PT": 10,
+      "WT": 0,
+      "resource_type": "MACHINE",
+      "eligible_k": [
+        3
+      ],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 2,
+      "product_name": "Product 6",
+      "stage_name": "Dividing",
+      "resource_category": "Divider"
+    },
+    {
+      "g": 16,
+      "p": 1,
+      "s": 5,
+      "PT": 1,
+      "WT": 0,
+      "resource_type": "NONE",
+      "eligible_k": [],
+      "eligible_l": [],
+      "orig_pr_group": 6,
+      "batch_no": 2,
+      "product_name": "Product 6",
+      "stage_name": "Freezing",
+      "resource_category": "NONE"
+    }
+  ]
+}

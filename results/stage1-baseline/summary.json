@@ -1,0 +1,296 @@
+{
+  "config": {
+    "seed": 42,
+    "oidt": "union"
+  },
+  "instances": {
+    "BK15": {
+      "n_groups": 16,
+      "natural": {
+        "order": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "makespan": 519,
+        "oidt": 273,
+        "checker_valid": true,
+        "oven_breakdown": {
+          "7": {
+            "machine_name": "Oven A1",
+            "first_st": 82,
+            "last_ct": 429,
+            "busy": 217,
+            "idle": 130
+          },
+          "8": {
+            "machine_name": "Oven A2",
+            "first_st": 83,
+            "last_ct": 353,
+            "busy": 177,
+            "idle": 93
+          },
+          "9": {
+            "machine_name": "Oven A3",
+            "first_st": null,
+            "last_ct": null,
+            "busy": 0,
+            "idle": 0
+          },
+          "10": {
+            "machine_name": "Oven B",
+            "first_st": 68,
+            "last_ct": 449,
+            "busy": 331,
+            "idle": 50
+          }
+        }
+      },
+      "random_spv": {
+        "order": [
+          5,
+          9,
+          16,
+          11,
+          2,
+          15,
+          10,
+          13,
+          4,
+          7,
+          1,
+          8,
+          14,
+          3,
+          12,
+          6
+        ],
+        "makespan": 534,
+        "oidt": 221
+      }
+    },
+    "BK50": {
+      "n_groups": 62,
+      "natural": {
+        "order": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62
+        ],
+        "makespan": 1202,
+        "oidt": 2409,
+        "checker_valid": true,
+        "oven_breakdown": {
+          "14": {
+            "machine_name": "Oven 1",
+            "first_st": 105,
+            "last_ct": 1163,
+            "busy": 546,
+            "idle": 512
+          },
+          "15": {
+            "machine_name": "Oven 2",
+            "first_st": 116,
+            "last_ct": 550,
+            "busy": 193,
+            "idle": 241
+          },
+          "16": {
+            "machine_name": "Oven 3",
+            "first_st": 165,
+            "last_ct": 382,
+            "busy": 107,
+            "idle": 110
+          },
+          "17": {
+            "machine_name": "Oven 4",
+            "first_st": 125,
+            "last_ct": 1087,
+            "busy": 587,
+            "idle": 375
+          },
+          "18": {
+            "machine_name": "Oven 5",
+            "first_st": 186,
+            "last_ct": 1110,
+            "busy": 365,
+            "idle": 559
+          },
+          "19": {
+            "machine_name": "Oven 6",
+            "first_st": 199,
+            "last_ct": 387,
+            "busy": 106,
+            "idle": 82
+          },
+          "20": {
+            "machine_name": "Oven 8",
+            "first_st": null,
+            "last_ct": null,
+            "busy": 0,
+            "idle": 0
+          },
+          "21": {
+            "machine_name": "Oven 9",
+            "first_st": 2,
+            "last_ct": 861,
+            "busy": 420,
+            "idle": 439
+          },
+          "22": {
+            "machine_name": "Oven 10",
+            "first_st": 186,
+            "last_ct": 432,
+            "busy": 155,
+            "idle": 91
+          }
+        }
+      },
+      "random_spv": {
+        "order": [
+          36,
+          53,
+          12,
+          59,
+          2,
+          44,
+          21,
+          34,
+          43,
+          13,
+          20,
+          10,
+          35,
+          55,
+          23,
+          58,
+          60,
+          32,
+          61,
+          52,
+          28,
+          17,
+          6,
+          18,
+          31,
+          56,
+          54,
+          25,
+          41,
+          11,
+          19,
+          46,
+          22,
+          50,
+          1,
+          51,
+          47,
+          42,
+          4,
+          49,
+          62,
+          38,
+          45,
+          24,
+          33,
+          14,
+          27,
+          39,
+          15,
+          5,
+          48,
+          9,
+          40,
+          37,
+          30,
+          3,
+          29,
+          26,
+          57,
+          8,
+          16,
+          7
+        ],
+        "makespan": 1259,
+        "oidt": 2866
+      }
+    }
+  },
+  "meta": {
+    "created": "2026-11-24T17:45:52",
+    "python": "3.12.9",
+    "git_rev": null
+  }
+}

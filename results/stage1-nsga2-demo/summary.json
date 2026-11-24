@@ -1,0 +1,131 @@
+{
+  "config": {
+    "instance": "BK15",
+    "population_size": 20,
+    "offspring_population_size": 20,
+    "sbx_probability": 0.9,
+    "sbx_distribution_index": 20,
+    "mutation_distribution_index": 20,
+    "max_evaluations": 200,
+    "seed": 2001
+  },
+  "evaluations": 200,
+  "front": [
+    {
+      "makespan": 475,
+      "oidt": 300,
+      "order": [
+        2,
+        6,
+        8,
+        14,
+        1,
+        5,
+        4,
+        3,
+        13,
+        10,
+        9,
+        12,
+        7,
+        16,
+        11,
+        15
+      ]
+    },
+    {
+      "makespan": 478,
+      "oidt": 242,
+      "order": [
+        6,
+        2,
+        14,
+        1,
+        15,
+        8,
+        5,
+        4,
+        13,
+        3,
+        10,
+        12,
+        7,
+        9,
+        16,
+        11
+      ]
+    },
+    {
+      "makespan": 493,
+      "oidt": 212,
+      "order": [
+        10,
+        6,
+        2,
+        3,
+        14,
+        9,
+        8,
+        1,
+        4,
+        12,
+        15,
+        13,
+        7,
+        16,
+        11,
+        5
+      ]
+    },
+    {
+      "makespan": 494,
+      "oidt": 167,
+      "order": [
+        10,
+        14,
+        2,
+        6,
+        9,
+        4,
+        8,
+        12,
+        3,
+        16,
+        1,
+        13,
+        7,
+        11,
+        15,
+        5
+      ]
+    },
+    {
+      "makespan": 503,
+      "oidt": 142,
+      "order": [
+        10,
+        6,
+        14,
+        2,
+        4,
+        15,
+        8,
+        1,
+        13,
+        3,
+        5,
+        9,
+        7,
+        16,
+        12,
+        11
+      ]
+    }
+  ],
+  "best_checker_valid": true,
+  "meta": {
+    "created": "2026-11-24T17:46:15",
+    "python": "3.12.9",
+    "git_rev": null
+  }
+}

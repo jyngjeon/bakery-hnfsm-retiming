@@ -1,0 +1,165 @@
+g,orig_group,batch,p,product_name,s,stage_name,ST,CT,PT,assigned_k,assigned_l,assigned_resource
+2,2,1,1,Product 2A,1,Preparation,0,9,9,,1.0,Employee 1 (l=1)
+12,12,1,1,Product 12A,1,Defrost,7,87,80,,,NONE
+2,2,1,1,Product 2A,2,Load kneader,9,11,2,,1.0,Employee 1 (l=1)
+2,2,1,1,Product 2A,3,Kneading,11,29,18,1.0,,Kneader 1 (k=1)
+1,1,1,1,Product 1A,1,Preparation,15,20,5,,1.0,Employee 1 (l=1)
+1,1,1,1,Product 1A,2,Kneading,20,41,21,2.0,,Kneader 2 (k=2)
+6,6,1,1,Product 6,1,Preparation,24,29,5,,1.0,Employee 1 (l=1)
+2,2,1,1,Product 2A,4,Kneading disch.,29,31,2,,1.0,Employee 1 (l=1)
+6,6,1,1,Product 6,2,Kneading,29,38,9,1.0,,Kneader 1 (k=1)
+2,2,1,1,Product 2A,5,Dividing,31,40,9,,1.0,Employee 1 (l=1)
+8,8,1,1,Product 8,1,Preparation,32,38,6,,2.0,Employee 2 (l=2)
+6,6,1,1,Product 6,3,Dough rest,38,64,26,,,NONE
+8,8,1,1,Product 8,2,Kneading,38,61,23,1.0,,Kneader 1 (k=1)
+2,2,1,1,Product 2A,6,Dough rest,40,65,25,,,NONE
+2,2,1,2,Product 2B,1,Dividing,40,50,10,,1.0,Employee 1 (l=1)
+1,1,1,1,Product 1A,3,Dividing,41,57,16,3.0,,Divider (k=3)
+2,2,1,2,Product 2B,2,Dough rest,50,80,30,,,NONE
+2,2,1,3,Product 2C,1,Dividing,50,65,15,,1.0,Employee 1 (l=1)
+5,5,1,1,Product 5,1,Preparation,50,61,11,,2.0,Employee 2 (l=2)
+1,1,1,1,Product 1A,4,Proofing,57,162,105,,,NONE
+3,3,1,1,Product 3A,1,Preparation,61,65,4,,2.0,Employee 2 (l=2)
+5,5,1,1,Product 5,2,Kneading,61,71,10,1.0,,Kneader 1 (k=1)
+8,8,1,1,Product 8,3,Cutting-forming,61,91,30,4.0,,Cutter (k=4)
+6,6,1,1,Product 6,4,Dividing,64,74,10,3.0,,Divider (k=3)
+2,2,1,1,Product 2A,7,Load baking,65,68,3,,1.0,Employee 1 (l=1)
+2,2,1,3,Product 2C,2,Dough rest,65,110,45,,,NONE
+3,3,1,1,Product 3A,2,Kneading,65,72,7,2.0,,Kneader 2 (k=2)
+2,2,1,1,Product 2A,8,Baking,68,118,50,10.0,,Oven B (k=10)
+5,5,1,1,Product 5,3,Dough rest,71,106,35,,,NONE
+10,10,1,1,Product 10,1,Preparation,71,75,4,,2.0,Employee 2 (l=2)
+3,3,1,1,Product 3A,3,Discharge kneading,72,74,2,,1.0,Employee 1 (l=1)
+3,3,1,1,Product 3A,4,Load dividing,74,92,18,3.0,,Divider (k=3)
+6,6,1,1,Product 6,5,Freezing,74,75,1,,,NONE
+10,10,1,1,Product 10,2,Kneading,75,91,16,1.0,,Kneader 1 (k=1)
+2,2,1,2,Product 2B,3,Proofing,80,160,80,,,NONE
+12,12,1,1,Product 12A,2,Load baking,87,90,3,,1.0,Employee 1 (l=1)
+12,12,1,1,Product 12A,3,Baking,90,108,18,7.0,,Oven A1 (k=7)
+12,12,1,2,Product 12B,1,Load baking,90,93,3,,1.0,Employee 1 (l=1)
+8,8,1,1,Product 8,4,Dough rest,91,127,36,,,NONE
+10,10,1,1,Product 10,3,Cutting-forming,91,147,56,4.0,,Cutter (k=4)
+16,6,2,1,Product 6,1,Preparation,91,96,5,,2.0,Employee 2 (l=2)
+3,3,1,1,Product 3A,5,Dividing,92,105,13,3.0,,Divider (k=3)
+12,12,1,2,Product 12B,2,Baking,93,111,18,7.0,,Oven A1 (k=7)
+12,12,1,3,Product 12C,1,Load baking,93,96,3,,1.0,Employee 1 (l=1)
+12,12,1,3,Product 12C,2,Baking,96,114,18,7.0,,Oven A1 (k=7)
+16,6,2,1,Product 6,2,Kneading,96,105,9,1.0,,Kneader 1 (k=1)
+1,1,1,2,Product 1A-2,1,Baking,97,153,56,8.0,,Oven A2 (k=8)
+1,1,1,3,Product 1A-3,1,Baking,97,153,56,8.0,,Oven A2 (k=8)
+9,9,1,1,Product 9,1,Preparation,104,108,4,,2.0,Employee 2 (l=2)
+3,3,1,1,Product 3A,6,Dough rest,105,137,32,,,NONE
+16,6,2,1,Product 6,3,Dough rest,105,131,26,,,NONE
+5,5,1,1,Product 5,4,Dividing,106,108,2,,1.0,Employee 1 (l=1)
+5,5,1,1,Product 5,5,Shaping,108,110,2,5.0,,Shaper (k=5)
+9,9,1,1,Product 9,2,Kneading,108,119,11,1.0,,Kneader 1 (k=1)
+12,12,1,1,Product 12A,4,Unload baking,108,111,3,,1.0,Employee 1 (l=1)
+2,2,1,3,Product 2C,3,Proofing,110,225,115,,,NONE
+5,5,1,1,Product 5,6,Transfer to Proofing,110,111,1,,,NONE
+5,5,1,1,Product 5,7,Proofing,111,211,100,,,NONE
+12,12,1,2,Product 12B,3,Unload baking,111,114,3,,1.0,Employee 1 (l=1)
+12,12,1,3,Product 12C,3,Unload baking,114,117,3,,1.0,Employee 1 (l=1)
+2,2,1,1,Product 2A,9,Discharge baking,118,121,3,,1.0,Employee 1 (l=1)
+9,9,1,1,Product 9,3,Dividing,119,131,12,3.0,,Divider (k=3)
+2,2,1,1,Product 2A,10,Cooling,121,146,25,,,NONE
+8,8,1,1,Product 8,5,Load baking,127,137,10,,1.0,Employee 1 (l=1)
+9,9,1,1,Product 9,4,Dough rest,131,150,19,,,NONE
+16,6,2,1,Product 6,4,Dividing,131,141,10,3.0,,Divider (k=3)
+3,3,1,1,Product 3A,7,Load baking,137,148,11,,2.0,Employee 2 (l=2)
+8,8,1,1,Product 8,6,Baking,137,152,15,7.0,,Oven A1 (k=7)
+4,4,1,1,Product 4,1,Preparation,139,146,7,,1.0,Employee 1 (l=1)
+16,6,2,1,Product 6,5,Freezing,141,142,1,,,NONE
+2,2,1,1,Product 2A,11,Unmolding,146,150,4,,1.0,Employee 1 (l=1)
+4,4,1,1,Product 4,2,Kneading,146,164,18,1.0,,Kneader 1 (k=1)
+10,10,1,1,Product 10,4,Dough rest,147,171,24,,,NONE
+3,3,1,1,Product 3A,8,Baking,148,202,54,9.0,,Oven A3 (k=9)
+9,9,1,1,Product 9,5,Shaping,150,155,5,,1.0,Employee 1 (l=1)
+8,8,1,1,Product 8,7,Unload baking,152,162,10,,2.0,Employee 2 (l=2)
+9,9,1,1,Product 9,6,Proofing,155,275,120,,,NONE
+2,2,1,2,Product 2B,4,Load baking,160,162,2,,1.0,Employee 1 (l=1)
+1,1,1,1,Product 1A,5,Load baking,162,176,14,,1.0,Employee 1 (l=1)
+2,2,1,2,Product 2B,5,Baking,162,222,60,10.0,,Oven B (k=10)
+4,4,1,1,Product 4,3,Dividing,164,175,11,3.0,,Divider (k=3)
+10,10,1,1,Product 10,5,Shaping,171,183,12,,2.0,Employee 2 (l=2)
+4,4,1,1,Product 4,4,Cutting-forming,175,210,35,4.0,,Cutter (k=4)
+1,1,1,1,Product 1A,6,Baking,176,232,56,7.0,,Oven A1 (k=7)
+7,7,1,1,Product 7,1,Preparation,176,181,5,,1.0,Employee 1 (l=1)
+7,7,1,1,Product 7,2,Kneading,181,191,10,1.0,,Kneader 1 (k=1)
+10,10,1,1,Product 10,6,Proofing,183,263,80,,,NONE
+7,7,1,1,Product 7,3,Dough rest,191,212,21,,,NONE
+15,15,1,1,Product 15,1,Preparation,191,194,3,,1.0,Employee 1 (l=1)
+15,15,1,1,Product 15,2,Load kneader,194,196,2,,1.0,Employee 1 (l=1)
+15,15,1,1,Product 15,3,Kneading,196,211,15,1.0,,Kneader 1 (k=1)
+14,14,1,1,Product 14,1,Preparation,205,217,12,,1.0,Employee 1 (l=1)
+4,4,1,1,Product 4,5,Transfer to Proofing,210,211,1,,2.0,Employee 2 (l=2)
+4,4,1,1,Product 4,6,Proofing,211,331,120,,,NONE
+5,5,1,1,Product 5,8,Load baking,211,217,6,,,NONE
+15,15,1,1,Product 15,4,Kneading disch.,211,213,2,,2.0,Employee 2 (l=2)
+7,7,1,1,Product 7,4,Cutting-forming,212,260,48,4.0,,Cutter (k=4)
+15,15,1,1,Product 15,5,Dividing,213,218,5,,2.0,Employee 2 (l=2)
+5,5,1,1,Product 5,9,Baking,217,259,42,8.0,,Oven A2 (k=8)
+14,14,1,1,Product 14,2,Load kneader,217,219,2,,1.0,Employee 1 (l=1)
+15,15,1,1,Product 15,6,Dough rest,218,238,20,,,NONE
+14,14,1,1,Product 14,3,Kneading,219,229,10,1.0,,Kneader 1 (k=1)
+2,2,1,2,Product 2B,6,Discharge baking,222,224,2,,1.0,Employee 1 (l=1)
+2,2,1,2,Product 2B,7,Cooling,224,260,36,,,NONE
+2,2,1,3,Product 2C,4,Load baking,225,228,3,,1.0,Employee 1 (l=1)
+2,2,1,3,Product 2C,5,Baking,228,286,58,10.0,,Oven B (k=10)
+14,14,1,1,Product 14,4,Kneading disch.,229,231,2,,1.0,Employee 1 (l=1)
+14,14,1,1,Product 14,5,Dividing,231,238,7,,1.0,Employee 1 (l=1)
+1,1,1,1,Product 1A,7,Unload baking,232,249,17,,2.0,Employee 2 (l=2)
+11,11,1,1,Product 11,1,Preparation,238,244,6,,1.0,Employee 1 (l=1)
+14,14,1,1,Product 14,6,Dough rest,238,284,46,,,NONE
+15,15,1,1,Product 15,7,Shaping,238,253,15,5.0,,Shaper (k=5)
+11,11,1,1,Product 11,2,Kneading,244,267,23,1.0,,Kneader 1 (k=1)
+1,1,1,1,Product 1A,8,Cooling,249,250,1,,1.0,Employee 1 (l=1)
+15,15,1,1,Product 15,8,Proofing,253,343,90,,,NONE
+5,5,1,1,Product 5,10,Unload baking,259,262,3,,2.0,Employee 2 (l=2)
+2,2,1,2,Product 2B,8,Unmolding,260,267,7,,1.0,Employee 1 (l=1)
+7,7,1,1,Product 7,5,Proofing,260,365,105,,,NONE
+5,5,1,1,Product 5,11,Cooling,262,294,32,,,NONE
+10,10,1,1,Product 10,7,Load baking,263,268,5,,2.0,Employee 2 (l=2)
+11,11,1,1,Product 11,3,Cutting-forming,267,317,50,4.0,,Cutter (k=4)
+10,10,1,1,Product 10,8,Baking,268,310,42,7.0,,Oven A1 (k=7)
+9,9,1,1,Product 9,7,Load baking,275,278,3,,1.0,Employee 1 (l=1)
+9,9,1,1,Product 9,8,Baking,278,320,42,8.0,,Oven A2 (k=8)
+14,14,1,1,Product 14,7,Load baking,284,286,2,,1.0,Employee 1 (l=1)
+2,2,1,3,Product 2C,6,Discharge baking,286,288,2,,1.0,Employee 1 (l=1)
+14,14,1,1,Product 14,8,Baking,286,334,48,10.0,,Oven B (k=10)
+2,2,1,3,Product 2C,7,Cooling,288,318,30,,,NONE
+5,5,1,1,Product 5,12,Packaging,294,297,3,,1.0,Employee 1 (l=1)
+10,10,1,1,Product 10,9,Unload baking,310,315,5,,1.0,Employee 1 (l=1)
+10,10,1,1,Product 10,10,Cooling,315,395,80,,,NONE
+11,11,1,1,Product 11,4,Tr. To Cold-storage,317,318,1,,1.0,Employee 1 (l=1)
+2,2,1,3,Product 2C,8,Unmolding,318,321,3,,1.0,Employee 1 (l=1)
+9,9,1,1,Product 9,9,Unload baking,320,324,4,,2.0,Employee 2 (l=2)
+9,9,1,1,Product 9,10,Cold-storage,324,326,2,,1.0,Employee 1 (l=1)
+4,4,1,1,Product 4,7,Load baking,331,334,3,,1.0,Employee 1 (l=1)
+4,4,1,1,Product 4,8,Baking,334,404,70,10.0,,Oven B (k=10)
+14,14,1,1,Product 14,9,Discharge baking,334,336,2,,1.0,Employee 1 (l=1)
+14,14,1,1,Product 14,10,Cooling,336,364,28,,,NONE
+15,15,1,1,Product 15,9,Load baking,343,345,2,,1.0,Employee 1 (l=1)
+15,15,1,1,Product 15,10,Baking,345,383,38,8.0,,Oven A2 (k=8)
+13,13,1,1,Product 13,1,Preparation,346,351,5,,1.0,Employee 1 (l=1)
+13,13,1,1,Product 13,2,Load kneader,351,353,2,,1.0,Employee 1 (l=1)
+13,13,1,1,Product 13,3,Kneading,353,367,14,1.0,,Kneader 1 (k=1)
+14,14,1,1,Product 14,11,Unmolding,364,366,2,,1.0,Employee 1 (l=1)
+7,7,1,1,Product 7,6,Load baking,365,369,4,,2.0,Employee 2 (l=2)
+13,13,1,1,Product 13,4,Kneading disch.,367,369,2,,1.0,Employee 1 (l=1)
+7,7,1,1,Product 7,7,Baking,369,394,25,7.0,,Oven A1 (k=7)
+13,13,1,1,Product 13,5,Dividing,369,373,4,,1.0,Employee 1 (l=1)
+13,13,1,1,Product 13,6,Dough rest,373,403,30,,,NONE
+15,15,1,1,Product 15,11,Discharge baking,383,385,2,,1.0,Employee 1 (l=1)
+15,15,1,1,Product 15,12,Cooling,385,413,28,,,NONE
+7,7,1,1,Product 7,8,Unload baking,394,397,3,,2.0,Employee 2 (l=2)
+10,10,1,1,Product 10,11,Packaging,395,400,5,,1.0,Employee 1 (l=1)
+7,7,1,1,Product 7,9,Cooling,397,417,20,,,NONE
+13,13,1,1,Product 13,7,Load baking,403,404,1,,1.0,Employee 1 (l=1)
+4,4,1,1,Product 4,9,Unload baking,404,406,2,,1.0,Employee 1 (l=1)
+13,13,1,1,Product 13,8,Baking,404,449,45,10.0,,Oven B (k=10)
+4,4,1,1,Product 4,10,Cooling,406,437,31,,,NONE
+15,15,1,1,Product 15,13,Unmolding,413,415,2,,1.0,Employee 1 (l=1)
+4,4,1,1,Product 4,11,Packaging,437,447,10,,1.0,Employee 1 (l=1)
+13,13,1,1,Product 13,9,Discharge baking,449,451,2,,1.0,Employee 1 (l=1)
+13,13,1,1,Product 13,10,Cooling,451,471,20,,,NONE
+13,13,1,1,Product 13,11,Unmolding,471,475,4,,1.0,Employee 1 (l=1)

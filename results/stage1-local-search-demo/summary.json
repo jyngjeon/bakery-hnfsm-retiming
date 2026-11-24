@@ -1,0 +1,60 @@
+{
+  "config": {
+    "instance": "BK15",
+    "steps": 100,
+    "seed": 42
+  },
+  "start": [
+    534,
+    221
+  ],
+  "final": {
+    "makespan": 528,
+    "oidt": 155,
+    "order": [
+      5,
+      9,
+      16,
+      11,
+      2,
+      15,
+      10,
+      3,
+      4,
+      7,
+      14,
+      8,
+      6,
+      13,
+      12,
+      1
+    ]
+  },
+  "improvements": [
+    {
+      "step": 0,
+      "makespan": 534,
+      "oidt": 221
+    },
+    {
+      "step": 2,
+      "makespan": 534,
+      "oidt": 198
+    },
+    {
+      "step": 24,
+      "makespan": 528,
+      "oidt": 181
+    },
+    {
+      "step": 36,
+      "makespan": 528,
+      "oidt": 155
+    }
+  ],
+  "meta": {
+    "created": "2026-11-24T18:16:20",
+    "python": "3.12.9",
+    "git_rev": null
+  }
+}

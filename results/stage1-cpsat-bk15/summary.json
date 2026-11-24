@@ -1,0 +1,19 @@
+{
+  "config": {
+    "instance": "BK15",
+    "horizon": 1000,
+    "time_limit": 30.0,
+    "workers": 8,
+    "seed": 0
+  },
+  "status": "OPTIMAL",
+  "elapsed_s": 0.12453389167785645,
+  "makespan": 471,
+  "oidt_union": 206,
+  "checker_valid": true,
+  "meta": {
+    "created": "2026-11-24T17:46:04",
+    "python": "3.12.9",
+    "git_rev": null
+  }
+}

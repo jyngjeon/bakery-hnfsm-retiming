@@ -1,0 +1,680 @@
+g,orig_group,batch,p,product_name,s,stage_name,ST,CT,PT,assigned_k,assigned_l,assigned_resource
+1,1,1,1,Pastry type I,1,Discharge refrigerator,0,2,2,,1.0,Emp1 (l=1)
+2,2,1,1,Pita,1,Discharge refrigerator,0,2,2,,2.0,Emp2 (l=2)
+3,3,1,1,layer cake,1,Discharge refrigerator,0,2,2,,3.0,Emp3 (l=3)
+4,4,1,1,Baguettes 250,1,Kneading,0,22,22,1.0,,Kneader 1 (k=1)
+1,1,1,1,Pastry type I,2,Baking,2,53,51,21.0,,Oven 9 (k=21)
+2,2,1,1,Pita,2,Dividing,2,5,3,5.0,,Divider 2 (k=5)
+3,3,1,1,layer cake,2,Dividing,2,11,9,,1.0,Emp1 (l=1)
+5,5,1,1,Butter roll,1,Preparation,2,7,5,,2.0,Emp2 (l=2)
+8,8,1,1,Bread 2201,1,Preparation,2,8,6,,3.0,Emp3 (l=3)
+2,2,1,1,Pita,3,Shaping,5,15,10,9.0,,Rolling Machine (k=9)
+5,5,1,1,Butter roll,2,Kneading 1,7,17,10,3.0,,Kneader 3 (k=3)
+8,8,1,1,Bread 2201,2,Kneading 1,8,20,12,2.0,,Kneader 2 (k=2)
+3,3,1,1,layer cake,3,Decoration,11,31,20,,1.0,Emp1 (l=1)
+7,7,1,1,Wholegrain butter roll,1,Preparation,13,17,4,,2.0,Emp2 (l=2)
+11,11,1,1,Corn rye bread,1,Preparation,14,20,6,,3.0,Emp3 (l=3)
+2,2,1,1,Pita,4,Proofing,15,105,90,,,NONE
+5,5,1,1,Butter roll,3,Discharge Kneading 1,17,18,1,,2.0,Emp2 (l=2)
+7,7,1,1,Wholegrain butter roll,2,Kneading 1,17,26,9,3.0,,Kneader 3 (k=3)
+5,5,1,1,Butter roll,4,Dividing,18,20,2,,2.0,Emp2 (l=2)
+5,5,1,1,Butter roll,5,Rolling,20,36,16,9.0,,Rolling Machine (k=9)
+8,8,1,1,Bread 2201,3,Dough rest,20,70,50,,,NONE
+11,11,1,1,Corn rye bread,2,Kneading,20,34,14,2.0,,Kneader 2 (k=2)
+12,12,1,1,Rye bread,1,Preparation,20,25,5,,3.0,Emp3 (l=3)
+4,4,1,1,Baguettes 250,2,Dividing,22,34,12,4.0,,Divider 1 (k=4)
+9,9,1,1,Mix bread 1000g,1,Preparation,22,26,4,,2.0,Emp2 (l=2)
+12,12,1,1,Rye bread,2,Kneading,25,43,18,1.0,,Kneader 1 (k=1)
+7,7,1,1,Wholegrain butter roll,3,Dividing,26,29,3,5.0,,Divider 2 (k=5)
+9,9,1,1,Mix bread 1000g,2,Kneading,26,35,9,3.0,,Kneader 3 (k=3)
+7,7,1,1,Wholegrain butter roll,4,Shaping,29,64,35,,2.0,Emp2 (l=2)
+10,10,1,1,Small bread,1,Preparation,29,35,6,,3.0,Emp3 (l=3)
+4,4,1,1,Baguettes 250,3,Shaping,34,46,12,13.0,,Shaper (k=13)
+11,11,1,1,Corn rye bread,3,Dividing,34,36,2,,1.0,Emp1 (l=1)
+9,9,1,1,Mix bread 1000g,3,Dividing,35,40,5,5.0,,Divider 2 (k=5)
+10,10,1,1,Small bread,2,Kneading,35,50,15,3.0,,Kneader 3 (k=3)
+5,5,1,1,Butter roll,6,Refrigeration,36,98,62,,,NONE
+5,5,1,2,Vanilla horn,1,Rolling,36,86,50,9.0,,Rolling Machine (k=9)
+11,11,1,1,Corn rye bread,4,Dough rest,36,71,35,,,NONE
+13,13,1,1,Dark malt buns,1,Preparation,37,40,3,,1.0,Emp1 (l=1)
+11,11,1,2,Pumpkin seed bread,1,Preparation,39,44,5,,,NONE
+9,9,1,1,Mix bread 1000g,4,Refining,40,45,5,,1.0,Emp1 (l=1)
+13,13,1,1,Dark malt buns,2,Kneading 1,40,51,11,2.0,,Kneader 2 (k=2)
+17,17,1,1,Flat bread,1,Preparation,41,53,12,,3.0,Emp3 (l=3)
+12,12,1,1,Rye bread,3,Dividing,43,49,6,4.0,,Divider 1 (k=4)
+11,11,1,2,Pumpkin seed bread,2,Kneading,44,55,11,1.0,,Kneader 1 (k=1)
+9,9,1,1,Mix bread 1000g,5,Proofing,45,105,60,,,NONE
+4,4,1,1,Baguettes 250,4,Proofing,46,156,110,,,NONE
+12,12,1,1,Rye bread,4,Dough rest,49,104,55,,,NONE
+10,10,1,1,Small bread,3,Shaping,50,69,19,13.0,,Shaper (k=13)
+13,13,1,1,Dark malt buns,3,Dough rest,51,77,26,,,NONE
+1,1,1,1,Pastry type I,3,Refining,53,55,2,,1.0,Emp1 (l=1)
+17,17,1,1,Flat bread,2,Kneading,53,74,21,2.0,,Kneader 2 (k=2)
+1,1,1,1,Pastry type I,4,Transfer to freezer,55,56,1,,1.0,Emp1 (l=1)
+11,11,1,2,Pumpkin seed bread,3,Dividing,55,56,1,,3.0,Emp3 (l=3)
+11,11,1,2,Pumpkin seed bread,4,Dough rest,56,81,25,,,NONE
+23,23,1,1,Baguettes 500g,1,Preparation,56,66,10,,3.0,Emp3 (l=3)
+32,32,1,1,Wholemeal sourdough,1,Preparation,56,61,5,,1.0,Emp1 (l=1)
+32,32,1,1,Wholemeal sourdough,2,Kneading,61,71,10,1.0,,Kneader 1 (k=1)
+7,7,1,1,Wholegrain butter roll,5,Transfer to freezer,64,66,2,,1.0,Emp1 (l=1)
+23,23,1,1,Baguettes 500g,2,Kneader,66,83,17,3.0,,Kneader 3 (k=3)
+24,24,1,1,Bread with potatoes,1,Preparation,66,76,10,,1.0,Emp1 (l=1)
+10,10,1,1,Small bread,4,Dough rest,69,114,45,,,NONE
+8,8,1,1,Bread 2201,4,Dividing,70,76,6,4.0,,Divider 1 (k=4)
+11,11,1,1,Corn rye bread,5,Shaping,71,86,15,,2.0,Emp2 (l=2)
+32,32,1,1,Wholemeal sourdough,3,Proofing,71,371,300,,,NONE
+35,35,1,1,Bread 2057,1,Preparation,71,76,5,,3.0,Emp3 (l=3)
+17,17,1,1,Flat bread,3,Cutting and forming,74,124,50,23.0,,Cutting and forming machine (k=23)
+8,8,1,1,Bread 2201,5,Shaping,76,82,6,,1.0,Emp1 (l=1)
+24,24,1,1,Bread with potatoes,2,Kneader,76,93,17,1.0,,Kneader 1 (k=1)
+35,35,1,1,Bread 2057,2,Kneading,76,104,28,2.0,,Kneader 2 (k=2)
+13,13,1,1,Dark malt buns,4,Dividing,77,78,1,,3.0,Emp3 (l=3)
+13,13,1,5,Wheat baguettes,1,Proofing,77,157,80,,,NONE
+13,13,1,1,Dark malt buns,5,Shaping,78,80,2,,3.0,Emp3 (l=3)
+13,13,1,3,Wheatbread,1,Dividing,78,86,8,4.0,,Divider 1 (k=4)
+13,13,1,1,Dark malt buns,6,Proofing,80,165,85,,,NONE
+13,13,1,2,Wholegrain croissant,1,Proofing,80,200,120,,,NONE
+13,13,1,4,Wheat buns,1,Proofing,80,160,80,,,NONE
+11,11,1,2,Pumpkin seed bread,5,Shaping,81,91,10,,3.0,Emp3 (l=3)
+8,8,1,1,Bread 2201,6,Proofing,82,162,80,,,NONE
+45,9,2,1,Mix bread 1000g,1,Preparation,82,86,4,,1.0,Emp1 (l=1)
+23,23,1,1,Baguettes 500g,3,Dough rest,83,148,65,,,NONE
+5,5,1,2,Vanilla horn,2,Shaping,86,96,10,,1.0,Emp1 (l=1)
+11,11,1,1,Corn rye bread,6,Proofing,86,151,65,,,NONE
+13,13,1,3,Wheatbread,2,Proofing,86,116,30,,,NONE
+13,13,1,6,Wheat roll,1,Dividing,86,94,8,,2.0,Emp2 (l=2)
+45,9,2,1,Mix bread 1000g,2,Kneading,86,95,9,3.0,,Kneader 3 (k=3)
+11,11,1,2,Pumpkin seed bread,6,Proofing,91,151,60,,,NONE
+14,14,1,1,Dough B,1,Preparation,91,98,7,,3.0,Emp3 (l=3)
+24,24,1,1,Bread with potatoes,3,Dough rest,93,158,65,,,NONE
+13,13,1,6,Wheat roll,2,Proofing,94,124,30,,,NONE
+45,9,2,1,Mix bread 1000g,3,Dividing,95,100,5,5.0,,Divider 2 (k=5)
+5,5,1,2,Vanilla horn,3,Transfer freezing,96,97,1,,1.0,Emp1 (l=1)
+5,5,1,1,Butter roll,7,Rolling,98,158,60,9.0,,Rolling Machine (k=9)
+14,14,1,1,Dough B,2,Kneading,98,119,21,3.0,,Kneader 3 (k=3)
+45,9,2,1,Mix bread 1000g,4,Refining,100,105,5,,1.0,Emp1 (l=1)
+12,12,1,1,Rye bread,5,Shaping,104,116,12,13.0,,Shaper (k=13)
+35,35,1,1,Bread 2057,3,Dividing,104,114,10,5.0,,Divider 2 (k=5)
+2,2,1,1,Pita,5,Baking,105,132,27,21.0,,Oven 9 (k=21)
+9,9,1,1,Mix bread 1000g,6,Baking,105,160,55,14.0,,Oven 1 (k=14)
+45,9,2,1,Mix bread 1000g,5,Proofing,105,165,60,,,NONE
+26,26,1,1,Bread 8011,1,Preparation,108,118,10,,3.0,Emp3 (l=3)
+19,19,1,1,Seed bread I,1,Preparation,109,117,8,,1.0,Emp1 (l=1)
+10,10,1,1,Small bread,5,Refining,114,124,10,,2.0,Emp2 (l=2)
+35,35,1,1,Bread 2057,4,Dough rest,114,144,30,,,NONE
+12,12,1,1,Rye bread,6,Proofing,116,206,90,,,NONE
+13,13,1,3,Wheatbread,3,Baking,116,136,20,15.0,,Oven 2 (k=15)
+19,19,1,1,Seed bread I,2,Kneading,117,136,19,1.0,,Kneader 1 (k=1)
+46,9,3,1,Mix bread 1000g,1,Preparation,117,121,4,,1.0,Emp1 (l=1)
+26,26,1,1,Bread 8011,2,Kneading,118,133,15,2.0,,Kneader 2 (k=2)
+14,14,1,1,Dough B,3,Dividing,119,134,15,4.0,,Divider 1 (k=4)
+46,9,3,1,Mix bread 1000g,2,Kneading,121,130,9,3.0,,Kneader 3 (k=3)
+4,4,1,2,Baguettes 250 p-i,1,Load baking,123,125,2,,1.0,Emp1 (l=1)
+27,27,1,1,Bread 8020,1,Preparation,123,133,10,,3.0,Emp3 (l=3)
+10,10,1,1,Small bread,6,Proofing,124,184,60,,,NONE
+13,13,1,6,Wheat roll,3,Baking,124,144,20,15.0,,Oven 2 (k=15)
+17,17,1,1,Flat bread,4,Refining,124,127,3,,2.0,Emp2 (l=2)
+4,4,1,2,Baguettes 250 p-i,2,Baking,125,147,22,17.0,,Oven 4 (k=17)
+4,4,1,3,Baguettes 250 p-ii,1,Load baking,125,127,2,,1.0,Emp1 (l=1)
+4,4,1,3,Baguettes 250 p-ii,2,Baking,127,149,22,17.0,,Oven 4 (k=17)
+4,4,1,4,Baguettes 250 p-iii,1,Load baking,127,129,2,,1.0,Emp1 (l=1)
+17,17,1,1,Flat bread,5,Dough rest,127,182,55,,,NONE
+4,4,1,4,Baguettes 250 p-iii,2,Baking,129,151,22,17.0,,Oven 4 (k=17)
+46,9,3,1,Mix bread 1000g,3,Dividing,130,135,5,5.0,,Divider 2 (k=5)
+2,2,1,1,Pita,6,Transfer to cooling room,132,134,2,,1.0,Emp1 (l=1)
+6,6,1,1,Pastry dough,1,Preparation,133,138,5,3.0,,Kneader 3 (k=3)
+26,26,1,1,Bread 8011,3,Dough rest,133,159,26,,,NONE
+27,27,1,1,Bread 8020,2,Kneading,133,148,15,2.0,,Kneader 2 (k=2)
+14,14,1,1,Dough B,4,Dough rest,134,172,38,,,NONE
+46,9,3,1,Mix bread 1000g,4,Refining,135,140,5,,1.0,Emp1 (l=1)
+19,19,1,1,Seed bread I,3,Dough rest,136,149,13,,,NONE
+6,6,1,1,Pastry dough,2,Kneading 1,138,154,16,3.0,,Kneader 3 (k=3)
+46,9,3,1,Mix bread 1000g,5,Proofing,140,200,60,,,NONE
+35,35,1,1,Bread 2057,5,Shaping,144,149,5,,3.0,Emp3 (l=3)
+34,34,1,1,Bread 2055,1,Preparation,145,148,3,,2.0,Emp2 (l=2)
+4,4,1,2,Baguettes 250 p-i,3,Discharge baking,147,149,2,,1.0,Emp1 (l=1)
+23,23,1,1,Baguettes 500g,4,Shaping,148,160,12,,,NONE
+27,27,1,1,Bread 8020,3,Dividing,148,156,8,4.0,,Divider 1 (k=4)
+34,34,1,1,Bread 2055,2,Kneading,148,180,32,1.0,,Kneader 1 (k=1)
+4,4,1,3,Baguettes 250 p-ii,3,Discharge baking,149,151,2,,1.0,Emp1 (l=1)
+19,19,1,1,Seed bread I,4,Shaping,149,159,10,13.0,,Shaper (k=13)
+35,35,1,1,Bread 2057,6,Proofing,149,199,50,,,NONE
+4,4,1,4,Baguettes 250 p-iii,3,Discharge baking,151,153,2,,1.0,Emp1 (l=1)
+11,11,1,1,Corn rye bread,7,Load baking,151,154,3,,2.0,Emp2 (l=2)
+11,11,1,2,Pumpkin seed bread,7,Load baking,151,154,3,,3.0,Emp3 (l=3)
+6,6,1,1,Pastry dough,3,Dividing,154,158,4,,1.0,Emp1 (l=1)
+11,11,1,1,Corn rye bread,8,Baking,154,204,50,21.0,,Oven 9 (k=21)
+11,11,1,2,Pumpkin seed bread,8,Baking,154,204,50,21.0,,Oven 9 (k=21)
+15,15,1,1,Bread 500g,1,Preparation,154,157,3,,2.0,Emp2 (l=2)
+60,35,2,1,Bread 2057,1,Preparation,155,160,5,,3.0,Emp3 (l=3)
+27,27,1,1,Bread 8020,4,Dough rest,156,182,26,,,NONE
+13,13,1,5,Wheat baguettes,2,Baking,157,172,15,15.0,,Oven 2 (k=15)
+15,15,1,1,Bread 500g,2,Kneading,157,171,14,3.0,,Kneader 3 (k=3)
+5,5,1,1,Butter roll,8,Shaping,158,181,23,,1.0,Emp1 (l=1)
+6,6,1,1,Pastry dough,4,Rolling,158,180,22,9.0,,Rolling Machine (k=9)
+24,24,1,1,Bread with potatoes,4,Proofing,158,248,90,,,NONE
+19,19,1,1,Seed bread I,5,Proofing,159,204,45,,,NONE
+26,26,1,1,Bread 8011,4,Shaping,159,172,13,13.0,,Shaper (k=13)
+9,9,1,1,Mix bread 1000g,7,Transfer to cooling room,160,163,3,,3.0,Emp3 (l=3)
+13,13,1,4,Wheat buns,2,Baking,160,175,15,14.0,,Oven 1 (k=14)
+23,23,1,1,Baguettes 500g,5,Refrigeration,160,200,40,,,NONE
+60,35,2,1,Bread 2057,2,Kneading,160,188,28,2.0,,Kneader 2 (k=2)
+8,8,1,1,Bread 2201,7,Shaping,162,175,13,,2.0,Emp2 (l=2)
+13,13,1,1,Dark malt buns,7,Load baking,165,168,3,,3.0,Emp3 (l=3)
+45,9,2,1,Mix bread 1000g,6,Baking,165,220,55,16.0,,Oven 3 (k=16)
+13,13,1,1,Dark malt buns,8,Baking,168,185,17,14.0,,Oven 1 (k=14)
+15,15,1,1,Bread 500g,3,Dividing,171,206,35,4.0,,Divider 1 (k=4)
+14,14,1,2,Bread 213,1,Shaping,172,178,6,,3.0,Emp3 (l=3)
+26,26,1,1,Bread 8011,5,Refrigeration,172,222,50,,,NONE
+8,8,1,1,Bread 2201,8,Refining,175,182,7,,2.0,Emp2 (l=2)
+14,14,1,2,Bread 213,2,Proofing,178,243,65,,,NONE
+14,14,1,3,Bread 214,1,Shaping,178,188,10,,3.0,Emp3 (l=3)
+6,6,1,1,Pastry dough,5,Freezing 1,180,215,35,,,NONE
+34,34,1,1,Bread 2055,3,Dividing,180,186,6,5.0,,Divider 2 (k=5)
+5,5,1,1,Butter roll,9,Transfer freezing,181,182,1,,1.0,Emp1 (l=1)
+8,8,1,1,Bread 2201,9,Load baking,182,184,2,,1.0,Emp1 (l=1)
+17,17,1,1,Flat bread,6,Load baking,182,186,4,,2.0,Emp2 (l=2)
+27,27,1,1,Bread 8020,5,Shaping,182,195,13,13.0,,Shaper (k=13)
+8,8,1,1,Bread 2201,10,Baking,184,219,35,17.0,,Oven 4 (k=17)
+10,10,1,2,Small bread -1,1,Load baking,184,186,2,,1.0,Emp1 (l=1)
+10,10,1,2,Small bread -1,2,Baking,186,211,25,18.0,,Oven 5 (k=18)
+10,10,1,3,Small bread -2,1,Load baking,186,188,2,,1.0,Emp1 (l=1)
+17,17,1,1,Flat bread,7,Baking,186,231,45,22.0,,Oven 10 (k=22)
+34,34,1,1,Bread 2055,4,Dough rest,186,216,30,,,NONE
+10,10,1,3,Small bread -2,2,Baking,188,213,25,18.0,,Oven 5 (k=18)
+10,10,1,4,Small bread -3,1,Load baking,188,190,2,,1.0,Emp1 (l=1)
+14,14,1,3,Bread 214,2,Proofing,188,238,50,,,NONE
+14,14,1,4,Bread 215,1,Shaping,188,194,6,,2.0,Emp2 (l=2)
+60,35,2,1,Bread 2057,3,Dividing,188,198,10,5.0,,Divider 2 (k=5)
+16,16,1,1,Bread 1000g,1,Preparation,189,192,3,,3.0,Emp3 (l=3)
+10,10,1,4,Small bread -3,2,Baking,190,215,25,18.0,,Oven 5 (k=18)
+16,16,1,1,Bread 1000g,2,Kneading,192,206,14,3.0,,Kneader 3 (k=3)
+14,14,1,4,Bread 215,2,Proofing,194,259,65,,,NONE
+14,14,1,5,Bread 216,1,Shaping,194,204,10,,2.0,Emp2 (l=2)
+27,27,1,1,Bread 8020,6,Refrigeration,195,245,50,,,NONE
+20,20,1,1,Seed bread II,1,Preparation,198,206,8,,3.0,Emp3 (l=3)
+60,35,2,1,Bread 2057,4,Dough rest,198,228,30,,,NONE
+35,35,1,1,Bread 2057,7,Baking,199,239,40,19.0,,Oven 6 (k=19)
+13,13,1,2,Wholegrain croissant,2,Load baking,200,202,2,,1.0,Emp1 (l=1)
+23,23,1,1,Baguettes 500g,6,Proofing,200,310,110,,,NONE
+46,9,3,1,Mix bread 1000g,6,Baking,200,255,55,15.0,,Oven 2 (k=15)
+13,13,1,2,Wholegrain croissant,3,Baking,202,217,15,14.0,,Oven 1 (k=14)
+14,14,1,5,Bread 216,2,Proofing,204,274,70,,,NONE
+19,19,1,1,Seed bread I,6,Baking,204,249,45,21.0,,Oven 9 (k=21)
+12,12,1,1,Rye bread,7,Refining,206,211,5,,1.0,Emp1 (l=1)
+15,15,1,1,Bread 500g,4,Dough rest,206,241,35,,,NONE
+16,16,1,1,Bread 1000g,3,Dividing,206,241,35,4.0,,Divider 1 (k=4)
+20,20,1,1,Seed bread II,2,Kneading,206,214,8,3.0,,Kneader 3 (k=3)
+25,25,1,1,Oval shaped bread,1,Preparation,207,214,7,,3.0,Emp3 (l=3)
+10,10,1,2,Small bread -1,3,Discharge baking,211,214,3,,1.0,Emp1 (l=1)
+12,12,1,1,Rye bread,8,Transfer to freezing,211,213,2,,2.0,Emp2 (l=2)
+10,10,1,3,Small bread -2,3,Discharge baking,213,216,3,,2.0,Emp2 (l=2)
+20,20,1,1,Seed bread II,3,Dough rest,214,237,23,,,NONE
+25,25,1,1,Oval shaped bread,2,Kneading,214,225,11,3.0,,Kneader 3 (k=3)
+6,6,1,1,Pastry dough,6,Rolling,215,256,41,9.0,,Rolling Machine (k=9)
+10,10,1,4,Small bread -3,3,Discharge baking,215,218,3,,1.0,Emp1 (l=1)
+34,34,1,1,Bread 2055,5,Shaping,216,220,4,,2.0,Emp2 (l=2)
+8,8,1,1,Bread 2201,11,Discharge baking,219,221,2,,1.0,Emp1 (l=1)
+34,34,1,1,Bread 2055,6,Dough rest,220,250,30,,,NONE
+45,9,2,1,Mix bread 1000g,7,Transfer to cooling room,220,223,3,,3.0,Emp3 (l=3)
+8,8,1,1,Bread 2201,12,Transfer to cooling room,221,223,2,,1.0,Emp1 (l=1)
+26,26,1,1,Bread 8011,6,Refining,222,232,10,,2.0,Emp2 (l=2)
+25,25,1,1,Oval shaped bread,3,Dividing,225,237,12,5.0,,Divider 2 (k=5)
+60,35,2,1,Bread 2057,5,Shaping,228,233,5,,3.0,Emp3 (l=3)
+17,17,1,1,Flat bread,8,Discharge baking,231,233,2,,1.0,Emp1 (l=1)
+26,26,1,1,Bread 8011,7,Proofing,232,327,95,,,NONE
+17,17,1,1,Flat bread,9,Cooling,233,263,30,,,NONE
+60,35,2,1,Bread 2057,6,Proofing,233,283,50,,,NONE
+41,4,2,1,Baguettes 250,1,Kneading,236,258,22,1.0,,Kneader 1 (k=1)
+20,20,1,1,Seed bread II,4,Shaping,237,247,10,13.0,,Shaper (k=13)
+25,25,1,1,Oval shaped bread,4,Dough rest,237,289,52,,,NONE
+14,14,1,3,Bread 214,3,Load baking,238,240,2,,1.0,Emp1 (l=1)
+18,18,1,1,Dough C,1,Preparation,238,242,4,,3.0,Emp3 (l=3)
+35,35,1,1,Bread 2057,8,Cooling,239,299,60,,,NONE
+14,14,1,3,Bread 214,4,Baking,240,275,35,14.0,,Oven 1 (k=14)
+15,15,1,1,Bread 500g,5,Load baking,241,244,3,,2.0,Emp2 (l=2)
+16,16,1,1,Bread 1000g,4,Dough rest,241,276,35,,,NONE
+18,18,1,1,Dough C,2,Kneading,242,249,7,3.0,,Kneader 3 (k=3)
+21,21,1,1,Long bread,1,Preparation,242,257,15,,3.0,Emp3 (l=3)
+14,14,1,2,Bread 213,3,Load baking,243,245,2,,1.0,Emp1 (l=1)
+15,15,1,1,Bread 500g,6,Baking,244,304,60,17.0,,Oven 4 (k=17)
+14,14,1,2,Bread 213,4,Baking,245,287,42,14.0,,Oven 1 (k=14)
+27,27,1,1,Bread 8020,7,Refining,245,255,10,,2.0,Emp2 (l=2)
+20,20,1,1,Seed bread II,5,Proofing,247,312,65,,,NONE
+24,24,1,1,Bread with potatoes,5,Load baking,248,250,2,,1.0,Emp1 (l=1)
+24,24,1,1,Bread with potatoes,6,Baking,250,315,65,22.0,,Oven 10 (k=22)
+34,34,1,1,Bread 2055,7,Shaping,250,254,4,,1.0,Emp1 (l=1)
+18,18,1,2,Bread 1101,1,Dividing,251,257,6,4.0,,Divider 1 (k=4)
+34,34,1,1,Bread 2055,8,Dough rest,254,284,30,,,NONE
+27,27,1,1,Bread 8020,8,Proofing,255,350,95,,,NONE
+46,9,3,1,Mix bread 1000g,7,Transfer to cooling room,255,258,3,,2.0,Emp2 (l=2)
+6,6,1,1,Pastry dough,7,Shaping,256,289,33,,1.0,Emp1 (l=1)
+18,18,1,2,Bread 1101,2,Molding,257,274,17,,3.0,Emp3 (l=3)
+21,21,1,1,Long bread,2,Kneading,257,278,21,3.0,,Kneader 3 (k=3)
+41,4,2,1,Baguettes 250,2,Dividing,258,270,12,4.0,,Divider 1 (k=4)
+14,14,1,4,Bread 215,3,Load baking,259,261,2,,2.0,Emp2 (l=2)
+14,14,1,4,Bread 215,4,Baking,261,307,46,14.0,,Oven 1 (k=14)
+17,17,1,1,Flat bread,10,Packaging,263,268,5,,2.0,Emp2 (l=2)
+28,28,1,1,Cornbread,1,Preparation,268,271,3,,2.0,Emp2 (l=2)
+41,4,2,1,Baguettes 250,3,Shaping,270,282,12,13.0,,Shaper (k=13)
+28,28,1,1,Cornbread,2,Kneading,271,283,12,1.0,,Kneader 1 (k=1)
+14,14,1,5,Bread 216,3,Load baking,274,275,1,,2.0,Emp2 (l=2)
+18,18,1,2,Bread 1101,3,Dough rest,274,353,79,,,NONE
+18,18,1,3,Bread 1102,1,Dividing,274,277,3,4.0,,Divider 1 (k=4)
+14,14,1,3,Bread 214,5,Cooling,275,277,2,,2.0,Emp2 (l=2)
+14,14,1,5,Bread 216,4,Baking,275,300,25,14.0,,Oven 1 (k=14)
+16,16,1,1,Bread 1000g,5,Load baking,276,279,3,,3.0,Emp3 (l=3)
+18,18,1,3,Bread 1102,2,Molding,277,287,10,,2.0,Emp2 (l=2)
+21,21,1,1,Long bread,3,Dough rest,278,302,24,,,NONE
+28,28,1,2,Chia seed bread,1,Preparation,278,283,5,,,NONE
+16,16,1,1,Bread 1000g,6,Baking,279,339,60,18.0,,Oven 5 (k=18)
+41,4,2,1,Baguettes 250,4,Proofing,282,392,110,,,NONE
+28,28,1,1,Cornbread,3,Dividing,283,286,3,,3.0,Emp3 (l=3)
+28,28,1,2,Chia seed bread,2,Kneading,283,291,8,1.0,,Kneader 1 (k=1)
+60,35,2,1,Bread 2057,7,Baking,283,323,40,19.0,,Oven 6 (k=19)
+34,34,1,1,Bread 2055,9,Dividing,284,305,21,5.0,,Divider 2 (k=5)
+28,28,1,1,Cornbread,4,Dough rest,286,315,29,,,NONE
+14,14,1,2,Bread 213,5,Discharge baking,287,289,2,,2.0,Emp2 (l=2)
+18,18,1,3,Bread 1102,3,Dough rest,287,337,50,,,NONE
+18,18,1,4,Bread 1103,1,Dividing,288,293,5,4.0,,Divider 1 (k=4)
+49,15,2,1,Bread 500g,1,Preparation,288,291,3,,3.0,Emp3 (l=3)
+25,25,1,1,Oval shaped bread,5,Load baking,289,292,3,,1.0,Emp1 (l=1)
+28,28,1,2,Chia seed bread,3,Dividing,291,295,4,,3.0,Emp3 (l=3)
+49,15,2,1,Bread 500g,2,Kneading,291,305,14,3.0,,Kneader 3 (k=3)
+25,25,1,1,Oval shaped bread,6,Baking,292,357,65,15.0,,Oven 2 (k=15)
+53,19,2,1,Seed bread I,1,Preparation,292,300,8,,1.0,Emp1 (l=1)
+18,18,1,4,Bread 1103,2,Molding,293,312,19,,2.0,Emp2 (l=2)
+28,28,1,2,Chia seed bread,4,Dough rest,295,322,27,,,NONE
+35,35,1,1,Bread 2057,9,Freezing,299,309,10,,,NONE
+14,14,1,5,Bread 216,5,Cooling,300,302,2,,1.0,Emp1 (l=1)
+53,19,2,1,Seed bread I,2,Kneading,300,319,19,1.0,,Kneader 1 (k=1)
+21,21,1,1,Long bread,4,Shaping,302,347,45,,3.0,Emp3 (l=3)
+15,15,1,1,Bread 500g,7,Discharge baking,304,306,2,,1.0,Emp1 (l=1)
+34,34,1,1,Bread 2055,10,Proofing,305,355,50,,,NONE
+49,15,2,1,Bread 500g,3,Dividing,305,340,35,4.0,,Divider 1 (k=4)
+15,15,1,1,Bread 500g,8,Cooling,306,406,100,,,NONE
+14,14,1,4,Bread 215,5,Cooling,307,309,2,,1.0,Emp1 (l=1)
+35,35,1,1,Bread 2057,10,Packaging,309,314,5,,1.0,Emp1 (l=1)
+23,23,1,1,Baguettes 500g,7,Baking,310,337,27,14.0,,Oven 1 (k=14)
+18,18,1,4,Bread 1103,3,Dough rest,312,351,39,,,NONE
+20,20,1,1,Seed bread II,6,Baking,312,357,45,21.0,,Oven 9 (k=21)
+35,35,1,1,Bread 2057,11,Storage,314,316,2,,2.0,Emp2 (l=2)
+28,28,1,1,Cornbread,5,Shaping,315,327,12,,1.0,Emp1 (l=1)
+53,19,2,1,Seed bread I,3,Dough rest,319,332,13,,,NONE
+28,28,1,2,Chia seed bread,5,Shaping,322,330,8,,2.0,Emp2 (l=2)
+60,35,2,1,Bread 2057,8,Cooling,323,383,60,,,NONE
+26,26,1,1,Bread 8011,8,Load baking,327,330,3,,1.0,Emp1 (l=1)
+28,28,1,1,Cornbread,6,Proofing,327,390,63,,,NONE
+26,26,1,1,Bread 8011,9,Baking,330,382,52,16.0,,Oven 3 (k=16)
+28,28,1,2,Chia seed bread,6,Proofing,330,385,55,,,NONE
+53,19,2,1,Seed bread I,4,Shaping,332,342,10,13.0,,Shaper (k=13)
+48,12,2,1,Rye bread,1,Preparation,334,339,5,,1.0,Emp1 (l=1)
+18,18,1,3,Bread 1102,4,Baking,337,359,22,17.0,,Oven 4 (k=17)
+23,23,1,1,Baguettes 500g,8,Storing,337,347,10,,2.0,Emp2 (l=2)
+16,16,1,1,Bread 1000g,7,Discharge baking,339,341,2,,1.0,Emp1 (l=1)
+48,12,2,1,Rye bread,2,Kneading,339,357,18,1.0,,Kneader 1 (k=1)
+49,15,2,1,Bread 500g,4,Dough rest,340,375,35,,,NONE
+16,16,1,1,Bread 1000g,8,Cooling,341,441,100,,,NONE
+54,20,2,1,Seed bread II,1,Preparation,341,349,8,,1.0,Emp1 (l=1)
+53,19,2,1,Seed bread I,5,Proofing,342,387,45,,,NONE
+21,21,1,1,Long bread,5,Proofing,347,407,60,,,NONE
+29,29,1,1,Multigrain bread,1,Preparation,347,359,12,,2.0,Emp2 (l=2)
+54,20,2,1,Seed bread II,2,Kneading,349,357,8,3.0,,Kneader 3 (k=3)
+27,27,1,1,Bread 8020,9,Load baking,350,353,3,,1.0,Emp1 (l=1)
+18,18,1,4,Bread 1103,4,Baking,351,377,26,17.0,,Oven 4 (k=17)
+18,18,1,2,Bread 1101,4,Baking,353,377,24,17.0,,Oven 4 (k=17)
+27,27,1,1,Bread 8020,10,Baking,353,405,52,14.0,,Oven 1 (k=14)
+34,34,1,1,Bread 2055,11,Baking,355,389,34,18.0,,Oven 5 (k=18)
+25,25,1,1,Oval shaped bread,7,Discharge baking,357,361,4,,1.0,Emp1 (l=1)
+48,12,2,1,Rye bread,3,Dividing,357,363,6,4.0,,Divider 1 (k=4)
+54,20,2,1,Seed bread II,3,Dough rest,357,380,23,,,NONE
+30,30,1,1,Sourdough,1,Preparation,358,368,10,,3.0,Emp3 (l=3)
+29,29,1,1,Multigrain bread,2,Kneading,359,368,9,3.0,,Kneader 3 (k=3)
+41,4,2,2,Baguettes 250 p-i,1,Load baking,359,361,2,,2.0,Emp2 (l=2)
+25,25,1,1,Oval shaped bread,8,Cooling,361,421,60,,,NONE
+41,4,2,2,Baguettes 250 p-i,2,Baking,361,383,22,19.0,,Oven 6 (k=19)
+41,4,2,3,Baguettes 250 p-ii,1,Load baking,361,363,2,,1.0,Emp1 (l=1)
+41,4,2,3,Baguettes 250 p-ii,2,Baking,363,385,22,19.0,,Oven 6 (k=19)
+41,4,2,4,Baguettes 250 p-iii,1,Load baking,363,365,2,,2.0,Emp2 (l=2)
+48,12,2,1,Rye bread,4,Dough rest,363,418,55,,,NONE
+22,22,1,1,Small-round bread p-i,1,Preparation,364,367,3,,1.0,Emp1 (l=1)
+41,4,2,4,Baguettes 250 p-iii,2,Baking,365,387,22,19.0,,Oven 6 (k=19)
+22,22,1,1,Small-round bread p-i,2,Kneading,367,380,13,1.0,,Kneader 1 (k=1)
+29,29,1,1,Multigrain bread,3,Discharge kneading,368,370,2,,1.0,Emp1 (l=1)
+30,30,1,1,Sourdough,2,Kneading,368,384,16,3.0,,Kneader 3 (k=3)
+29,29,1,1,Multigrain bread,4,Dividing,370,375,5,5.0,,Divider 2 (k=5)
+37,37,1,1,Challah,1,Preparation,370,376,6,,2.0,Emp2 (l=2)
+32,32,1,1,Wholemeal sourdough,4,Transfer to storage,371,372,1,,1.0,Emp1 (l=1)
+29,29,1,1,Multigrain bread,5,Dough rest,375,415,40,,,NONE
+49,15,2,1,Bread 500g,5,Load baking,375,378,3,,1.0,Emp1 (l=1)
+37,37,1,1,Challah,2,Kneading,376,391,15,2.0,,Kneader 2 (k=2)
+49,15,2,1,Bread 500g,6,Baking,378,438,60,17.0,,Oven 4 (k=17)
+22,22,1,1,Small-round bread p-i,3,Dividing,380,390,10,5.0,,Divider 2 (k=5)
+54,20,2,1,Seed bread II,4,Shaping,380,390,10,13.0,,Shaper (k=13)
+26,26,1,1,Bread 8011,10,Discharge baking,382,385,3,,1.0,Emp1 (l=1)
+41,4,2,2,Baguettes 250 p-i,3,Discharge baking,383,385,2,,3.0,Emp3 (l=3)
+60,35,2,1,Bread 2057,9,Freezing,383,393,10,,,NONE
+30,30,1,1,Sourdough,3,Discharge kneading,384,388,4,,2.0,Emp2 (l=2)
+26,26,1,1,Bread 8011,11,Cooling,385,465,80,,,NONE
+28,28,1,2,Chia seed bread,7,Refining,385,390,5,,1.0,Emp1 (l=1)
+41,4,2,3,Baguettes 250 p-ii,3,Discharge baking,385,387,2,,3.0,Emp3 (l=3)
+41,4,2,4,Baguettes 250 p-iii,3,Discharge baking,387,389,2,,3.0,Emp3 (l=3)
+53,19,2,1,Seed bread I,6,Baking,387,432,45,22.0,,Oven 10 (k=22)
+30,30,1,1,Sourdough,4,Dough rest,388,396,8,,,NONE
+34,34,1,1,Bread 2055,12,Cooling,389,439,50,,,NONE
+22,22,1,1,Small-round bread p-i,4,forming and shaping,390,510,120,,5.0,Emp5 (l=5)
+28,28,1,1,Cornbread,7,Load baking,390,393,3,,1.0,Emp1 (l=1)
+28,28,1,2,Chia seed bread,8,Load baking,390,393,3,,2.0,Emp2 (l=2)
+54,20,2,1,Seed bread II,5,Proofing,390,455,65,,,NONE
+37,37,1,1,Challah,3,Discharge kneading,391,393,2,,3.0,Emp3 (l=3)
+28,28,1,1,Cornbread,8,Baking,393,443,50,21.0,,Oven 9 (k=21)
+28,28,1,2,Chia seed bread,9,Baking,393,443,50,21.0,,Oven 9 (k=21)
+37,37,1,1,Challah,4,Dough rest,393,417,24,,,NONE
+60,35,2,1,Bread 2057,10,Packaging,393,398,5,,2.0,Emp2 (l=2)
+30,30,1,1,Sourdough,5,Transfer to long fermentation,396,398,2,,1.0,Emp1 (l=1)
+60,35,2,1,Bread 2057,11,Storage,398,400,2,,1.0,Emp1 (l=1)
+27,27,1,1,Bread 8020,11,Discharge baking,405,408,3,,3.0,Emp3 (l=3)
+15,15,1,1,Bread 500g,9,Packaging,406,416,10,,1.0,Emp1 (l=1)
+21,21,1,1,Long bread,6,Load baking,407,409,2,,2.0,Emp2 (l=2)
+27,27,1,1,Bread 8020,12,Cooling,408,488,80,,,NONE
+21,21,1,1,Long bread,7,Baking,409,449,40,14.0,,Oven 1 (k=14)
+21,21,1,2,Long bread-ii,1,Load baking,409,411,2,,2.0,Emp2 (l=2)
+21,21,1,2,Long bread-ii,2,Baking,411,451,40,14.0,,Oven 1 (k=14)
+21,21,1,3,Long bread-iii,1,Load baking,411,413,2,,2.0,Emp2 (l=2)
+21,21,1,3,Long bread-iii,2,Baking,413,453,40,14.0,,Oven 1 (k=14)
+29,29,1,1,Multigrain bread,6,Shaping,415,430,15,,2.0,Emp2 (l=2)
+37,37,1,1,Challah,5,Shaping,417,427,10,,3.0,Emp3 (l=3)
+48,12,2,1,Rye bread,5,Shaping,418,430,12,13.0,,Shaper (k=13)
+25,25,1,1,Oval shaped bread,9,Packaging,421,426,5,,1.0,Emp1 (l=1)
+37,37,1,1,Challah,6,Proofing,427,517,90,,,NONE
+29,29,1,1,Multigrain bread,7,Fermentation,430,515,85,,4.0,Emp4 (l=4)
+48,12,2,1,Rye bread,6,Proofing,430,520,90,,,NONE
+49,15,2,1,Bread 500g,7,Discharge baking,438,440,2,,1.0,Emp1 (l=1)
+34,34,1,1,Bread 2055,13,Freezing,439,559,120,,,NONE
+49,15,2,1,Bread 500g,8,Cooling,440,540,100,,,NONE
+50,16,2,1,Bread 1000g,1,Preparation,440,443,3,,2.0,Emp2 (l=2)
+16,16,1,1,Bread 1000g,9,Packaging,441,451,10,,1.0,Emp1 (l=1)
+50,16,2,1,Bread 1000g,2,Kneading,443,457,14,3.0,,Kneader 3 (k=3)
+31,31,1,1,Sourdough old,1,Bring fermented dough - old,445,448,3,,2.0,Emp2 (l=2)
+31,31,1,1,Sourdough old,2,Molding,448,478,30,,2.0,Emp2 (l=2)
+36,36,1,1,Brioche,1,Preparation,451,459,8,,1.0,Emp1 (l=1)
+54,20,2,1,Seed bread II,6,Baking,455,500,45,21.0,,Oven 9 (k=21)
+50,16,2,1,Bread 1000g,3,Dividing,457,492,35,4.0,,Divider 1 (k=4)
+36,36,1,1,Brioche,2,Kneading,459,483,24,1.0,,Kneader 1 (k=1)
+31,31,1,2,Sourdough Bread,1,Load baking,460,465,5,,1.0,Emp1 (l=1)
+26,26,1,1,Bread 8011,12,Packaging,465,475,10,,1.0,Emp1 (l=1)
+31,31,1,2,Sourdough Bread,2,Baking,465,520,55,14.0,,Oven 1 (k=14)
+31,31,1,3,Sourdough Bread-2,1,Load baking,475,480,5,,1.0,Emp1 (l=1)
+31,31,1,3,Sourdough Bread-2,2,Baking,480,535,55,14.0,,Oven 1 (k=14)
+36,36,1,1,Brioche,3,Discharge kneading,483,485,2,,1.0,Emp1 (l=1)
+36,36,1,1,Brioche,4,Dough rest,485,525,40,,,NONE
+27,27,1,1,Bread 8020,13,Packaging,488,498,10,,1.0,Emp1 (l=1)
+50,16,2,1,Bread 1000g,4,Dough rest,492,527,35,,,NONE
+22,22,1,1,Small-round bread p-i,5,Proofing,510,570,60,,,NONE
+33,33,1,1,Wholemeal bread dough,1,Preparation,510,520,10,,5.0,Emp5 (l=5)
+29,29,1,1,Multigrain bread,8,Load baking,515,517,2,,4.0,Emp4 (l=4)
+29,29,1,1,Multigrain bread,9,Baking,517,572,55,17.0,,Oven 4 (k=17)
+37,37,1,1,Challah,7,Load baking,517,520,3,,4.0,Emp4 (l=4)
+31,31,1,2,Sourdough Bread,3,Discharge baking,520,525,5,,4.0,Emp4 (l=4)
+33,33,1,1,Wholemeal bread dough,2,Kneading,520,533,13,3.0,,Kneader 3 (k=3)
+37,37,1,1,Challah,8,Baking,520,550,30,15.0,,Oven 2 (k=15)
+48,12,2,1,Rye bread,7,Refining,520,525,5,,5.0,Emp5 (l=5)
+31,31,1,2,Sourdough Bread,4,Cooling,525,615,90,,,NONE
+36,36,1,1,Brioche,5,Shaping,525,555,30,,5.0,Emp5 (l=5)
+48,12,2,1,Rye bread,8,Transfer to freezing,525,527,2,,4.0,Emp4 (l=4)
+50,16,2,1,Bread 1000g,5,Load baking,527,530,3,,4.0,Emp4 (l=4)
+50,16,2,1,Bread 1000g,6,Baking,530,590,60,18.0,,Oven 5 (k=18)
+33,33,1,1,Wholemeal bread dough,3,Dividing,533,542,9,5.0,,Divider 2 (k=5)
+31,31,1,3,Sourdough Bread-2,3,Discharge baking,535,540,5,,4.0,Emp4 (l=4)
+31,31,1,3,Sourdough Bread-2,4,Cooling,540,615,75,,,NONE
+49,15,2,1,Bread 500g,9,Packaging,540,550,10,,4.0,Emp4 (l=4)
+33,33,1,1,Wholemeal bread dough,4,Dough rest,542,582,40,,,NONE
+37,37,1,1,Challah,9,Discharge baking,550,553,3,,4.0,Emp4 (l=4)
+37,37,1,1,Challah,10,Cooling,553,613,60,,,NONE
+36,36,1,1,Brioche,6,Proofing,555,645,90,,,NONE
+38,38,1,1,Sunflower seed bread,1,Preparation,555,571,16,,5.0,Emp5 (l=5)
+34,34,1,1,Bread 2055,14,Packaging,559,564,5,,4.0,Emp4 (l=4)
+34,34,1,1,Bread 2055,15,Storage,564,565,1,,4.0,Emp4 (l=4)
+22,22,1,1,Small-round bread p-i,6,Load baking,570,573,3,,4.0,Emp4 (l=4)
+38,38,1,1,Sunflower seed bread,2,Kneading,571,600,29,3.0,,Kneader 3 (k=3)
+29,29,1,1,Multigrain bread,10,Discharge baking,572,574,2,,5.0,Emp5 (l=5)
+22,22,1,1,Small-round bread p-i,7,Baking,573,628,55,17.0,,Oven 4 (k=17)
+22,22,1,2,Small-round bread p-ii,1,Load baking,573,576,3,,4.0,Emp4 (l=4)
+29,29,1,1,Multigrain bread,11,Cooling,574,634,60,,,NONE
+22,22,1,2,Small-round bread p-ii,2,Baking,576,631,55,17.0,,Oven 4 (k=17)
+22,22,1,3,Small-round bread p-iii,1,Load baking,576,579,3,,4.0,Emp4 (l=4)
+22,22,1,3,Small-round bread p-iii,2,Baking,579,634,55,17.0,,Oven 4 (k=17)
+22,22,1,4,Small-round bread p-iV,1,Load baking,579,582,3,,4.0,Emp4 (l=4)
+22,22,1,4,Small-round bread p-iV,2,Baking,582,637,55,17.0,,Oven 4 (k=17)
+33,33,1,1,Wholemeal bread dough,5,Shaping,582,594,12,,4.0,Emp4 (l=4)
+50,16,2,1,Bread 1000g,7,Discharge baking,590,592,2,,5.0,Emp5 (l=5)
+50,16,2,1,Bread 1000g,8,Cooling,592,692,100,,,NONE
+33,33,1,1,Wholemeal bread dough,6,Proofing,594,704,110,,,NONE
+38,38,1,1,Sunflower seed bread,3,Kneading discharge,600,606,6,,4.0,Emp4 (l=4)
+40,40,1,1,Bread 750g,1,Preparation,600,605,5,,5.0,Emp5 (l=5)
+40,40,1,1,Bread 750g,2,Kneading,605,618,13,3.0,,Kneader 3 (k=3)
+38,38,1,1,Sunflower seed bread,4,Dough rest,606,646,40,,,NONE
+58,34,2,1,Bread 2055,1,Preparation,611,614,3,,4.0,Emp4 (l=4)
+37,37,1,1,Challah,11,Packaging,613,628,15,,5.0,Emp5 (l=5)
+58,34,2,1,Bread 2055,2,Kneading,614,646,32,1.0,,Kneader 1 (k=1)
+31,31,1,2,Sourdough Bread,5,Boxing,615,620,5,,4.0,Emp4 (l=4)
+31,31,1,3,Sourdough Bread-2,5,Boxing,615,620,5,,,NONE
+40,40,1,1,Bread 750g,3,Dividing,618,633,15,4.0,,Divider 1 (k=4)
+42,6,2,1,Pastry dough,1,Preparation,618,623,5,3.0,,Kneader 3 (k=3)
+42,6,2,1,Pastry dough,2,Kneading 1,623,639,16,3.0,,Kneader 3 (k=3)
+22,22,1,1,Small-round bread p-i,8,Discharge baking,628,629,1,,4.0,Emp4 (l=4)
+22,22,1,2,Small-round bread p-ii,3,Discharge baking,631,632,1,,4.0,Emp4 (l=4)
+40,40,1,1,Bread 750g,4,Dough rest,633,663,30,,,NONE
+22,22,1,3,Small-round bread p-iii,3,Discharge baking,634,635,1,,4.0,Emp4 (l=4)
+29,29,1,1,Multigrain bread,12,Packaging,634,644,10,,5.0,Emp5 (l=5)
+22,22,1,4,Small-round bread p-iV,3,Discharge baking,637,638,1,,4.0,Emp4 (l=4)
+42,6,2,1,Pastry dough,3,Dividing,639,643,4,,4.0,Emp4 (l=4)
+42,6,2,1,Pastry dough,4,Rolling,643,665,22,9.0,,Rolling Machine (k=9)
+36,36,1,2,Brioche,1,Load baking,645,647,2,,4.0,Emp4 (l=4)
+38,38,1,1,Sunflower seed bread,5,Shaping,646,669,23,,5.0,Emp5 (l=5)
+58,34,2,1,Bread 2055,3,Dividing,646,652,6,5.0,,Divider 2 (k=5)
+36,36,1,2,Brioche,2,Baking,647,687,40,21.0,,Oven 9 (k=21)
+36,36,1,3,Brioche,1,Load baking,647,649,2,,4.0,Emp4 (l=4)
+36,36,1,3,Brioche,2,Baking,649,689,40,21.0,,Oven 9 (k=21)
+39,39,1,1,Bread rolls,1,Preparation,649,661,12,,4.0,Emp4 (l=4)
+58,34,2,1,Bread 2055,4,Dough rest,652,682,30,,,NONE
+39,39,1,1,Bread rolls,2,Kneading,661,682,21,3.0,,Kneader 3 (k=3)
+40,40,1,2,Bread 750g p-i,1,Load baking,663,666,3,,4.0,Emp4 (l=4)
+42,6,2,1,Pastry dough,5,Freezing 1,665,700,35,,,NONE
+40,40,1,2,Bread 750g p-i,2,Baking,666,711,45,17.0,,Oven 4 (k=17)
+40,40,1,3,Bread 750g p-ii,1,Load baking,666,669,3,,4.0,Emp4 (l=4)
+38,38,1,1,Sunflower seed bread,6,Refining,669,674,5,,4.0,Emp4 (l=4)
+40,40,1,3,Bread 750g p-ii,2,Baking,669,714,45,17.0,,Oven 4 (k=17)
+38,38,1,1,Sunflower seed bread,7,Proofing,674,786,112,,,NONE
+51,16,3,1,Bread 1000g,1,Preparation,679,682,3,,4.0,Emp4 (l=4)
+39,39,1,1,Bread rolls,3,Kneading discharge,682,686,4,,4.0,Emp4 (l=4)
+51,16,3,1,Bread 1000g,2,Kneading,682,696,14,3.0,,Kneader 3 (k=3)
+58,34,2,1,Bread 2055,5,Shaping,682,686,4,,5.0,Emp5 (l=5)
+39,39,1,1,Bread rolls,4,Dough rest,686,721,35,,,NONE
+58,34,2,1,Bread 2055,6,Dough rest,686,716,30,,,NONE
+36,36,1,2,Brioche,3,Discharge baking,687,689,2,,4.0,Emp4 (l=4)
+36,36,1,2,Brioche,4,Cooling,689,779,90,,,NONE
+36,36,1,3,Brioche,3,Discharge baking,689,691,2,,4.0,Emp4 (l=4)
+56,26,2,1,Bread 8011,1,Preparation,689,699,10,,5.0,Emp5 (l=5)
+36,36,1,3,Brioche,4,Cooling,691,781,90,,,NONE
+50,16,2,1,Bread 1000g,9,Packaging,692,702,10,,4.0,Emp4 (l=4)
+51,16,3,1,Bread 1000g,3,Dividing,696,731,35,4.0,,Divider 1 (k=4)
+56,26,2,1,Bread 8011,2,Kneading,699,714,15,2.0,,Kneader 2 (k=2)
+42,6,2,1,Pastry dough,6,Rolling,700,741,41,9.0,,Rolling Machine (k=9)
+44,8,2,1,Bread 2201,1,Preparation,703,709,6,,5.0,Emp5 (l=5)
+33,33,1,1,Wholemeal bread dough,7,Refining,704,714,10,,4.0,Emp4 (l=4)
+44,8,2,1,Bread 2201,2,Kneading 1,709,721,12,1.0,,Kneader 1 (k=1)
+40,40,1,2,Bread 750g p-i,3,Discharge baking,711,713,2,,5.0,Emp5 (l=5)
+40,40,1,2,Bread 750g p-i,4,Cooling,713,793,80,,,NONE
+33,33,1,2,Wholemeal bread p-i,1,Load baking,714,717,3,,4.0,Emp4 (l=4)
+40,40,1,3,Bread 750g p-ii,3,Discharge baking,714,716,2,,5.0,Emp5 (l=5)
+56,26,2,1,Bread 8011,3,Dough rest,714,740,26,,,NONE
+40,40,1,3,Bread 750g p-ii,4,Cooling,716,796,80,,,NONE
+58,34,2,1,Bread 2055,7,Shaping,716,720,4,,5.0,Emp5 (l=5)
+33,33,1,2,Wholemeal bread p-i,2,Baking,717,772,55,17.0,,Oven 4 (k=17)
+33,33,1,3,Wholemeal bread p-ii,1,Load baking,717,720,3,,4.0,Emp4 (l=4)
+33,33,1,3,Wholemeal bread p-ii,2,Baking,720,775,55,17.0,,Oven 4 (k=17)
+33,33,1,4,Wholemeal bread p-iii,1,Load baking,720,723,3,,4.0,Emp4 (l=4)
+58,34,2,1,Bread 2055,8,Dough rest,720,750,30,,,NONE
+39,39,1,1,Bread rolls,5,Shaping,721,741,20,,5.0,Emp5 (l=5)
+44,8,2,1,Bread 2201,3,Dough rest,721,771,50,,,NONE
+33,33,1,4,Wholemeal bread p-iii,2,Baking,723,778,55,17.0,,Oven 4 (k=17)
+43,6,3,1,Pastry dough,1,Preparation,725,730,5,3.0,,Kneader 3 (k=3)
+43,6,3,1,Pastry dough,2,Kneading 1,730,746,16,3.0,,Kneader 3 (k=3)
+51,16,3,1,Bread 1000g,4,Dough rest,731,766,35,,,NONE
+59,34,3,1,Bread 2055,1,Preparation,736,739,3,,4.0,Emp4 (l=4)
+59,34,3,1,Bread 2055,2,Kneading,739,771,32,1.0,,Kneader 1 (k=1)
+56,26,2,1,Bread 8011,4,Shaping,740,753,13,13.0,,Shaper (k=13)
+39,39,1,1,Bread rolls,6,Refining,741,746,5,,4.0,Emp4 (l=4)
+42,6,2,1,Pastry dough,7,Shaping,741,774,33,,5.0,Emp5 (l=5)
+39,39,1,1,Bread rolls,7,Proofing,746,846,100,,,NONE
+43,6,3,1,Pastry dough,3,Dividing,746,750,4,,4.0,Emp4 (l=4)
+43,6,3,1,Pastry dough,4,Rolling,750,772,22,9.0,,Rolling Machine (k=9)
+58,34,2,1,Bread 2055,9,Dividing,750,771,21,5.0,,Divider 2 (k=5)
+61,35,3,1,Bread 2057,1,Preparation,751,756,5,,4.0,Emp4 (l=4)
+56,26,2,1,Bread 8011,5,Refrigeration,753,803,50,,,NONE
+61,35,3,1,Bread 2057,2,Kneading,756,784,28,2.0,,Kneader 2 (k=2)
+51,16,3,1,Bread 1000g,5,Load baking,766,769,3,,4.0,Emp4 (l=4)
+51,16,3,1,Bread 1000g,6,Baking,769,829,60,18.0,,Oven 5 (k=18)
+44,8,2,1,Bread 2201,4,Dividing,771,777,6,4.0,,Divider 1 (k=4)
+58,34,2,1,Bread 2055,10,Proofing,771,821,50,,,NONE
+59,34,3,1,Bread 2055,3,Dividing,771,777,6,5.0,,Divider 2 (k=5)
+33,33,1,2,Wholemeal bread p-i,3,Discharge baking,772,775,3,,4.0,Emp4 (l=4)
+43,6,3,1,Pastry dough,5,Freezing 1,772,807,35,,,NONE
+33,33,1,3,Wholemeal bread p-ii,3,Discharge baking,775,778,3,,4.0,Emp4 (l=4)
+44,8,2,1,Bread 2201,5,Shaping,777,783,6,,5.0,Emp5 (l=5)
+59,34,3,1,Bread 2055,4,Dough rest,777,807,30,,,NONE
+33,33,1,4,Wholemeal bread p-iii,3,Discharge baking,778,781,3,,4.0,Emp4 (l=4)
+36,36,1,2,Brioche,5,Freezing,779,829,50,,,NONE
+36,36,1,3,Brioche,5,Freezing,781,831,50,,,NONE
+57,27,2,1,Bread 8020,1,Preparation,781,791,10,,6.0,Emp6 (l=6)
+44,8,2,1,Bread 2201,6,Proofing,783,863,80,,,NONE
+61,35,3,1,Bread 2057,3,Dividing,784,794,10,5.0,,Divider 2 (k=5)
+38,38,1,1,Sunflower seed bread,8,Refining,786,791,5,,4.0,Emp4 (l=4)
+38,38,1,1,Sunflower seed bread,9,Load baking,791,796,5,,4.0,Emp4 (l=4)
+57,27,2,1,Bread 8020,2,Kneading,791,806,15,1.0,,Kneader 1 (k=1)
+40,40,1,2,Bread 750g p-i,5,Packaging,793,803,10,,6.0,Emp6 (l=6)
+61,35,3,1,Bread 2057,4,Dough rest,794,824,30,,,NONE
+38,38,1,1,Sunflower seed bread,10,Baking,796,861,65,21.0,,Oven 9 (k=21)
+40,40,1,3,Bread 750g p-ii,5,Packaging,796,806,10,,4.0,Emp4 (l=4)
+47,10,2,1,Small bread,1,Preparation,800,806,6,,7.0,Emp7 (l=7)
+56,26,2,1,Bread 8011,6,Refining,803,813,10,,6.0,Emp6 (l=6)
+47,10,2,1,Small bread,2,Kneading,806,821,15,3.0,,Kneader 3 (k=3)
+57,27,2,1,Bread 8020,3,Dividing,806,814,8,4.0,,Divider 1 (k=4)
+43,6,3,1,Pastry dough,6,Rolling,807,848,41,9.0,,Rolling Machine (k=9)
+59,34,3,1,Bread 2055,5,Shaping,807,811,4,,7.0,Emp7 (l=7)
+59,34,3,1,Bread 2055,6,Dough rest,811,841,30,,,NONE
+56,26,2,1,Bread 8011,7,Proofing,813,908,95,,,NONE
+57,27,2,1,Bread 8020,4,Dough rest,814,840,26,,,NONE
+47,10,2,1,Small bread,3,Shaping,821,840,19,13.0,,Shaper (k=13)
+58,34,2,1,Bread 2055,11,Baking,821,855,34,17.0,,Oven 4 (k=17)
+61,35,3,1,Bread 2057,5,Shaping,824,829,5,,6.0,Emp6 (l=6)
+36,36,1,2,Brioche,6,Packaging,829,839,10,,6.0,Emp6 (l=6)
+51,16,3,1,Bread 1000g,7,Discharge baking,829,831,2,,7.0,Emp7 (l=7)
+61,35,3,1,Bread 2057,6,Proofing,829,879,50,,,NONE
+36,36,1,3,Brioche,6,Packaging,831,841,10,,7.0,Emp7 (l=7)
+51,16,3,1,Bread 1000g,8,Cooling,831,931,100,,,NONE
+47,10,2,1,Small bread,4,Dough rest,840,885,45,,,NONE
+57,27,2,1,Bread 8020,5,Shaping,840,853,13,13.0,,Shaper (k=13)
+59,34,3,1,Bread 2055,7,Shaping,841,845,4,,6.0,Emp6 (l=6)
+59,34,3,1,Bread 2055,8,Dough rest,845,875,30,,,NONE
+39,39,1,2,Bread rolls p-i,1,Load baking,846,849,3,,6.0,Emp6 (l=6)
+43,6,3,1,Pastry dough,7,Shaping,848,881,33,,7.0,Emp7 (l=7)
+39,39,1,2,Bread rolls p-i,2,Baking,849,889,40,14.0,,Oven 1 (k=14)
+39,39,1,3,Bread rolls p-ii,1,Load baking,849,852,3,,6.0,Emp6 (l=6)
+39,39,1,3,Bread rolls p-ii,2,Baking,852,892,40,14.0,,Oven 1 (k=14)
+57,27,2,1,Bread 8020,6,Refrigeration,853,903,50,,,NONE
+58,34,2,1,Bread 2055,12,Cooling,855,905,50,,,NONE
+38,38,1,1,Sunflower seed bread,11,Discharge baking,861,863,2,,6.0,Emp6 (l=6)
+38,38,1,1,Sunflower seed bread,12,Cooling,863,933,70,,,NONE
+44,8,2,1,Bread 2201,7,Shaping,863,876,13,,6.0,Emp6 (l=6)
+59,34,3,1,Bread 2055,9,Dividing,875,896,21,5.0,,Divider 2 (k=5)
+44,8,2,1,Bread 2201,8,Refining,876,883,7,,6.0,Emp6 (l=6)
+61,35,3,1,Bread 2057,7,Baking,879,919,40,18.0,,Oven 5 (k=18)
+44,8,2,1,Bread 2201,9,Load baking,883,885,2,,6.0,Emp6 (l=6)
+44,8,2,1,Bread 2201,10,Baking,885,920,35,17.0,,Oven 4 (k=17)
+47,10,2,1,Small bread,5,Refining,885,895,10,,7.0,Emp7 (l=7)
+39,39,1,2,Bread rolls p-i,3,Discharge baking,889,891,2,,6.0,Emp6 (l=6)
+39,39,1,2,Bread rolls p-i,4,Cooling,891,941,50,,,NONE
+39,39,1,3,Bread rolls p-ii,3,Discharge baking,892,894,2,,6.0,Emp6 (l=6)
+39,39,1,3,Bread rolls p-ii,4,Cooling,894,944,50,,,NONE
+47,10,2,1,Small bread,6,Proofing,895,955,60,,,NONE
+59,34,3,1,Bread 2055,10,Proofing,896,946,50,,,NONE
+57,27,2,1,Bread 8020,7,Refining,903,913,10,,7.0,Emp7 (l=7)
+58,34,2,1,Bread 2055,13,Freezing,905,1025,120,,,NONE
+56,26,2,1,Bread 8011,8,Load baking,908,911,3,,6.0,Emp6 (l=6)
+56,26,2,1,Bread 8011,9,Baking,911,963,52,14.0,,Oven 1 (k=14)
+57,27,2,1,Bread 8020,8,Proofing,913,1008,95,,,NONE
+61,35,3,1,Bread 2057,8,Cooling,919,979,60,,,NONE
+44,8,2,1,Bread 2201,11,Discharge baking,920,922,2,,6.0,Emp6 (l=6)
+44,8,2,1,Bread 2201,12,Transfer to cooling room,922,924,2,,6.0,Emp6 (l=6)
+51,16,3,1,Bread 1000g,9,Packaging,931,941,10,,7.0,Emp7 (l=7)
+38,38,1,1,Sunflower seed bread,13,Packaging,933,943,10,,6.0,Emp6 (l=6)
+39,39,1,2,Bread rolls p-i,5,Packaging,941,946,5,,7.0,Emp7 (l=7)
+39,39,1,3,Bread rolls p-ii,5,Packaging,944,949,5,,6.0,Emp6 (l=6)
+59,34,3,1,Bread 2055,11,Baking,946,980,34,18.0,,Oven 5 (k=18)
+52,18,2,1,Dough C,1,Preparation,948,952,4,,7.0,Emp7 (l=7)
+52,18,2,1,Dough C,2,Kneading,952,959,7,3.0,,Kneader 3 (k=3)
+55,21,2,1,Long bread,1,Preparation,952,967,15,,7.0,Emp7 (l=7)
+47,10,2,2,Small bread -1,1,Load baking,955,957,2,,6.0,Emp6 (l=6)
+47,10,2,2,Small bread -1,2,Baking,957,982,25,17.0,,Oven 4 (k=17)
+47,10,2,3,Small bread -2,1,Load baking,957,959,2,,6.0,Emp6 (l=6)
+47,10,2,3,Small bread -2,2,Baking,959,984,25,17.0,,Oven 4 (k=17)
+47,10,2,4,Small bread -3,1,Load baking,959,961,2,,6.0,Emp6 (l=6)
+47,10,2,4,Small bread -3,2,Baking,961,986,25,17.0,,Oven 4 (k=17)
+52,18,2,2,Bread 1101,1,Dividing,961,967,6,4.0,,Divider 1 (k=4)
+56,26,2,1,Bread 8011,10,Discharge baking,963,966,3,,6.0,Emp6 (l=6)
+56,26,2,1,Bread 8011,11,Cooling,966,1046,80,,,NONE
+52,18,2,2,Bread 1101,2,Molding,967,984,17,,7.0,Emp7 (l=7)
+55,21,2,1,Long bread,2,Kneading,967,988,21,3.0,,Kneader 3 (k=3)
+61,35,3,1,Bread 2057,9,Freezing,979,989,10,,,NONE
+59,34,3,1,Bread 2055,12,Cooling,980,1030,50,,,NONE
+47,10,2,2,Small bread -1,3,Discharge baking,982,985,3,,6.0,Emp6 (l=6)
+47,10,2,3,Small bread -2,3,Discharge baking,984,987,3,,7.0,Emp7 (l=7)
+52,18,2,2,Bread 1101,3,Dough rest,984,1063,79,,,NONE
+52,18,2,3,Bread 1102,1,Dividing,984,987,3,4.0,,Divider 1 (k=4)
+47,10,2,4,Small bread -3,3,Discharge baking,986,989,3,,6.0,Emp6 (l=6)
+52,18,2,3,Bread 1102,2,Molding,987,997,10,,7.0,Emp7 (l=7)
+55,21,2,1,Long bread,3,Dough rest,988,1012,24,,,NONE
+61,35,3,1,Bread 2057,10,Packaging,989,994,5,,6.0,Emp6 (l=6)
+61,35,3,1,Bread 2057,11,Storage,994,996,2,,6.0,Emp6 (l=6)
+62,40,2,1,Bread 750g,1,Preparation,996,1001,5,,6.0,Emp6 (l=6)
+52,18,2,3,Bread 1102,3,Dough rest,997,1047,50,,,NONE
+52,18,2,4,Bread 1103,1,Dividing,998,1003,5,4.0,,Divider 1 (k=4)
+62,40,2,1,Bread 750g,2,Kneading,1001,1014,13,3.0,,Kneader 3 (k=3)
+52,18,2,4,Bread 1103,2,Molding,1003,1022,19,,6.0,Emp6 (l=6)
+57,27,2,1,Bread 8020,9,Load baking,1008,1011,3,,7.0,Emp7 (l=7)
+57,27,2,1,Bread 8020,10,Baking,1011,1063,52,14.0,,Oven 1 (k=14)
+55,21,2,1,Long bread,4,Shaping,1012,1057,45,,7.0,Emp7 (l=7)
+62,40,2,1,Bread 750g,3,Dividing,1014,1029,15,4.0,,Divider 1 (k=4)
+52,18,2,4,Bread 1103,3,Dough rest,1022,1061,39,,,NONE
+58,34,2,1,Bread 2055,14,Packaging,1025,1030,5,,6.0,Emp6 (l=6)
+62,40,2,1,Bread 750g,4,Dough rest,1029,1059,30,,,NONE
+58,34,2,1,Bread 2055,15,Storage,1030,1031,1,,6.0,Emp6 (l=6)
+59,34,3,1,Bread 2055,13,Freezing,1030,1150,120,,,NONE
+56,26,2,1,Bread 8011,12,Packaging,1046,1056,10,,6.0,Emp6 (l=6)
+52,18,2,3,Bread 1102,4,Baking,1047,1069,22,17.0,,Oven 4 (k=17)
+55,21,2,1,Long bread,5,Proofing,1057,1117,60,,,NONE
+62,40,2,2,Bread 750g p-i,1,Load baking,1059,1062,3,,6.0,Emp6 (l=6)
+52,18,2,4,Bread 1103,4,Baking,1061,1087,26,17.0,,Oven 4 (k=17)
+62,40,2,2,Bread 750g p-i,2,Baking,1062,1107,45,18.0,,Oven 5 (k=18)
+62,40,2,3,Bread 750g p-ii,1,Load baking,1062,1065,3,,7.0,Emp7 (l=7)
+52,18,2,2,Bread 1101,4,Baking,1063,1087,24,17.0,,Oven 4 (k=17)
+57,27,2,1,Bread 8020,11,Discharge baking,1063,1066,3,,6.0,Emp6 (l=6)
+62,40,2,3,Bread 750g p-ii,2,Baking,1065,1110,45,18.0,,Oven 5 (k=18)
+57,27,2,1,Bread 8020,12,Cooling,1066,1146,80,,,NONE
+62,40,2,2,Bread 750g p-i,3,Discharge baking,1107,1109,2,,6.0,Emp6 (l=6)
+62,40,2,2,Bread 750g p-i,4,Cooling,1109,1189,80,,,NONE
+62,40,2,3,Bread 750g p-ii,3,Discharge baking,1110,1112,2,,6.0,Emp6 (l=6)
+62,40,2,3,Bread 750g p-ii,4,Cooling,1112,1192,80,,,NONE
+55,21,2,1,Long bread,6,Load baking,1117,1119,2,,6.0,Emp6 (l=6)
+55,21,2,1,Long bread,7,Baking,1119,1159,40,14.0,,Oven 1 (k=14)
+55,21,2,2,Long bread-ii,1,Load baking,1119,1121,2,,6.0,Emp6 (l=6)
+55,21,2,2,Long bread-ii,2,Baking,1121,1161,40,14.0,,Oven 1 (k=14)
+55,21,2,3,Long bread-iii,1,Load baking,1121,1123,2,,6.0,Emp6 (l=6)
+55,21,2,3,Long bread-iii,2,Baking,1123,1163,40,14.0,,Oven 1 (k=14)
+57,27,2,1,Bread 8020,13,Packaging,1146,1156,10,,6.0,Emp6 (l=6)
+59,34,3,1,Bread 2055,14,Packaging,1150,1155,5,,7.0,Emp7 (l=7)
+59,34,3,1,Bread 2055,15,Storage,1155,1156,1,,7.0,Emp7 (l=7)
+62,40,2,2,Bread 750g p-i,5,Packaging,1189,1199,10,,6.0,Emp6 (l=6)
+62,40,2,3,Bread 750g p-ii,5,Packaging,1192,1202,10,,7.0,Emp7 (l=7)
