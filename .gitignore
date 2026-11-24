@@ -19,3 +19,7 @@ results/raw/
 
 # Tooling
 .pytest_cache/
+
+# Claude Code (personal use only)
+CLAUDE.md
+.claude/
