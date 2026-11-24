@@ -7,13 +7,13 @@
     "seed": 0
   },
   "status": "OPTIMAL",
-  "elapsed_s": 0.12453389167785645,
+  "elapsed_s": 0.11270713806152344,
   "makespan": 471,
-  "oidt_union": 206,
+  "oidt_union": 357,
   "checker_valid": true,
   "meta": {
-    "created": "2026-11-24T17:46:04",
+    "created": "2026-11-25T01:20:46",
     "python": "3.12.9",
-    "git_rev": null
+    "git_rev": "4ac203a"
   }
 }

@@ -31,7 +31,7 @@
 
 - [x] **B1.** decoder와 CP-SAT의 UNLIMITED 기계 처리를 고친다. (2026-11-24 리팩토링 때 수정, `tests/test_decoder.py`)
 - [ ] **B2.** BK50 Group 31의 2회차 Boxing 자원 공백을 처리한다(Manual로 보정할지 팀 확인).
-- [ ] **B3.** 알고리즘 설정을 Table 5에 맞추고 (데모 스크립트는 seed 2001 고정만 반영)(population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament) seed를 고정한다. 실행 설정을 기록한다.
+- [ ] **B3.** 알고리즘 설정을 Table 5에 맞추고(population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament) seed를 고정한다. 실행 설정을 기록한다. 현재 데모 스크립트에는 seed 2001 고정만 반영돼 있다.
 - [x] **B4.** 원본 노트북 cell 14의 "논문 BK15 PF* 최소 makespan 약 471분" 표현. 노트북을 삭제해 해소. 보고서에는 출처를 CP-SAT 결과와 Fig. 7a 판독으로 적는다.
 - [ ] **B5.** 모델링 가정(PROGRESS.md 5절)을 보고서용 문서로 확정한다. 대상은 OIDT 정의, batch, tie-break, co-baking, infeasible 처리다.
 

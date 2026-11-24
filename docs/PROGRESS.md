@@ -31,7 +31,7 @@
 
 **CP-SAT (`src/bakery/cpsat.py`, `experiments/stage1-cpsat-bk15.py`)**
 - BK15 전체 모델을 OR-Tools CP-SAT로 makespan만 최소화했다. 결과는 **OPTIMAL, makespan 471**이고 checker PASS다.
-- OIDT는 최적화 대상이 아니라 해마다 달라진다(원본 노트북 281, 리팩토링 후 seed 0 실행 206).
+- OIDT는 최적화 대상이 아니라 실행마다 달라진다(원본 노트북 281, 리팩토링 후 seed 0 실행 206, 재실행 357). workers 8의 병렬 탐색 때문에 seed를 고정해도 같은 해가 나오지 않는다. makespan 471은 매번 같다.
 
 **HNFSM decoder (`src/bakery/decoder.py`)**
 - 구성: `spv_to_group_order`, `load_hnfsm_instance`, `hnfsm_decode`
