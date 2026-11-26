@@ -11,6 +11,14 @@ Rules not specified by the paper (see docs/paper-conformance.md):
 - Oven (M12): different groups may not overlap; same-group overlap is allowed.
 - OIDT: per-compartment idle time on the union of busy intervals.
 - Infeasible group (cannot fit within employee shifts): returns (INFEASIBLE, INFEASIBLE).
+
+Variants for sensitivity runs (docs/TODO.md A1, A3, A4); defaults reproduce the
+behaviour above exactly:
+- oven_rule: "first_fit" (default) | "used_first" (prefer an already-used
+  compartment, smallest gap to its busy time) | "min_idle" (smallest increase
+  of the compartment's union idle time).
+- cobake: "any" (default) | "same_start" | "same_start_end" (Fig. 3 form).
+- oidt: "union" (default) | "m2" (paper M2 as written, PT summed per product).
 """
 
 from __future__ import annotations
@@ -125,10 +133,45 @@ def oidt_union(oven_intervals: dict[int, list[tuple[int, int]]]) -> int:
     return total
 
 
+def oidt_m2(oven_intervals: dict[int, list[tuple[int, int]]]) -> int:
+    """Paper M2 as written: sum over compartments of (end_k - start_k - sum PT)."""
+    total = 0
+    for ivs in oven_intervals.values():
+        if ivs:
+            total += max(e for _, e in ivs) - min(s for s, _ in ivs) - sum(e - s for s, e in ivs)
+    return total
+
+
+OIDT_FUNCS = {"union": oidt_union, "m2": oidt_m2}
+
+
+def _cobake_ok(st: int, ct: int, same_group_ivs, cobake: str) -> bool:
+    """Same-group co-baking check on one compartment (M12 variants)."""
+    if cobake == "any":
+        return True
+    for s2, e2 in same_group_ivs:
+        if st < e2 and s2 < ct:  # overlap
+            if st != s2 or (cobake == "same_start_end" and ct != e2):
+                return False
+    return True
+
+
+def _oven_score(k: int, st: int, ct: int, ivs, rule: str):
+    """Lower is better; ties fall back to the lowest index."""
+    if rule == "used_first":
+        if not ivs:
+            return (1, 0)
+        gap = min(max(0, s2 - ct, st - e2) for s2, e2 in ivs)
+        return (0, gap)
+    # min_idle: increase of union idle time on this compartment
+    return (oidt_union({k: ivs + [(st, ct)]}) - oidt_union({k: ivs}),)
+
+
 # ----------------------------------------------------------------------------
 # Decoder
 # ----------------------------------------------------------------------------
-def hnfsm_decode(instance: dict, group_order, return_schedule: bool = False):
+def hnfsm_decode(instance: dict, group_order, return_schedule: bool = False,
+                 oven_rule: str = "first_fit", cobake: str = "any", oidt: str = "union"):
     """Decode a group priority order into a schedule.
 
     Returns (makespan, oidt, sched_df). sched_df is None unless return_schedule.
@@ -159,6 +202,7 @@ def hnfsm_decode(instance: dict, group_order, return_schedule: bool = False):
             ok = True
             chosen_m, chosen_e, chosen_o = [], [], []
             loc_m, loc_e = {}, {}  # within-group occupancy of single machines / employees
+            loc_o: dict[int, list] = {}  # within-group oven intervals per compartment
 
             for op, rel_s, rel_e, base_mask in c_ops:
                 m = base_mask << tg
@@ -193,15 +237,25 @@ def hnfsm_decode(instance: dict, group_order, return_schedule: bool = False):
                     chosen_m.append((op, tg + rel_s, tg + rel_e, pk, m))
 
                 else:  # OVEN: only other groups' occupancy blocks (M12)
+                    st, ct = tg + rel_s, tg + rel_e
                     pk = None
-                    for k in op["eligible_k"]:
-                        if (oven_mask[k] & m) == 0:
-                            pk = k
-                            break
+                    if oven_rule == "first_fit":
+                        for k in op["eligible_k"]:
+                            if (oven_mask[k] & m) == 0 and _cobake_ok(st, ct, loc_o.get(k, ()), cobake):
+                                pk = k
+                                break
+                    else:
+                        best = None
+                        for k in op["eligible_k"]:
+                            if (oven_mask[k] & m) == 0 and _cobake_ok(st, ct, loc_o.get(k, ()), cobake):
+                                score = _oven_score(k, st, ct, oven_intervals[k] + loc_o.get(k, []), oven_rule)
+                                if best is None or score < best:
+                                    best, pk = score, k
                     if pk is None:
                         ok = False
                         break
-                    chosen_o.append((op, tg + rel_s, tg + rel_e, pk, m))
+                    loc_o.setdefault(pk, []).append((st, ct))
+                    chosen_o.append((op, st, ct, pk, m))
 
             if not ok:
                 continue
@@ -252,7 +306,7 @@ def hnfsm_decode(instance: dict, group_order, return_schedule: bool = False):
         if not placed:
             return INFEASIBLE, INFEASIBLE, None
 
-    total_oidt = oidt_union(oven_intervals)
+    total_oidt = OIDT_FUNCS[oidt](oven_intervals)
     sched_df = (
         pd.DataFrame(schedule_rows).sort_values(["ST", "g", "p", "s"]).reset_index(drop=True)
         if return_schedule else None

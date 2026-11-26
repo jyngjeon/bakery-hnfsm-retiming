@@ -1,0 +1,692 @@
+{
+  "instance": "BK50",
+  "config": {
+    "algorithm": "NSGA-II",
+    "population_size": 50,
+    "offspring_population_size": 50,
+    "sbx_probability": 1.0,
+    "sbx_distribution_index": 20,
+    "mutation_probability": "1/NG",
+    "mutation_distribution_index": 20,
+    "selection": "binary tournament (jMetalPy default)",
+    "generations": 300,
+    "max_evaluations": 15000,
+    "infeasible": "(1e9, 1e9) penalty",
+    "BK15": {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "variants": [
+        "base",
+        "A1-oidt-m2",
+        "A3-used-first",
+        "A3-min-idle",
+        "A4-same-start",
+        "A4-same-start-end",
+        "A5-no-batch",
+        "A3uf+A4sse",
+        "A3uf+A5nb",
+        "A3uf+A4sse+A5nb"
+      ]
+    },
+    "BK50": {
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "variants": [
+        "base",
+        "A1-oidt-m2",
+        "A3-used-first",
+        "A3-min-idle",
+        "A4-same-start-end",
+        "A5-no-batch",
+        "A5-g18-once"
+      ]
+    },
+    "processes": 8
+  },
+  "paper_pf_star": {
+    "E2_oidt": 1243,
+    "E1_makespan": "940-960 (figure reading)"
+  },
+  "variants": [
+    {
+      "variant": "base",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          985,
+          2163
+        ],
+        [
+          994,
+          1905
+        ],
+        [
+          999,
+          1468
+        ],
+        [
+          1022,
+          1424
+        ],
+        [
+          1025,
+          1349
+        ],
+        [
+          1044,
+          1338
+        ],
+        [
+          1045,
+          1320
+        ],
+        [
+          1056,
+          1243
+        ]
+      ],
+      "min_makespan": 985,
+      "min_oidt": 1243,
+      "per_seed_min_makespan": [
+        999,
+        991,
+        985
+      ],
+      "per_seed_min_oidt": [
+        1243,
+        1321,
+        1244
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 309.4,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "options": {
+        "oidt": "m2",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_m2",
+      "pooled_front": [
+        [
+          987,
+          1396
+        ],
+        [
+          994,
+          1073
+        ],
+        [
+          995,
+          562
+        ],
+        [
+          1028,
+          549
+        ],
+        [
+          1035,
+          505
+        ],
+        [
+          1037,
+          331
+        ],
+        [
+          1054,
+          269
+        ],
+        [
+          1056,
+          197
+        ],
+        [
+          1072,
+          195
+        ],
+        [
+          1076,
+          108
+        ]
+      ],
+      "min_makespan": 987,
+      "min_oidt": 108,
+      "per_seed_min_makespan": [
+        994,
+        987,
+        1029
+      ],
+      "per_seed_min_oidt": [
+        532,
+        108,
+        197
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 313.2,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3-used-first",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "used_first",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          965,
+          2175
+        ],
+        [
+          966,
+          2149
+        ],
+        [
+          976,
+          2146
+        ],
+        [
+          977,
+          2082
+        ],
+        [
+          982,
+          1538
+        ],
+        [
+          992,
+          1507
+        ],
+        [
+          1003,
+          1467
+        ],
+        [
+          1011,
+          1299
+        ],
+        [
+          1012,
+          1042
+        ],
+        [
+          1016,
+          962
+        ]
+      ],
+      "min_makespan": 965,
+      "min_oidt": 962,
+      "per_seed_min_makespan": [
+        982,
+        983,
+        965
+      ],
+      "per_seed_min_oidt": [
+        962,
+        1392,
+        1204
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 358.9,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3-min-idle",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "min_idle",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          949,
+          2177
+        ],
+        [
+          962,
+          2112
+        ],
+        [
+          964,
+          2004
+        ],
+        [
+          965,
+          1707
+        ],
+        [
+          973,
+          1682
+        ],
+        [
+          991,
+          1475
+        ],
+        [
+          994,
+          1455
+        ],
+        [
+          995,
+          1384
+        ],
+        [
+          1018,
+          1335
+        ],
+        [
+          1028,
+          1318
+        ],
+        [
+          1047,
+          1299
+        ],
+        [
+          1050,
+          1289
+        ],
+        [
+          1175,
+          1145
+        ]
+      ],
+      "min_makespan": 949,
+      "min_oidt": 1145,
+      "per_seed_min_makespan": [
+        1017,
+        949,
+        986
+      ],
+      "per_seed_min_oidt": [
+        1145,
+        1289,
+        1441
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 424.4,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A4-same-start-end",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "same_start_end",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          1010,
+          1718
+        ],
+        [
+          1027,
+          1664
+        ],
+        [
+          1042,
+          1596
+        ],
+        [
+          1059,
+          1544
+        ],
+        [
+          1067,
+          1540
+        ]
+      ],
+      "min_makespan": 1010,
+      "min_oidt": 1540,
+      "per_seed_min_makespan": [
+        1023,
+        1013,
+        1010
+      ],
+      "per_seed_min_oidt": [
+        1949,
+        1956,
+        1540
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 476.3,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A5-no-batch",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "no_batch"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          638,
+          720
+        ],
+        [
+          645,
+          579
+        ],
+        [
+          649,
+          555
+        ],
+        [
+          661,
+          499
+        ],
+        [
+          669,
+          485
+        ],
+        [
+          680,
+          483
+        ],
+        [
+          693,
+          468
+        ],
+        [
+          711,
+          466
+        ],
+        [
+          713,
+          462
+        ],
+        [
+          725,
+          424
+        ],
+        [
+          726,
+          415
+        ],
+        [
+          738,
+          389
+        ],
+        [
+          776,
+          386
+        ]
+      ],
+      "min_makespan": 638,
+      "min_oidt": 386,
+      "per_seed_min_makespan": [
+        638,
+        658,
+        647
+      ],
+      "per_seed_min_oidt": [
+        412,
+        574,
+        386
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 180.1,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A5-g18-once",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "g18_once"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          975,
+          2249
+        ],
+        [
+          982,
+          2230
+        ],
+        [
+          987,
+          2125
+        ],
+        [
+          1010,
+          2009
+        ],
+        [
+          1012,
+          1556
+        ],
+        [
+          1029,
+          1406
+        ],
+        [
+          1042,
+          1380
+        ],
+        [
+          1048,
+          1371
+        ],
+        [
+          1049,
+          1256
+        ],
+        [
+          1050,
+          1247
+        ],
+        [
+          1054,
+          1185
+        ],
+        [
+          1081,
+          1125
+        ]
+      ],
+      "min_makespan": 975,
+      "min_oidt": 1125,
+      "per_seed_min_makespan": [
+        1028,
+        975,
+        982
+      ],
+      "per_seed_min_oidt": [
+        1125,
+        1556,
+        1225
+      ],
+      "infeasible_rate": 0.0,
+      "mean_elapsed_s": 461.1,
+      "all_front_checker_valid": true
+    }
+  ],
+  "runs": [
+    {
+      "variant": "base",
+      "seed": 1,
+      "elapsed_s": 314.0,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "base",
+      "seed": 2,
+      "elapsed_s": 311.8,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "base",
+      "seed": 3,
+      "elapsed_s": 302.5,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 1,
+      "elapsed_s": 303.3,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 2,
+      "elapsed_s": 336.6,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 3,
+      "elapsed_s": 299.7,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 1,
+      "elapsed_s": 330.1,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 2,
+      "elapsed_s": 339.9,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 3,
+      "elapsed_s": 406.8,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 1,
+      "elapsed_s": 392.3,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 2,
+      "elapsed_s": 431.2,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 3,
+      "elapsed_s": 449.8,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 1,
+      "elapsed_s": 443.5,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 2,
+      "elapsed_s": 514.2,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 3,
+      "elapsed_s": 471.3,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 1,
+      "elapsed_s": 124.0,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 2,
+      "elapsed_s": 192.8,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 3,
+      "elapsed_s": 223.4,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A5-g18-once",
+      "seed": 1,
+      "elapsed_s": 458.5,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A5-g18-once",
+      "seed": 2,
+      "elapsed_s": 470.3,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A5-g18-once",
+      "seed": 3,
+      "elapsed_s": 454.4,
+      "evaluations": 15000,
+      "infeasible": 0
+    }
+  ],
+  "meta": {
+    "created": "2026-11-26T18:18:02",
+    "python": "3.12.9",
+    "git_rev": "85e18e2"
+  }
+}

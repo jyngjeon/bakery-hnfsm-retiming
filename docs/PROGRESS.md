@@ -1,4 +1,4 @@
-# 진행 현황 (2026-11-24 기준)
+# 진행 현황 (2026-11-26 기준)
 
 근거는 원본 노트북(`1단계.ipynb`, 리팩토링 후 삭제)의 저장된 출력, `docs/notes/`의 전처리 노트, 리팩토링 후 `experiments/`와 `tests/`로 다시 실행한 결과다.
 
@@ -93,13 +93,22 @@ OIDT는 구획별 합집합 정의 기준이다.
 
 ## 5. 모델링 가정 (논문에 명시되지 않음)
 
-1. **OIDT는 구획별 점유구간 합집합 기준**으로 계산한다(제안서 5.3). 논문 M2를 그대로 쓰면 같은 그룹이 같이 굽는 작업의 PT가 두 번 차감된다. 근거는 `paper-conformance.md` 3a.
-2. **batch는 서로 독립된 그룹으로 전개**한다. 근거는 데이터셋 Description 시트의 "batches of same group do not depend on each other"이고, 논문에는 batch 언급이 없다.
-3. **자원 선택은 first-fit(가장 낮은 인덱스)** 이다. 논문은 "based on availability"라고만 쓴다.
-4. **같은 그룹 오븐 공동 사용은 겹침 형태에 제한이 없다.** 동시 시작을 요구하지 않는다.
+2026-11-26 팀 결정으로 확정했다(TODO (A) A1–A6). 근거는 `docs/decisions-A.md`에 있다.
+
+1. **OIDT는 구획별 점유구간 합집합 기준**으로 계산한다(제안서 5.3, A1).
+   - 논문 M2를 그대로 쓰면 같은 그룹이 같이 굽는 작업의 PT가 두 번 차감되어, 최적화하면 OIDT가 음수까지 내려간다(BK15 −28).
+   - 보고서에는 M2 그대로의 값을 병기한다.
+2. **batch는 서로 독립된 그룹으로 전개**한다(A5).
+   - 근거는 데이터셋 Description 시트의 "batches of same group do not depend on each other"이고, 논문에는 batch 언급이 없다.
+   - 전개하지 않으면 BK50 makespan이 논문 E1과 규모부터 다르다(638 vs ≈ 940–960).
+3. **자원 선택은 first-fit(가장 낮은 인덱스)** 이다(A3). 논문은 "based on availability"라고만 쓴다. 오븐 used_first·min_idle은 민감도 실험으로만 쓴다. B0·P1은 같은 규칙을 쓴다.
+4. **같은 그룹 오븐 공동 사용은 겹침 형태에 제한이 없다**(A4). 동시 시작을 요구하지 않는다.
 5. **`T_g`는 1분 단위로 탐색**하고 가장 이른 시각을 고른다.
-6. **배치할 수 없는 순서는 `(1e9, 1e9)` penalty**를 준다. 논문에는 언급이 없다.
-7. **Group 18 Dough C를 2회 전개**하고, **Group 31을 p=3으로 분리**했다.
+6. **배치할 수 없는 순서는 `(1e9, 1e9)` penalty**를 준다(A2). 논문에는 언급이 없다. 알고리즘별 infeasible 발생률을 함께 보고한다.
+7. **Group 18 Dough C를 2회 전개**하고(A5), **Group 31을 p=3으로 분리**했다.
+8. **iteration은 세대 수**다(A6). population 50 × 300세대 = 15,000회 평가이고, 50·100·200·300세대 시점의 front를 저장한다.
+9. **성능 비교 주 지표는 RHA**다(A6, 논문 Eq. 6). PF*는 같은 인스턴스에서 모든 알고리즘의 해를 합친 nondominated set이다. HV reference point는 [0, 1] 정규화 후 (1.1, 1.1)이다.
+10. SBX와 polynomial mutation의 **distribution index는 20**(jMetalPy 기본값)이다. Table 5에 값이 없다.
 
 ## 6. 알려진 문제
 
@@ -132,3 +141,25 @@ OIDT는 구획별 합집합 정의 기준이다.
 - 동작 변경은 UNLIMITED 버그 수정과 NSGA-II 데모 seed 고정 두 가지다.
 - 파일명 변경: `bk15_clean.*` → `bk15-clean.*`, 전처리 노트·제안서·Retiming 명세 파일명을 영문으로 바꿨다.
 - 환경: `pyproject.toml` + `uv.lock`, 프로젝트 루트 `.venv` 하나로 통일했다(`requirements.txt` 삭제). 설치 버전: numpy 2.5.5, pandas 2.3.3, ortools 9.15, jmetalpy 1.9.0.
+
+## 8. TODO (A) 결정 자료 실험 (2026-11-26)
+
+- 목적: TODO (A) 항목별로 어느 선택이 논문 표현과 논문 PF*에 맞는지 확인했다. 결과와 판단은 `docs/decisions-A.md`에 있다. 결정은 아직 하지 않았다.
+- 코드 추가. 기본값은 기존 동작과 같고, 회귀 테스트 14개가 통과한다(기존 9개 + 새 옵션 5개).
+  - `decoder.hnfsm_decode(..., oven_rule, cobake, oidt)`
+    - `oven_rule`: `first_fit` / `used_first` / `min_idle`
+    - `cobake`: `any` / `same_start` / `same_start_end`
+    - `oidt`: `union` / `m2`
+    - `oidt_m2()`를 추가했다.
+  - `cpsat.solve_min_makespan(..., cobake)`, 반환값에 `best_bound`와 `oidt_m2`를 추가했다.
+  - `problem.BakerySchedulingProblem(path, **decode_kwargs)`
+  - `bakery.variants`: batch 미전개와 BK50 Group 18 Dough C 1회 변형 인스턴스. `results/`에 쓰고 `data/processed/`는 건드리지 않는다.
+- 실험: `experiments/a-decisions-cpsat.py`, `experiments/a-decisions-nsga2.py`(Table 5 설정, 15,000회 평가, BK15 seed 1–10, BK50 seed 1–3)
+- 주요 수치:
+  - M2를 최적화하면 BK15 OIDT가 음수(−28)가 된다.
+  - BK50 base NSGA-II 최소 OIDT는 1243으로 논문 E2와 같다.
+  - BK50 batch 미전개 시 makespan 638(NSGA-II), 569(CP-SAT)로 논문 E1 ≈ 940–960과 맞지 않는다.
+  - BK50 CP-SAT(전개, 600초)는 makespan 931이다. 논문 E1보다 낮은 해가 있다.
+  - NSGA-II(Table 5) 실행 중 infeasible 비율은 BK15 0.02%, BK50 0%다.
+  - 1회 실행 시간(8 프로세스 병렬): BK15 약 50초, BK50 약 5–8분
+- Table 5에는 SBX와 polynomial mutation의 distribution index가 없어 jMetalPy 기본값 20을 썼다.

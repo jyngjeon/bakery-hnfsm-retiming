@@ -15,9 +15,11 @@ from bakery.decoder import hnfsm_decode, load_hnfsm_instance, spv_to_group_order
 
 
 class BakerySchedulingProblem(FloatProblem):
-    def __init__(self, json_path: str | Path):
+    def __init__(self, json_path: str | Path, **decode_kwargs):
+        """decode_kwargs are passed to hnfsm_decode (oven_rule, cobake, oidt)."""
         super().__init__()
         self.inst = load_hnfsm_instance(json_path)
+        self.decode_kwargs = decode_kwargs
         n = len(self.inst["group_ids"])
         self.lower_bound = [0.0] * n
         self.upper_bound = [1.0] * n
@@ -39,7 +41,7 @@ class BakerySchedulingProblem(FloatProblem):
         return spv_to_group_order(variables, self.inst["group_ids"])
 
     def evaluate(self, solution: FloatSolution) -> FloatSolution:
-        ms, oidt, _ = hnfsm_decode(self.inst, self.decode(solution.variables))
+        ms, oidt, _ = hnfsm_decode(self.inst, self.decode(solution.variables), **self.decode_kwargs)
         solution.objectives[0] = float(ms)
         solution.objectives[1] = float(oidt)
         self.eval_count += 1

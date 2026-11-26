@@ -65,3 +65,29 @@ def test_unlimited_machine_has_no_capacity_limit(tmp_path):
     ms, oidt, df = hnfsm_decode(inst, [1, 2], return_schedule=True)
     assert ms == 30 and (df["ST"] == 0).all()
     assert verify_schedule(path, df, ms, oidt)["is_valid"]
+
+
+def test_oidt_m2_double_subtracts_overlap():
+    from bakery.decoder import oidt_m2, oidt_union
+    ivs = {1: [(0, 10), (0, 10), (20, 30)]}  # two products baked together, then one more
+    assert oidt_union(ivs) == 10
+    assert oidt_m2(ivs) == 0  # 30 - 0 - (10 + 10 + 10); overlap counted twice
+
+
+@pytest.mark.parametrize("kw", [{"oven_rule": "used_first"}, {"oven_rule": "min_idle"},
+                                {"cobake": "same_start"}, {"cobake": "same_start_end"}])
+def test_decoder_variants_are_feasible(kw):
+    path = processed_json("BK15")
+    inst = load_hnfsm_instance(path)
+    ms, oidt, df = hnfsm_decode(inst, inst["group_ids"], return_schedule=True, **kw)
+    assert verify_schedule(path, df, ms, oidt)["is_valid"]
+    if "cobake" in kw:
+        oven = df[df["assigned_k"].isin(inst["oven_k"])]
+        for (_, k), grp in oven.groupby(["g", "assigned_k"]):
+            rows = grp.to_dict("records")
+            for i, a in enumerate(rows):
+                for b in rows[i + 1:]:
+                    if a["ST"] < b["CT"] and b["ST"] < a["CT"]:
+                        assert a["ST"] == b["ST"]
+                        if kw["cobake"] == "same_start_end":
+                            assert a["CT"] == b["CT"]

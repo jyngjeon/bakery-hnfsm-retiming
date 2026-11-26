@@ -1,0 +1,1408 @@
+{
+  "instance": "BK15",
+  "config": {
+    "algorithm": "NSGA-II",
+    "population_size": 50,
+    "offspring_population_size": 50,
+    "sbx_probability": 1.0,
+    "sbx_distribution_index": 20,
+    "mutation_probability": "1/NG",
+    "mutation_distribution_index": 20,
+    "selection": "binary tournament (jMetalPy default)",
+    "generations": 300,
+    "max_evaluations": 15000,
+    "infeasible": "(1e9, 1e9) penalty",
+    "BK15": {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "variants": [
+        "base",
+        "A1-oidt-m2",
+        "A3-used-first",
+        "A3-min-idle",
+        "A4-same-start",
+        "A4-same-start-end",
+        "A5-no-batch",
+        "A3uf+A4sse",
+        "A3uf+A5nb",
+        "A3uf+A4sse+A5nb"
+      ]
+    },
+    "BK50": {
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "variants": [
+        "base",
+        "A1-oidt-m2",
+        "A3-used-first",
+        "A3-min-idle",
+        "A4-same-start-end",
+        "A5-no-batch",
+        "A5-g18-once"
+      ]
+    },
+    "processes": 8
+  },
+  "paper_pf_star": {
+    "E1": [
+      471,
+      93
+    ],
+    "E2": [
+      480,
+      72
+    ]
+  },
+  "variants": [
+    {
+      "variant": "base",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          119
+        ],
+        [
+          474,
+          86
+        ],
+        [
+          491,
+          74
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 74,
+      "per_seed_min_makespan": [
+        475,
+        471,
+        475,
+        475,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471
+      ],
+      "per_seed_min_oidt": [
+        112,
+        95,
+        106,
+        86,
+        95,
+        74,
+        100,
+        95,
+        81,
+        81
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 53.5,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "options": {
+        "oidt": "m2",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_m2",
+      "pooled_front": [
+        [
+          471,
+          33
+        ],
+        [
+          474,
+          27
+        ],
+        [
+          475,
+          16
+        ],
+        [
+          478,
+          12
+        ],
+        [
+          481,
+          -1
+        ],
+        [
+          484,
+          -28
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": -28,
+      "per_seed_min_makespan": [
+        471,
+        471,
+        471,
+        475,
+        471,
+        475,
+        471,
+        475,
+        475,
+        471
+      ],
+      "per_seed_min_oidt": [
+        13,
+        -28,
+        -5,
+        15,
+        5,
+        -12,
+        5,
+        -1,
+        22,
+        -13
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 52.0,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3-used-first",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "used_first",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          107
+        ],
+        [
+          474,
+          83
+        ],
+        [
+          475,
+          78
+        ],
+        [
+          481,
+          76
+        ],
+        [
+          489,
+          69
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 69,
+      "per_seed_min_makespan": [
+        475,
+        471,
+        471,
+        471,
+        475,
+        471,
+        475,
+        475,
+        475,
+        471
+      ],
+      "per_seed_min_oidt": [
+        83,
+        76,
+        83,
+        83,
+        69,
+        77,
+        82,
+        97,
+        96,
+        90
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 51.5,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3-min-idle",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "min_idle",
+        "cobake": "any",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          97
+        ],
+        [
+          474,
+          91
+        ],
+        [
+          475,
+          85
+        ],
+        [
+          482,
+          79
+        ],
+        [
+          505,
+          76
+        ],
+        [
+          516,
+          69
+        ],
+        [
+          519,
+          56
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 56,
+      "per_seed_min_makespan": [
+        475,
+        471,
+        471,
+        475,
+        471,
+        471,
+        471,
+        475,
+        471,
+        471
+      ],
+      "per_seed_min_oidt": [
+        76,
+        88,
+        83,
+        56,
+        80,
+        89,
+        79,
+        94,
+        81,
+        85
+      ],
+      "infeasible_rate": 0.0003,
+      "mean_elapsed_s": 48.1,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A4-same-start",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "same_start",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          121
+        ],
+        [
+          474,
+          100
+        ],
+        [
+          475,
+          95
+        ],
+        [
+          478,
+          93
+        ],
+        [
+          484,
+          70
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 70,
+      "per_seed_min_makespan": [
+        471,
+        471,
+        475,
+        475,
+        475,
+        475,
+        471,
+        471,
+        475,
+        471
+      ],
+      "per_seed_min_oidt": [
+        70,
+        110,
+        84,
+        126,
+        70,
+        123,
+        104,
+        86,
+        70,
+        100
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 53.3,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A4-same-start-end",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "same_start_end",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          121
+        ],
+        [
+          474,
+          100
+        ],
+        [
+          475,
+          95
+        ],
+        [
+          478,
+          93
+        ],
+        [
+          484,
+          70
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 70,
+      "per_seed_min_makespan": [
+        471,
+        471,
+        475,
+        475,
+        475,
+        475,
+        471,
+        471,
+        475,
+        471
+      ],
+      "per_seed_min_oidt": [
+        70,
+        110,
+        84,
+        126,
+        70,
+        123,
+        104,
+        86,
+        70,
+        100
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 53.3,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A5-no-batch",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "first_fit",
+        "cobake": "any",
+        "batch": "no_batch"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          105
+        ],
+        [
+          475,
+          86
+        ],
+        [
+          504,
+          83
+        ],
+        [
+          505,
+          59
+        ],
+        [
+          520,
+          56
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 56,
+      "per_seed_min_makespan": [
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        475
+      ],
+      "per_seed_min_oidt": [
+        87,
+        83,
+        86,
+        56,
+        90,
+        92,
+        93,
+        94,
+        59,
+        98
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 46.7,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "used_first",
+        "cobake": "same_start_end",
+        "batch": "expanded"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          108
+        ],
+        [
+          475,
+          82
+        ],
+        [
+          500,
+          77
+        ],
+        [
+          515,
+          74
+        ],
+        [
+          530,
+          72
+        ],
+        [
+          565,
+          69
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 69,
+      "per_seed_min_makespan": [
+        475,
+        471,
+        471,
+        475,
+        475,
+        471,
+        471,
+        475,
+        471,
+        471
+      ],
+      "per_seed_min_oidt": [
+        72,
+        123,
+        112,
+        99,
+        69,
+        88,
+        77,
+        89,
+        82,
+        123
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 54.4,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "used_first",
+        "cobake": "any",
+        "batch": "no_batch"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          93
+        ],
+        [
+          474,
+          83
+        ],
+        [
+          488,
+          71
+        ],
+        [
+          496,
+          69
+        ],
+        [
+          506,
+          60
+        ],
+        [
+          520,
+          56
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 56,
+      "per_seed_min_makespan": [
+        471,
+        475,
+        471,
+        475,
+        471,
+        471,
+        475,
+        471,
+        475,
+        471
+      ],
+      "per_seed_min_oidt": [
+        105,
+        82,
+        88,
+        97,
+        78,
+        76,
+        60,
+        56,
+        108,
+        70
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 47.0,
+      "all_front_checker_valid": true
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "options": {
+        "oidt": "union",
+        "oven_rule": "used_first",
+        "cobake": "same_start_end",
+        "batch": "no_batch"
+      },
+      "objective_oidt": "oidt_union",
+      "pooled_front": [
+        [
+          471,
+          108
+        ],
+        [
+          474,
+          96
+        ],
+        [
+          475,
+          86
+        ],
+        [
+          481,
+          82
+        ],
+        [
+          482,
+          80
+        ],
+        [
+          484,
+          77
+        ],
+        [
+          511,
+          70
+        ]
+      ],
+      "min_makespan": 471,
+      "min_oidt": 70,
+      "per_seed_min_makespan": [
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471,
+        471
+      ],
+      "per_seed_min_oidt": [
+        80,
+        82,
+        91,
+        86,
+        86,
+        70,
+        88,
+        96,
+        77,
+        81
+      ],
+      "infeasible_rate": 0.0002,
+      "mean_elapsed_s": 45.7,
+      "all_front_checker_valid": true
+    }
+  ],
+  "runs": [
+    {
+      "variant": "base",
+      "seed": 1,
+      "elapsed_s": 52.0,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "base",
+      "seed": 2,
+      "elapsed_s": 62.3,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "base",
+      "seed": 3,
+      "elapsed_s": 53.1,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "base",
+      "seed": 4,
+      "elapsed_s": 57.9,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "base",
+      "seed": 5,
+      "elapsed_s": 46.1,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "base",
+      "seed": 6,
+      "elapsed_s": 51.8,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "base",
+      "seed": 7,
+      "elapsed_s": 55.4,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "base",
+      "seed": 8,
+      "elapsed_s": 53.4,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "base",
+      "seed": 9,
+      "elapsed_s": 49.1,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "base",
+      "seed": 10,
+      "elapsed_s": 53.8,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 1,
+      "elapsed_s": 47.5,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 2,
+      "elapsed_s": 50.3,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 3,
+      "elapsed_s": 44.8,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 4,
+      "elapsed_s": 56.9,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 5,
+      "elapsed_s": 57.2,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 6,
+      "elapsed_s": 51.6,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 7,
+      "elapsed_s": 46.5,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 8,
+      "elapsed_s": 59.0,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 9,
+      "elapsed_s": 59.3,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A1-oidt-m2",
+      "seed": 10,
+      "elapsed_s": 46.5,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 1,
+      "elapsed_s": 52.1,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 2,
+      "elapsed_s": 60.1,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 3,
+      "elapsed_s": 44.2,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 4,
+      "elapsed_s": 41.4,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 5,
+      "elapsed_s": 50.6,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 6,
+      "elapsed_s": 50.2,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 7,
+      "elapsed_s": 51.4,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 8,
+      "elapsed_s": 56.4,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 9,
+      "elapsed_s": 50.5,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-used-first",
+      "seed": 10,
+      "elapsed_s": 58.1,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 1,
+      "elapsed_s": 55.4,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 2,
+      "elapsed_s": 48.8,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 3,
+      "elapsed_s": 38.2,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 4,
+      "elapsed_s": 48.7,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 5,
+      "elapsed_s": 49.5,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 6,
+      "elapsed_s": 49.7,
+      "evaluations": 15000,
+      "infeasible": 7
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 7,
+      "elapsed_s": 52.5,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 8,
+      "elapsed_s": 46.4,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 9,
+      "elapsed_s": 46.7,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3-min-idle",
+      "seed": 10,
+      "elapsed_s": 45.2,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 1,
+      "elapsed_s": 52.2,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 2,
+      "elapsed_s": 51.4,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 3,
+      "elapsed_s": 51.5,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 4,
+      "elapsed_s": 56.0,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 5,
+      "elapsed_s": 52.1,
+      "evaluations": 15000,
+      "infeasible": 6
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 6,
+      "elapsed_s": 56.8,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 7,
+      "elapsed_s": 54.8,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 8,
+      "elapsed_s": 49.8,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 9,
+      "elapsed_s": 53.6,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A4-same-start",
+      "seed": 10,
+      "elapsed_s": 54.5,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 1,
+      "elapsed_s": 54.2,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 2,
+      "elapsed_s": 51.5,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 3,
+      "elapsed_s": 48.2,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 4,
+      "elapsed_s": 55.4,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 5,
+      "elapsed_s": 55.4,
+      "evaluations": 15000,
+      "infeasible": 6
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 6,
+      "elapsed_s": 55.0,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 7,
+      "elapsed_s": 50.3,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 8,
+      "elapsed_s": 49.6,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 9,
+      "elapsed_s": 58.8,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A4-same-start-end",
+      "seed": 10,
+      "elapsed_s": 54.2,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 1,
+      "elapsed_s": 39.8,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 2,
+      "elapsed_s": 42.5,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 3,
+      "elapsed_s": 54.2,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 4,
+      "elapsed_s": 44.2,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 5,
+      "elapsed_s": 44.9,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 6,
+      "elapsed_s": 50.8,
+      "evaluations": 15000,
+      "infeasible": 6
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 7,
+      "elapsed_s": 41.3,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 8,
+      "elapsed_s": 48.6,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 9,
+      "elapsed_s": 43.6,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A5-no-batch",
+      "seed": 10,
+      "elapsed_s": 57.3,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 1,
+      "elapsed_s": 54.1,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 2,
+      "elapsed_s": 54.8,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 3,
+      "elapsed_s": 47.1,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 4,
+      "elapsed_s": 60.8,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 5,
+      "elapsed_s": 58.3,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 6,
+      "elapsed_s": 50.9,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 7,
+      "elapsed_s": 59.0,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 8,
+      "elapsed_s": 55.8,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 9,
+      "elapsed_s": 58.4,
+      "evaluations": 15000,
+      "infeasible": 4
+    },
+    {
+      "variant": "A3uf+A4sse",
+      "seed": 10,
+      "elapsed_s": 45.3,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 1,
+      "elapsed_s": 46.5,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 2,
+      "elapsed_s": 43.7,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 3,
+      "elapsed_s": 51.8,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 4,
+      "elapsed_s": 45.4,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 5,
+      "elapsed_s": 49.1,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 6,
+      "elapsed_s": 41.9,
+      "evaluations": 15000,
+      "infeasible": 6
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 7,
+      "elapsed_s": 50.6,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 8,
+      "elapsed_s": 46.0,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 9,
+      "elapsed_s": 51.3,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3uf+A5nb",
+      "seed": 10,
+      "elapsed_s": 44.2,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 1,
+      "elapsed_s": 47.6,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 2,
+      "elapsed_s": 54.7,
+      "evaluations": 15000,
+      "infeasible": 5
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 3,
+      "elapsed_s": 61.8,
+      "evaluations": 15000,
+      "infeasible": 3
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 4,
+      "elapsed_s": 52.9,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 5,
+      "elapsed_s": 56.8,
+      "evaluations": 15000,
+      "infeasible": 0
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 6,
+      "elapsed_s": 42.2,
+      "evaluations": 15000,
+      "infeasible": 6
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 7,
+      "elapsed_s": 48.4,
+      "evaluations": 15000,
+      "infeasible": 2
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 8,
+      "elapsed_s": 32.3,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 9,
+      "elapsed_s": 31.0,
+      "evaluations": 15000,
+      "infeasible": 1
+    },
+    {
+      "variant": "A3uf+A4sse+A5nb",
+      "seed": 10,
+      "elapsed_s": 29.4,
+      "evaluations": 15000,
+      "infeasible": 6
+    }
+  ],
+  "meta": {
+    "created": "2026-11-26T17:45:36",
+    "python": "3.12.9",
+    "git_rev": "85e18e2"
+  }
+}

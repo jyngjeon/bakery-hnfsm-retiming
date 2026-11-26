@@ -1,0 +1,90 @@
+{
+  "instance": "BK15",
+  "config": {
+    "horizon": 1000,
+    "time_limit": 120.0,
+    "workers": 8,
+    "seed": 0,
+    "cases": [
+      [
+        "expanded",
+        "any"
+      ],
+      [
+        "expanded",
+        "same_start"
+      ],
+      [
+        "expanded",
+        "same_start_end"
+      ],
+      [
+        "no_batch",
+        "any"
+      ]
+    ]
+  },
+  "results": [
+    {
+      "batch": "expanded",
+      "cobake": "any",
+      "groups": 16,
+      "operations": 164,
+      "status": "OPTIMAL",
+      "elapsed_s": 0.1,
+      "makespan": 471,
+      "best_bound": 471,
+      "oidt_union": 270,
+      "oidt_m2": 184,
+      "checker_valid": true,
+      "cobake_violations": 0
+    },
+    {
+      "batch": "expanded",
+      "cobake": "same_start",
+      "groups": 16,
+      "operations": 164,
+      "status": "OPTIMAL",
+      "elapsed_s": 0.1,
+      "makespan": 471,
+      "best_bound": 471,
+      "oidt_union": 295,
+      "oidt_m2": 239,
+      "checker_valid": true,
+      "cobake_violations": 0
+    },
+    {
+      "batch": "expanded",
+      "cobake": "same_start_end",
+      "groups": 16,
+      "operations": 164,
+      "status": "OPTIMAL",
+      "elapsed_s": 0.1,
+      "makespan": 471,
+      "best_bound": 471,
+      "oidt_union": 179,
+      "oidt_m2": 123,
+      "checker_valid": true,
+      "cobake_violations": 0
+    },
+    {
+      "batch": "no_batch",
+      "cobake": "any",
+      "groups": 15,
+      "operations": 159,
+      "status": "OPTIMAL",
+      "elapsed_s": 0.1,
+      "makespan": 471,
+      "best_bound": 471,
+      "oidt_union": 586,
+      "oidt_m2": 500,
+      "checker_valid": true,
+      "cobake_violations": 0
+    }
+  ],
+  "meta": {
+    "created": "2026-11-26T17:27:43",
+    "python": "3.12.9",
+    "git_rev": "85e18e2"
+  }
+}
