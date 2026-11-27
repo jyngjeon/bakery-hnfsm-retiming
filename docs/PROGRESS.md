@@ -1,4 +1,4 @@
-# 진행 현황 (2026-11-26 기준)
+# 진행 현황 (2026-11-27 기준)
 
 근거는 원본 노트북(`1단계.ipynb`, 리팩토링 후 삭제)의 저장된 출력, `docs/notes/`의 전처리 노트, 리팩토링 후 `experiments/`와 `tests/`로 다시 실행한 결과다.
 
@@ -9,8 +9,8 @@
 | 단계 | 계획 기간 | 상태 | 내용 |
 |---|---|---|---|
 | 1. 데이터 정리, decoder, checker | 11/09–11/12 | **대부분 완료** | 전처리, HNFSM decoder, 독립 checker 동작. Table 1 예제는 테스트로 추가함. 미완: Gantt chart, makespan 하한 점검 |
-| 2. 알고리즘 연결 | 11/13–11/16 | **일부** | jMetalPy NSGA-II 연동 데모만 있음(Table 5 설정 아님). SPEA2·GDE3·OMOPSO·SMPSO 미연결 |
-| 3. 재현 실험 A | 11/17–11/20 | **미착수** | R0/R1/R2, 지표(PDS, MSF, DPF, RHA, HV, GMM), 통계 검정 없음 |
+| 2. 알고리즘 연결 | 11/13–11/16 | **일부** | NSGA-II를 Table 5 설정으로 연결(2026-11-27, 9절). SPEA2·GDE3·OMOPSO·SMPSO 미연결 |
+| 3. 재현 실험 A | 11/17–11/20 | **일부** | NSGA-II R1/R2 완료, 지표 PDS·MSF·DPF·RHA 구현(9절). 나머지 4종, PCA + GMM, 통계 검정 없음 |
 | 4. Retiming 구현·부분문제 검증 | 11/19–11/25 | **이 저장소에 없음** | 명세는 `docs/proposal/`에 있음. 제안서의 BK15 예비 검증 코드 위치 확인 필요 |
 | 5. B0 vs P1, Ablation | 11/26–11/30 | 미착수 | |
 | 6. 분석·보고서 | 12/1–12/7 | 미착수 | |
@@ -63,10 +63,11 @@ OIDT는 구획별 합집합 정의 기준이다.
 | 원래 순서 OIDT, 논문 M2 그대로 계산 | 187 | 1362 |
 | CP-SAT 최소 makespan | 471 (OPTIMAL) | 미실행 |
 | NSGA-II 데모 front (seed 2001) | (475, 300) … (503, 142), 5개 | – |
+| NSGA-II Table 5, seed 10개 합친 front (9절) | (471, 119), (474, 86), (491, 74) | (960, 1956) … (1022, 1208), 7개 |
 | random search 최소 makespan (검토 시 별도 재실행) | 474 (3000회) | 1057 (300회) |
 | random 순서 중 infeasible 비율 | 3.4% (102/3000) | 0% (0/300) |
 | decoder 1회 평가 시간 | 약 1.5 ms | 약 21 ms |
-| 논문 PF* (Fig. 7, p.9) | E1≈(471, 93), E2≈(480, 72) | E2 OIDT 1243, E1→E2: makespan +61 / OIDT −1348, E1 makespan ≈ 940–960 (그림 판독) |
+| 논문 PF* (Fig. 7, p.9) | E1≈(471, 93), E2≈(480, 72) | E2 OIDT 1243, E1→E2: makespan +61 / OIDT −1348, E1 ≈ (934, 2590) (Fig. 10a 판독, 본문 수치와 일치. 이전 판독 940–960) |
 
 ## 4. 데이터 처리 결정 (팀원 전처리)
 
@@ -121,6 +122,7 @@ OIDT는 구획별 합집합 정의 기준이다.
 - **[문서] 전처리 docx 3건**은 모두 2절부터 시작한다(1절 없음). 「결과판단」은 문서에 없는 "위 코드"를 언급한다.
 - **[참고] decoder 내부 자원 선택**은 그룹 안 작업을 (p, s) 순서로 배정한다. 다른 배정이면 들어갈 수 있는 시각을 놓쳐 `T_g`가 늦어질 수 있다. 영향은 작다.
 - **[참고] BK50 makespan 격차**: random search 최소 1057은 논문 E1(약 940–960)과 차이가 크다. 실제 최적화 후 다시 비교해야 한다.
+  - 2026-11-27: NSGA-II Table 5(seed 10개) 최소 makespan은 960, seed 중앙값 986.5다. 논문 E1 ≈ 934(Fig. 10a 판독)보다 26분 길다. CP-SAT은 931(9절, 8절).
 
 ## 7. 코드 리팩토링 (2026-11-24)
 
@@ -163,3 +165,40 @@ OIDT는 구획별 합집합 정의 기준이다.
   - NSGA-II(Table 5) 실행 중 infeasible 비율은 BK15 0.02%, BK50 0%다.
   - 1회 실행 시간(8 프로세스 병렬): BK15 약 50초, BK50 약 5–8분
 - Table 5에는 SBX와 polynomial mutation의 distribution index가 없어 jMetalPy 기본값 20을 썼다.
+
+## 9. Stage 2: NSGA-II Table 5 실행과 논문 대조 (2026-11-27)
+
+- 스크립트 `experiments/stage2-nsga2.py`, 결과 `results/stage2-nsga2/`(`summary.json`, `fronts.csv`, `metrics.csv`, `trace.csv`), 보기 `notebooks/stage2-nsga2.ipynb`.
+- 설정: Table 5(p.20) population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament, distribution index 20. seed 1–10. 300세대 = 15,000회 평가. 50·100·200·300세대의 population nondominated front를 snapshot으로 저장했다.
+  - **iteration 경계 정의(새 가정)**: 초기 population을 1세대로 센다. 따라서 g세대 = 50·g회 평가다(50세대 = 2,500회). `a-decisions-nsga2.py`의 15,000회 예산과 맞추기 위한 선택이고, 1세대 차이라 영향은 작다.
+  - seed 1의 snapshot이 논문 방식(iteration별 1 run, R1)에 해당한다. 같은 seed로 50세대만 돌린 결과와 같다.
+  - decoder 설정은 PROGRESS 5절 결정 그대로(OIDT 합집합, first-fit, 겹침 자유, batch 전개, 1e9 penalty).
+- 새 코드
+  - `src/bakery/metrics.py`: PDS(Eq. 2), MSF(Eq. 3), DPF(Eq. 4), HV(Eq. 5), RHA(Eq. 6). MSF는 논문에 인쇄된 식 그대로(분모가 후보 front 범위)다. Table 4의 1 초과 값(1.84 등)은 이 식이라야 나온다. 후보 front가 점 하나면 항을 0으로 둔다(논문 BK40 SPEA2의 0.00과 같은 처리).
+  - `src/bakery/paper_ref.py`: 논문 기준값. Table 4와 본문 수치는 정확값이고 Fig. 7a, 10a, 11, 12 값은 300 dpi 그림 판독값이다.
+  - `tests/test_metrics.py`: 지표 손계산 테스트 5개. 전체 19개 통과.
+- 지표 기준: PF*는 NSGA-II front 전체(seed 10 × snapshot 4)의 nondominated 합집합이다(잠정). RHA와 DPF_norm은 그 front들의 min/max로 [0, 1] 정규화하고 RV = (1.1, 1.1)을 쓴다. DPF는 논문 Fig. 11 축이 분 단위이므로 원 단위 값(DPF_raw)으로 비교한다.
+- 실행 점검: infeasible 비율 BK15 0.022%, BK50 0%. front에 오른 해는 모두 checker PASS다. 같은 seed로 두 번 실행해 지표가 같음을 확인했다.
+
+**논문 대조**
+
+| 항목 | BK15 논문 | BK15 재현 | BK50 논문 | BK50 재현 |
+|---|---|---|---|---|
+| PF* | (471, 93), (478, 84), (480, 72) | (471, 119), (474, 86), (491, 74) | (934, 2590) … (995, 1243), 7개 | (960, 1956) … (1022, 1208), 7개 |
+| 최소 makespan | 471 | 471 (seed 7/10) | ≈ 934 | 960 (seed 중앙값 986.5) |
+| 최소 OIDT | 72 | 74 (seed 중앙값 95) | 1243 | **1208** (seed 중앙값 1330) |
+| E1→E2 | +9 / −21 | +20 / −45 | +61 / −1348 | +62 / −748 |
+| 재현 점 중 논문 PF*에 지배되는 점 | – | 2/3 | – | 6/7 |
+| RHA 50→300 (NSGA-II) | 67 → 97 | 중앙값 74 → 84, seed 1 59 → 69 | 66 → 97.5 | 중앙값 65 → 88, seed 1 71 → 89 |
+| DPF 50→300 (분) | 44 → 11 | 중앙값 22 → 13 | 258 → 78 | 중앙값 283 → 91 |
+| PDS 300 (Table 4) | 0.00 | 중앙값 0.33 | −0.09 | 중앙값 0.14 |
+| 50 iteration 시간 | 13분 | 약 4초 | 342분 | 약 54초 |
+
+- **맞는 점**: BK15 최소 makespan 471, iteration에 따라 RHA가 오르고 DPF가 내리는 경향, BK50 DPF의 규모(수백 분 → 수십 분), BK50 front 개수(7)와 OIDT 범위(≈1200–2000).
+- **다른 점**: BK50 낮은 makespan 쪽(< 960)에 도달하지 못한다. 논문 PF*가 재현 PF*를 대부분 지배한다. E1 부근 OIDT가 논문보다 BK15 +26, BK50은 논문 E1 OIDT 2590보다 오히려 낮지만 makespan이 26분 길다.
+- **해석 시 주의**:
+  - 논문 PF*는 5종 × iteration 4종의 합집합이고, 재현 PF*는 NSGA-II만의 합집합이다. PDS, MSF, DPF, RHA의 절대값은 비교 대상이 아니다. 5종을 모두 돌린 뒤 다시 계산한다.
+  - 논문은 run 하나라서 seed 간 편차가 크다. 논문 값 다수가 재현 seed 분포 안에 든다(BK50 RHA, BK15·BK50 DPF).
+  - BK50 최소 OIDT 1208이 논문 E2 1243보다 낮다. 오븐 구획 수 차이(9 vs 10, 4절)와 OIDT 정의 차이가 원인일 수 있다(확인 필요).
+  - 계산 시간은 하드웨어와 구현이 달라 비교하지 않는다. 논문의 decoder가 훨씬 느렸던 것으로 보인다.
+- 논문 BK50 E1 판독을 940–960에서 **≈ 934**로 고친다. Fig. 10a의 PF* 첫 점이 (934, 2590)이고, 본문의 E1→E2 +61 / −1348과 E2 OIDT 1243이 함께 맞는다(934 + 61 = 995, 1243 + 1348 = 2591). CP-SAT 931(8절)과도 모순이 없다.

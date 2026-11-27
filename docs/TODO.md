@@ -1,4 +1,4 @@
-# TODO (2026-11-26 기준)
+# TODO (2026-11-27 기준)
 
 ## (A) 팀 결정 필요 (2026-11-26 전 항목 결정)
 
@@ -45,7 +45,8 @@
 
 - [x] **B1.** decoder와 CP-SAT의 UNLIMITED 기계 처리를 고친다. (2026-11-24 리팩토링 때 수정, `tests/test_decoder.py`)
 - [ ] **B2.** BK50 Group 31의 2회차 Boxing 자원 공백을 처리한다(Manual로 보정할지 팀 확인).
-- [ ] **B3.** 알고리즘 설정을 Table 5에 맞추고(population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament) seed를 고정한다. 실행 설정을 기록한다. 현재 데모 스크립트에는 seed 2001 고정만 반영돼 있다.
+- [x] **B3.** 알고리즘 설정을 Table 5에 맞추고(population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament) seed를 고정한다. 실행 설정을 기록한다.
+  - 2026-11-27: NSGA-II는 `experiments/stage2-nsga2.py`로 해소(seed 1–10, `random`·`numpy.random` 고정, CONFIG를 `summary.json`에 저장). 나머지 4종도 같은 형식으로 연결한다.
 - [x] **B4.** 원본 노트북 cell 14의 "논문 BK15 PF* 최소 makespan 약 471분" 표현. 노트북을 삭제해 해소. 보고서에는 출처를 CP-SAT 결과와 Fig. 7a 판독으로 적는다.
 - [ ] **B5.** 모델링 가정(PROGRESS.md 5절)을 보고서용 문서로 확정한다. 대상은 OIDT 정의, batch, tie-break, co-baking, infeasible 처리다.
   - 2026-11-26: 내용은 팀 결정으로 확정했다(PROGRESS.md 5절, `decisions-A.md`). 보고서 문안 작성이 남았다.
@@ -58,7 +59,7 @@
 - [ ] makespan 하한과 baseline을 점검한다. random search보다 좋은지 확인한다.
 
 **Stage 2: 알고리즘 연결**
-- [ ] NSGA-II를 Table 5 설정으로 정식 연결한다.
+- [x] NSGA-II를 Table 5 설정으로 정식 연결한다. (2026-11-27, `experiments/stage2-nsga2.py`)
 - [ ] SPEA2를 연결한다.
 - [ ] OMOPSO를 연결한다(uniform + non-uniform mutation, Table 5 계수).
 - [ ] GDE3를 연결한다(CR=1, F=0.4).
@@ -66,11 +67,13 @@
 
 **Stage 3: 재현 실험 A**
 - [ ] R0: random search와 원래 순서를 비교한다.
-- [ ] R1: BK15·BK50 × 5종 × iteration 4종, 각 1 run
-- [ ] R2: BK15·BK50 × 5종 × seed 10개, 300 iteration까지 실행하고 50·100·200·300 시점 결과를 저장
+- [ ] R1: BK15·BK50 × 5종 × iteration 4종, 각 1 run (NSGA-II 완료: R2의 seed 1 snapshot)
+- [ ] R2: BK15·BK50 × 5종 × seed 10개, 300 iteration까지 실행하고 50·100·200·300 시점 결과를 저장 (NSGA-II 완료, `results/stage2-nsga2/`)
 - [ ] 지표: PDS, MSF, DPF, HV/RHA, PCA + GMM cluster
+  - 2026-11-27: PDS·MSF·DPF·RHA는 `src/bakery/metrics.py`(`tests/test_metrics.py`). 현재 PF*는 NSGA-II만으로 만든 잠정값이다. 5종이 모이면 PF*를 다시 만들고 지표를 재계산한다. PCA + GMM은 미구현.
 - [ ] 통계 검정: Kruskal–Wallis, Wilcoxon, Holm
 - [ ] 논문 PF*와 경향을 비교한다(E1≠E2, front 모양, BK50 알고리즘 순위).
+  - 2026-11-27 NSGA-II 단독 비교: `notebooks/stage2-nsga2.ipynb`, PROGRESS.md 9절. 논문 그림 판독값은 `src/bakery/paper_ref.py`.
 
 **Stage 4: Retiming**
 - [ ] 명세(`proposal/proposal-idea-01-event-point-retiming.md`)대로 한 그룹 Event-Point Retiming을 구현한다.
