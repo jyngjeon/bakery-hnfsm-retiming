@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "purpose": "archival pre-optimization reference; not installed as production bakery code",
+  "recorded_git_revision": "4ac203adba09e3bf4d0c758f03f335be08e3dfd4",
+  "source_archive": "retiming-implementation-review.zip",
+  "source_archive_sha256": "3671f72dbfdfdce20d918dd06453a5a69e1861073584c464f3dceac8c05cfb21",
+  "sha256": {
+    "src/bakery/retiming.py": "55ca38f40e93f710a4a977b8e34631bcac83dab9ba9bf200e210f0662a01a9d3",
+    "tests/test_retiming.py": "596bfa6b4e398009259b57af852edaa91ec099baa3a0e0bb0f2d717d13791796"
+  },
+  "license_note": "Project-generated baseline; no additional license grant is made by this manifest."
+}

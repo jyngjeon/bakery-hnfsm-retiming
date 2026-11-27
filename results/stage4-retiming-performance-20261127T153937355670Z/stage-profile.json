@@ -1,0 +1,123 @@
+{
+  "config": {
+    "baseline": "scratch/retiming-performance-baseline-20261128",
+    "reference_results": "results/stage4-retiming-validation-20261126T105021665036Z",
+    "legacy_pilot": "scratch/retiming-source/pilot/optimization_pilot",
+    "seed": 20261128,
+    "warmup_passes": 1,
+    "repetitions": 5,
+    "profile_schedules_per_instance": 10,
+    "policies": [
+      false,
+      true
+    ],
+    "boundary_modes": [
+      false,
+      true
+    ],
+    "oidt": "per-compartment busy-union"
+  },
+  "instrumented": true,
+  "nested_times_not_additive": true,
+  "instances": {
+    "BK15": {
+      "n": 50,
+      "baseline_mean_ms": {
+        "input_shape_validation": 0.0201559963170439,
+        "input_dataframe_copy": 0.04036800470203161,
+        "instance_metadata": 0.07370799547061324,
+        "dataframe_conversion_and_validation": 1.8834120000246912,
+        "resource_lists_and_base_objectives": 0.04851600155234337,
+        "checker_json_loading_nested": 1.792181998025626,
+        "checker_metadata_nested": 0.08550800499506295,
+        "checker_rules_nested": 9.233412001049146,
+        "baseline_checker": 5.777395999757573,
+        "baseline_checker_guard": 0.001377997687086463,
+        "oven_profiles": 0.09251200128346682,
+        "setup_finish": 0.01618199865333736,
+        "feasible_intervals_nested": 0.875693999696523,
+        "event_search_total": 1.0191040055360645,
+        "result_dataframe_generation": 1.503853996982798,
+        "direct_objectives": 2.37675599870272,
+        "final_checker": 5.468546001939103,
+        "final_checker_guard": 0.0012980028986930847,
+        "invariants": 3.86882399674505,
+        "result_finish": 0.08435000199824572
+      },
+      "optimized_prepared_mean_ms": {
+        "instance_preparation_seconds": 0.0,
+        "dataframe_copy_seconds": 0.05222599720582366,
+        "dataframe_conversion_seconds": 0.8171120006591082,
+        "resource_preparation_seconds": 0.04381599836051464,
+        "oven_profiles_seconds": 0.048026000149548054,
+        "result_generation_seconds": 1.4598760078661144,
+        "direct_objectives_seconds": 0.26790999923832715,
+        "invariants_seconds": 1.5592639974784106,
+        "source_validation_seconds": 0.9778560092672706,
+        "setup_seconds": 3.029084005393088,
+        "baseline_checker_seconds": 1.5765239985194057,
+        "search_seconds": 0.9799279959406705,
+        "final_checker_seconds": 1.51489999727346,
+        "retime_seconds": 6.30516400677152
+      },
+      "optimized_nested_mean_ms": {
+        "checker_json_loading_nested": 1.3346980046480894,
+        "checker_metadata_nested": 0.07779200095683336,
+        "checker_rules_nested": 1.5926719980780035,
+        "feasible_intervals_nested": 0.844599996926263
+      }
+    },
+    "BK50": {
+      "n": 50,
+      "baseline_mean_ms": {
+        "input_shape_validation": 0.020815999014303088,
+        "input_dataframe_copy": 0.05725000170059502,
+        "instance_metadata": 0.22097600158303976,
+        "dataframe_conversion_and_validation": 6.018568001454696,
+        "resource_lists_and_base_objectives": 0.1524239976424724,
+        "checker_json_loading_nested": 4.319325997494161,
+        "checker_metadata_nested": 0.3044679993763566,
+        "checker_rules_nested": 37.661609997740015,
+        "baseline_checker": 21.359265997307375,
+        "baseline_checker_guard": 0.0019440019968897102,
+        "oven_profiles": 0.8039480017032474,
+        "setup_finish": 0.07235200144350529,
+        "feasible_intervals_nested": 2.1569939830806106,
+        "event_search_total": 2.3837639938574284,
+        "result_dataframe_generation": 1.6987680026795715,
+        "direct_objectives": 11.128301998833194,
+        "final_checker": 21.340378001332283,
+        "final_checker_guard": 0.0018880027346313,
+        "invariants": 3.9629319985397156,
+        "result_finish": 0.1856959972064942
+      },
+      "optimized_prepared_mean_ms": {
+        "instance_preparation_seconds": 0.0,
+        "dataframe_copy_seconds": 0.07488399976864457,
+        "dataframe_conversion_seconds": 2.557126007741317,
+        "resource_preparation_seconds": 0.1456760021392256,
+        "oven_profiles_seconds": 0.1435440022032708,
+        "result_generation_seconds": 1.888226002920419,
+        "direct_objectives_seconds": 0.8551439945586026,
+        "invariants_seconds": 2.0572679967153817,
+        "source_validation_seconds": 1.7524740064982325,
+        "setup_seconds": 9.941167997894809,
+        "baseline_checker_seconds": 6.103247996652499,
+        "search_seconds": 2.466387996682897,
+        "final_checker_seconds": 5.839956001145765,
+        "retime_seconds": 13.983886009082198
+      },
+      "optimized_nested_mean_ms": {
+        "checker_json_loading_nested": 4.509877999080345,
+        "checker_metadata_nested": 0.2949180023279041,
+        "checker_rules_nested": 6.827567993896082,
+        "feasible_intervals_nested": 2.2158100304659456
+      }
+    }
+  },
+  "meta": {
+    "created": "2026-11-28T00:58:53",
+    "python": "3.12.0",
+    "git_rev": "4ac203a"
+  }
+}

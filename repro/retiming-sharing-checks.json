@@ -1,0 +1,136 @@
+{
+  "checked_date_kst": "2026-11-28",
+  "local_head": "4ac203adba09e3bf4d0c758f03f335be08e3dfd4",
+  "remote_main_read_only": "1ec9e4524d0139881b398b5b6aee7a80802acba6",
+  "core_and_dependency_sha256": {
+    "src/bakery/retiming.py": "70c71465527e00bb7071da0d6e136d93606042ea29860b9ae4ef5bff435b55d3",
+    "src/bakery/retiming_audit.py": "5759294561b1bd1d90f7d22e13a6ff5f77c2a28e208f7e120d9ae0818206f669",
+    "tests/test_retiming.py": "f2b7cfa3cc3282527d936712a85ef5e9f0c13c796c1403196a3e73520c15bb83",
+    "src/bakery/decoder.py": "2dd22303e9334d84e38c3cf9089bc4eccc2976b804ec2554753ef4fb9eb8e468",
+    "src/bakery/checker.py": "0445ff8e067efd7c96ce923b532094be7ab2e7fddd6e1330ca7b7afe0a4fe8b5",
+    "src/bakery/problem.py": "9da9d234c6ec13087ec3066278ef1900da8fa4c15b753efd8955f002954621a2",
+    "src/bakery/preprocess.py": "c664257023a7beadb05477320c4b1d8c3ed7a9a8bf014ceedbf11eeb44da2c11",
+    "pyproject.toml": "9bf5e5bf67158a2213d2a1384fa184d1047966f65a1db63afe06f5e40630f9d5",
+    "uv.lock": "5bbf54490c0c509dc29d3bddd0424229568f07137b80378223d28e7c78318b58"
+  },
+  "pytest": {
+    "main_passed": 68,
+    "main_seconds": 1.95,
+    "clean_passed": 68,
+    "clean_seconds": 3.34
+  },
+  "api_example": {
+    "executed_from": "docs/retiming.md Python block",
+    "main_and_clean_objectives": [
+      519,
+      272
+    ],
+    "moved_group": 12,
+    "delta": 1
+  },
+  "current_validation": {
+    "BK15": {
+      "validated_schedules": 100,
+      "oidt_improved": 96,
+      "mean_oidt_reduction": 58.69,
+      "decoder_failures": 2,
+      "checker_violations": 0,
+      "invariant_violations": 0,
+      "pareto_violations": 0
+    },
+    "BK50": {
+      "validated_schedules": 100,
+      "oidt_improved": 96,
+      "mean_oidt_reduction": 61.06,
+      "decoder_failures": 0,
+      "checker_violations": 0,
+      "invariant_violations": 0,
+      "pareto_violations": 0
+    }
+  },
+  "historical_validation": {
+    "schedules": 66,
+    "oidt_improved_allow": 54,
+    "oidt_improved_preserve": 48,
+    "failures": []
+  },
+  "clean_environment": {
+    "independent_venv": true,
+    "locked_offline_sync": true,
+    "shared_uv_package_cache": true,
+    "source_scratch_or_external_present": false,
+    "bakery_import_confirmed_in_clean_copy": true,
+    "git_available": false,
+    "validated_per_instance": 100
+  },
+  "performance_input_checks": {
+    "repository_only_loaded": 200,
+    "with_private_pilot_loaded": 266,
+    "validation_executed_by_input_phase": false
+  },
+  "expected_rejections": [
+    {
+      "args": [
+        "experiments/stage4-retiming-validation.py",
+        "--scope",
+        "legacy"
+      ],
+      "exit_code": 1,
+      "expected_rejection": "Missing external evidence"
+    },
+    {
+      "args": [
+        "experiments/stage4-retiming-performance.py",
+        "--phase",
+        "inputs",
+        "--corpus",
+        "all"
+      ],
+      "exit_code": 1,
+      "expected_rejection": "Missing historical corpus"
+    },
+    {
+      "args": [
+        "experiments/stage4-retiming-performance.py",
+        "--phase",
+        "finalize",
+        "--output",
+        "results/stage4-retiming-performance-20261127T153937355670Z"
+      ],
+      "exit_code": 1,
+      "expected_rejection": "historical results are read-only"
+    },
+    {
+      "args": [
+        "experiments/stage4-retiming-performance.py",
+        "--phase",
+        "inputs",
+        "--corpus",
+        "current"
+      ],
+      "exit_code": 1,
+      "expected_rejection": "Archived baseline SHA-256 mismatch"
+    }
+  ],
+  "finalize_io_fixture_checks": [
+    {
+      "case": "no-git",
+      "passed": true,
+      "fixture_only": true,
+      "algorithm_rerun": false,
+      "historical_report_bytes_modified": false
+    },
+    {
+      "case": "later-git",
+      "passed": true,
+      "fixture_only": true,
+      "algorithm_rerun": false,
+      "historical_report_bytes_modified": false
+    }
+  ],
+  "not_rerun": [
+    "full 266-schedule performance benchmark",
+    "full 18606440-time exhaustive experiment"
+  ],
+  "notes": "Full historical metrics remain in the two immutable final result folders. Sharing checks verify wrappers and reproducibility only; they are not new NSGA-II experiments."
+}

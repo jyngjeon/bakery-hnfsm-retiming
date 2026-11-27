@@ -1,0 +1,69 @@
+{
+  "config": {
+    "legacy_source": "scratch\\retiming-review-run",
+    "hash_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "raw_source_and_hnfsm_audit": {
+    "schedules": 66,
+    "raw_source_baseline_errors": [],
+    "raw_source_retimed_checks": 132,
+    "raw_source_retimed_errors": [],
+    "frozen_hnfsm_replay_errors": [],
+    "frozen_hnfsm_schedule_differences": []
+  },
+  "legacy_nondeterministic_ties": [
+    {
+      "index": 61,
+      "seed_0": [
+        145,
+        608,
+        "12.1",
+        1
+      ],
+      "seed_1": [
+        145,
+        608,
+        "12.1",
+        1
+      ],
+      "seed_2": [
+        145,
+        608,
+        "15.1",
+        32
+      ]
+    }
+  ],
+  "unlimited_counterexample": {
+    "machine_original_id": "9",
+    "machine_category": "Proving chamber",
+    "baseline_intervals": [
+      [
+        0,
+        4
+      ],
+      [
+        5,
+        9
+      ]
+    ],
+    "group_1_new_start": 5,
+    "makespan_cap": 12,
+    "old_feasible_result": false,
+    "current_model_expected": true
+  },
+  "source_hashes": {
+    "retime_eval.py": "1cfad938d8c134fceaf6f909a67c4e0026290caee793f33e1e8f46fc559c0cae",
+    "event_interval.py": "82005008e914bf08a9b7f15b47e6a05ba7ad95f338d9b7c80bdfcda8400c91ec",
+    "boundary_abl.py": "086056fbedae4c213a4d1c2cb5801a8725870d9b8a75c41aa8a59c9dab48b14f"
+  },
+  "meta": {
+    "created": "2026-11-26T19:52:31",
+    "python": "3.12.0",
+    "git_rev": "4ac203a"
+  }
+}

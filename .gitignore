@@ -19,3 +19,16 @@ results/raw/
 
 # Tooling
 .pytest_cache/
+
+# External pilot evidence and local review packages (preserve locally)
+external/
+/*.zip
+/02_*.md
+*.prof
+
+# Intermediate Retiming runs and redundant profiling artifacts
+/results/stage4-retiming-validation-20261126T104800021496Z/
+/results/stage4-retiming-sharing-check-*/
+/results/stage4-retiming-performance-*/baseline-profile.json
+/results/stage4-retiming-performance-*/baseline-stage-profile.json
+/results/stage4-retiming-performance-*/source-comparison.patch

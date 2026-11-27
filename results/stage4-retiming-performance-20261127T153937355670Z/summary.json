@@ -1,0 +1,287 @@
+{
+  "config": {
+    "baseline": "scratch/retiming-performance-baseline-20261128",
+    "reference_results": "results/stage4-retiming-validation-20261126T105021665036Z",
+    "legacy_pilot": "scratch/retiming-source/pilot/optimization_pilot",
+    "seed": 20261128,
+    "warmup_passes": 1,
+    "repetitions": 5,
+    "profile_schedules_per_instance": 10,
+    "policies": [
+      false,
+      true
+    ],
+    "boundary_modes": [
+      false,
+      true
+    ],
+    "oidt": "per-compartment busy-union"
+  },
+  "repository": {
+    "branch": "feature/retiming",
+    "head": "4ac203adba09e3bf4d0c758f03f335be08e3dfd4"
+  },
+  "pytest_passed": 68,
+  "old_test_functions_unchanged": true,
+  "preservation": {
+    "protected_files": 71,
+    "allowed_modified_files": [
+      "experiments/stage4-retiming-validation.py",
+      "src/bakery/retiming.py",
+      "tests/test_retiming.py"
+    ],
+    "tracked_files_unchanged": 49,
+    "baseline_backup_files_verified": 22,
+    "oracle_source_unchanged": true,
+    "old_results_unchanged": true,
+    "original_review_zip_sha256": "3671f72dbfdfdce20d918dd06453a5a69e1861073584c464f3dceac8c05cfb21"
+  },
+  "source_sha256": {
+    "experiments/stage4-retiming-performance.py": "17f114d911af1bdaed498d594a7e6be1daac1fd2b31c66769d6edd10a85630d0",
+    "experiments/stage4-retiming-validation.py": "05d583dcf9949fc4b876a173d2e80683b994d35c4c8e4c13e42aec9281eaccea",
+    "src/bakery/retiming.py": "70c71465527e00bb7071da0d6e136d93606042ea29860b9ae4ef5bff435b55d3",
+    "src/bakery/retiming_audit.py": "5759294561b1bd1d90f7d22e13a6ff5f77c2a28e208f7e120d9ae0818206f669",
+    "tests/test_retiming.py": "f2b7cfa3cc3282527d936712a85ef5e9f0c13c796c1403196a3e73520c15bb83"
+  },
+  "equivalence": {
+    "schedules": 266,
+    "result_combinations": 1064,
+    "group_policy_comparisons": 17712,
+    "feasible_integer_times_compared": 113612,
+    "search_method_ast_unchanged": {
+      "boundary_groups": true,
+      "feasible_intervals": true,
+      "group_search": true,
+      "search": true
+    },
+    "checker_calls": {
+      "baseline": 1156,
+      "optimized": 1156
+    },
+    "mismatches": []
+  },
+  "independent_exhaustive": {
+    "schedules": 266,
+    "scope": {
+      "legacy_BK15": 66,
+      "new_BK15": 100,
+      "new_BK50": 100
+    },
+    "policies_per_schedule": 2,
+    "seconds": 87.06777860003058,
+    "group_policy_subproblems": 17712,
+    "integer_time_checks": 18606440,
+    "feasible_times": 113612,
+    "mismatches": []
+  },
+  "performance": {
+    "BK15": {
+      "schedules": 166,
+      "measurements_per_method": 830,
+      "retiming": {
+        "baseline": {
+          "n": 830,
+          "mean_ms": 21.917693855041772,
+          "median_ms": 21.68639999581501,
+          "p95_ms": 28.44755999976769
+        },
+        "optimized_direct": {
+          "n": 830,
+          "mean_ms": 12.091042048996314,
+          "median_ms": 11.69279997702688,
+          "p95_ms": 15.664160044980228
+        },
+        "optimized_prepared": {
+          "n": 830,
+          "mean_ms": 9.966167830791974,
+          "median_ms": 9.694650012534112,
+          "p95_ms": 12.653874992975027
+        }
+      },
+      "checker_calls": {
+        "baseline": 1580,
+        "optimized_direct": 1580,
+        "optimized_prepared": 1580,
+        "pipeline_optimized_prepared": 1580,
+        "pipeline_baseline": 1580
+      },
+      "expected_checker_calls": {
+        "baseline": 1580,
+        "optimized_direct": 1580,
+        "optimized_prepared": 1580,
+        "pipeline_optimized_prepared": 1580,
+        "pipeline_baseline": 1580
+      },
+      "hnfsm": {
+        "False": {
+          "n": 830,
+          "mean_ms": 2.2244314453424323,
+          "median_ms": 2.16684999759309,
+          "p95_ms": 3.1893149745883416
+        },
+        "True": {
+          "n": 830,
+          "mean_ms": 3.7877562635365023,
+          "median_ms": 3.685749979922548,
+          "p95_ms": 4.9715750152245155
+        }
+      },
+      "hnfsm_true_plus_retiming_actual_wall": {
+        "baseline": {
+          "n": 830,
+          "mean_ms": 24.807155664367826,
+          "median_ms": 24.984550022054464,
+          "p95_ms": 30.68778998567722
+        },
+        "optimized_prepared": {
+          "n": 830,
+          "mean_ms": 13.532670602098623,
+          "median_ms": 13.408950006123632,
+          "p95_ms": 16.256555009749718
+        }
+      },
+      "hnfsm_true_plus_retiming_component_sum": {
+        "baseline": {
+          "n": 830,
+          "mean_ms": 25.705450118578273,
+          "median_ms": 25.590600009309128,
+          "p95_ms": 32.591610032250166
+        },
+        "optimized_direct": {
+          "n": 830,
+          "mean_ms": 15.878798312532815,
+          "median_ms": 15.515750012127683,
+          "p95_ms": 20.004540029913183
+        },
+        "optimized_prepared": {
+          "n": 830,
+          "mean_ms": 13.753924094328479,
+          "median_ms": 13.494899962097406,
+          "p95_ms": 16.921335010556504
+        }
+      },
+      "one_time_preparation": {
+        "json_loading_seconds": 0.001576000009663403,
+        "metadata_seconds": 4.2899977415800095e-05
+      },
+      "improvement": {
+        "optimized_direct": {
+          "speedup": 1.8127216633789787,
+          "reduction_percent": 44.83433280452091
+        },
+        "optimized_prepared": {
+          "speedup": 2.1992097892756495,
+          "reduction_percent": 54.52912201116709
+        }
+      }
+    },
+    "BK50": {
+      "schedules": 100,
+      "measurements_per_method": 500,
+      "retiming": {
+        "optimized_direct": {
+          "n": 500,
+          "mean_ms": 29.54654259898234,
+          "median_ms": 28.43114998540841,
+          "p95_ms": 36.70230999705381
+        },
+        "optimized_prepared": {
+          "n": 500,
+          "mean_ms": 24.63265459833201,
+          "median_ms": 23.642899992410094,
+          "p95_ms": 34.848239997518185
+        },
+        "baseline": {
+          "n": 500,
+          "mean_ms": 72.25688979949336,
+          "median_ms": 71.04255000012927,
+          "p95_ms": 89.02134002128149
+        }
+      },
+      "checker_calls": {
+        "optimized_direct": 980,
+        "optimized_prepared": 980,
+        "baseline": 980,
+        "pipeline_optimized_prepared": 980,
+        "pipeline_baseline": 980
+      },
+      "expected_checker_calls": {
+        "optimized_direct": 980,
+        "optimized_prepared": 980,
+        "baseline": 980,
+        "pipeline_optimized_prepared": 980,
+        "pipeline_baseline": 980
+      },
+      "hnfsm": {
+        "False": {
+          "n": 500,
+          "mean_ms": 30.459880197653547,
+          "median_ms": 30.118499998934567,
+          "p95_ms": 36.36020002304576
+        },
+        "True": {
+          "n": 500,
+          "mean_ms": 33.8649868008215,
+          "median_ms": 33.376249979482964,
+          "p95_ms": 40.585865010507405
+        }
+      },
+      "hnfsm_true_plus_retiming_actual_wall": {
+        "baseline": {
+          "n": 500,
+          "mean_ms": 102.59147559828125,
+          "median_ms": 101.94759999285452,
+          "p95_ms": 120.73842500685714
+        },
+        "optimized_prepared": {
+          "n": 500,
+          "mean_ms": 57.71711399813648,
+          "median_ms": 56.52019998524338,
+          "p95_ms": 71.9121449830709
+        }
+      },
+      "hnfsm_true_plus_retiming_component_sum": {
+        "optimized_direct": {
+          "n": 500,
+          "mean_ms": 63.41152939980384,
+          "median_ms": 62.347349972696975,
+          "p95_ms": 75.22173003235365
+        },
+        "optimized_prepared": {
+          "n": 500,
+          "mean_ms": 58.49764139915351,
+          "median_ms": 57.4371000402607,
+          "p95_ms": 71.09247994376345
+        },
+        "baseline": {
+          "n": 500,
+          "mean_ms": 106.12187660031486,
+          "median_ms": 105.7499999878928,
+          "p95_ms": 123.086625043652
+        }
+      },
+      "one_time_preparation": {
+        "json_loading_seconds": 0.003665599972009659,
+        "metadata_seconds": 0.00019039999460801482
+      },
+      "improvement": {
+        "optimized_direct": {
+          "speedup": 2.4455277485488973,
+          "reduction_percent": 59.109030736070366
+        },
+        "optimized_prepared": {
+          "speedup": 2.933378110387916,
+          "reduction_percent": 65.90961129563492
+        }
+      }
+    }
+  },
+  "row_order_contract": "evaluation preserves input row/index/column order; schedule_for_export sorts ST,g,p,s explicitly",
+  "interface_contract": "legacy instance must equal JSON data; PreparedRetimingInstance owns source metadata and rejects content changes by SHA-256",
+  "checker_contract": "unchanged bakery.checker.verify_schedule executes every rule through a row mapping adapter; no checker or JSON parse is skipped",
+  "meta": {
+    "created": "2026-11-28T01:00:42",
+    "python": "3.12.0",
+    "git_rev": "4ac203a"
+  }
+}

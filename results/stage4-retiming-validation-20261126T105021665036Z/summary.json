@@ -1,0 +1,347 @@
+{
+  "config": {
+    "instances": [
+      "BK15",
+      "BK50"
+    ],
+    "seed": 20261126,
+    "feasible_schedules_per_instance": 100,
+    "max_attempts_per_instance": 1000,
+    "oracle_sample_indices": [
+      0,
+      1,
+      2
+    ],
+    "oracle_preserve_order_modes": [
+      false,
+      true
+    ],
+    "oidt": "per-compartment busy-union",
+    "retiming": "one best group move; fixed assignments; boundary groups by default",
+    "legacy_source": "scratch/retiming-source",
+    "legacy_pilot": "scratch/retiming-source/pilot/optimization_pilot",
+    "rerun_legacy_scripts": true,
+    "output_prefix": "stage4-retiming-validation"
+  },
+  "results": {
+    "BK15": {
+      "validated_schedules": 100,
+      "oidt_improved": 96,
+      "oidt_improved_ratio": 0.96,
+      "mean_oidt_reduction": 58.69,
+      "median_oidt_reduction": 56.0,
+      "max_oidt_reduction": 231,
+      "makespan_change_min": 0,
+      "makespan_change_max": 0,
+      "checker_violations": 0,
+      "invariant_violations": 0,
+      "pareto_violations": 0,
+      "boundary_oidt_mismatches": 0,
+      "full_boundary_makespan_differences": 0,
+      "all_group_candidates": 11195,
+      "boundary_candidates": 4022,
+      "timings_total_seconds": {
+        "hnfsm_seconds": 0.3250821001129225,
+        "retiming_total_seconds": 1.7126831003115512,
+        "search_seconds": 0.08213999989675358,
+        "setup_seconds": 0.6213686997652985,
+        "baseline_checker_seconds": 0.45973129983758554,
+        "final_checker_seconds": 0.4312265999033116
+      },
+      "oracle_schedules": 3,
+      "oracle_seconds": 0.4239042999688536,
+      "oracle_errors": [],
+      "oracle_totals": {
+        "groups": 96,
+        "time_checks": 53184,
+        "feasible_times": 1789,
+        "event_candidates": 401,
+        "feasible_set_mismatches": 0,
+        "group_optimum_mismatches": 0,
+        "deterministic_start_mismatches": 0,
+        "global_move_mismatches": 0
+      },
+      "instance_seed": 20261126,
+      "attempts": 102,
+      "duplicate_orders": 0,
+      "decoder_failures": 2,
+      "invalid_schedules": 0,
+      "decoder_seconds_including_failures": 0.329986700147856,
+      "target_reached": true
+    },
+    "BK50": {
+      "validated_schedules": 100,
+      "oidt_improved": 96,
+      "oidt_improved_ratio": 0.96,
+      "mean_oidt_reduction": 61.06,
+      "median_oidt_reduction": 55.5,
+      "max_oidt_reduction": 239,
+      "makespan_change_min": 0,
+      "makespan_change_max": 0,
+      "checker_violations": 0,
+      "invariant_violations": 0,
+      "pareto_violations": 0,
+      "boundary_oidt_mismatches": 0,
+      "full_boundary_makespan_differences": 0,
+      "all_group_candidates": 9045,
+      "boundary_candidates": 2652,
+      "timings_total_seconds": {
+        "hnfsm_seconds": 2.81042310007615,
+        "retiming_total_seconds": 5.317751000169665,
+        "search_seconds": 0.19218230003025383,
+        "setup_seconds": 2.2370654999976978,
+        "baseline_checker_seconds": 1.6589653000119142,
+        "final_checker_seconds": 1.5983388999593444
+      },
+      "oracle_schedules": 3,
+      "oracle_seconds": 1.332944700086955,
+      "oracle_errors": [],
+      "oracle_totals": {
+        "groups": 372,
+        "time_checks": 461280,
+        "feasible_times": 636,
+        "event_candidates": 500,
+        "feasible_set_mismatches": 0,
+        "group_optimum_mismatches": 0,
+        "deterministic_start_mismatches": 0,
+        "global_move_mismatches": 0
+      },
+      "instance_seed": 20261127,
+      "attempts": 100,
+      "duplicate_orders": 0,
+      "decoder_failures": 0,
+      "invalid_schedules": 0,
+      "decoder_seconds_including_failures": 2.81042310007615,
+      "target_reached": true
+    }
+  },
+  "failures": [],
+  "code_fingerprints": [
+    {
+      "path": "src\\bakery\\retiming.py",
+      "sha256": "55ca38f40e93f710a4a977b8e34631bcac83dab9ba9bf200e210f0662a01a9d3"
+    },
+    {
+      "path": "src\\bakery\\retiming_audit.py",
+      "sha256": "5759294561b1bd1d90f7d22e13a6ff5f77c2a28e208f7e120d9ae0818206f669"
+    },
+    {
+      "path": "tests\\test_retiming.py",
+      "sha256": "596bfa6b4e398009259b57af852edaa91ec099baa3a0e0bb0f2d717d13791796"
+    },
+    {
+      "path": "experiments\\stage4-retiming-validation.py",
+      "sha256": "77aeeff7173bb469fb56f7bd35e2aa1ef95415006e252c32e8ec0cad3a1f1c20"
+    }
+  ],
+  "data_fingerprints": [
+    {
+      "path": "data\\processed\\bk15-clean.json",
+      "sha256": "57edd3ab724ec83d322792b0354f35dd5fd8eefe7a7aaca02431c084d2d26c56"
+    },
+    {
+      "path": "data\\processed\\bk50-clean.json",
+      "sha256": "fe4b710a5166e238e0bdb05371c3f0ffdb76b962a5ed6e408b504146bcfa779d"
+    }
+  ],
+  "git_status": [
+    "?? 02_%EA%B8%B0%EC%A1%B4%EC%88%98%ED%96%89%EC%9E%91%EC%97%85_%EA%B2%80%EC%A6%9D%EA%B8%B0%EB%A1%9D_%EC%B5%9C%EC%A2%85.md",
+    "?? BK15_NSGAII_pilot_verified%282%29.zip",
+    "?? EventPoint_Retiming_%EC%B5%9C%EC%A2%85%EA%B2%80%ED%86%A0_%EA%B2%80%EC%A6%9D%EC%9E%90%EB%A3%8C.zip",
+    "?? experiments/stage4-retiming-validation.py",
+    "?? results/stage4-retiming-validation-20261126T104800021496Z/",
+    "?? src/bakery/retiming.py",
+    "?? src/bakery/retiming_audit.py",
+    "?? tests/test_retiming.py"
+  ],
+  "legacy_source_fingerprints": [
+    {
+      "path": "scratch\\retiming-source\\BK15_NSGAII_pilot_verified(2).zip",
+      "sha256": "0c6107182f4d742dc5c7a50b9b2aaa975a849958b65d401bda57db78a761028a"
+    },
+    {
+      "path": "scratch\\retiming-source\\EventPoint_Retiming_최종검토_검증자료.zip",
+      "sha256": "ac44ff8e84f002c1fa95723e16c8a70341792ce3a1d1397cc48fdb4a57175ea4"
+    }
+  ],
+  "legacy_rerun": {
+    "path": "scratch\\retiming-legacy-rerun-20261126T105021665036Z",
+    "exact_saved_result_matches": {
+      "retime_results_False.json": true,
+      "retime_results_True.json": true,
+      "event_interval_summary.json": true
+    },
+    "retime_summary": {
+      "False": {
+        "count": 66,
+        "improved": 54,
+        "avg_gain": 17.545454545454547,
+        "max_gain": 126,
+        "median_gain": 6.5,
+        "good_groups": 81,
+        "time_checks": 326920,
+        "event_checks": 373247,
+        "feas_time": 26366,
+        "feas_event": 8747,
+        "misses": 0,
+        "elapsed_sec": 2.889999999955762
+      },
+      "True": {
+        "count": 66,
+        "improved": 48,
+        "avg_gain": 2.1818181818181817,
+        "max_gain": 8,
+        "median_gain": 1.0,
+        "good_groups": 58,
+        "time_checks": 326920,
+        "event_checks": 373247,
+        "feas_time": 2249,
+        "feas_event": 1651,
+        "misses": 0,
+        "elapsed_sec": 1.297000000020489
+      }
+    },
+    "boundary": {
+      "False": {
+        "schedules": 66,
+        "candidates": 1694,
+        "objective_mismatches": 0
+      },
+      "True": {
+        "schedules": 66,
+        "candidates": 597,
+        "objective_mismatches": 0
+      }
+    },
+    "boundary_main_portability_issue": "absolute /mnt/data/_event_review; solve() called unchanged"
+  },
+  "legacy": {
+    "validated_schedules": 66,
+    "oidt_improved": 54,
+    "oidt_improved_ratio": 0.8181818181818182,
+    "mean_oidt_reduction": 17.545454545454547,
+    "median_oidt_reduction": 6.5,
+    "max_oidt_reduction": 126,
+    "makespan_change_min": 0,
+    "makespan_change_max": 0,
+    "checker_violations": 0,
+    "invariant_violations": 0,
+    "pareto_violations": 0,
+    "boundary_oidt_mismatches": 0,
+    "full_boundary_makespan_differences": 0,
+    "all_group_candidates": 5412,
+    "boundary_candidates": 1694,
+    "timings_total_seconds": {
+      "hnfsm_seconds": 0,
+      "retiming_total_seconds": 1.0022393997060135,
+      "search_seconds": 0.05248140002368018,
+      "setup_seconds": 0.40055960009340197,
+      "baseline_checker_seconds": 0.2982900000642985,
+      "final_checker_seconds": 0.22795699996640906
+    },
+    "oracle_schedules": 66,
+    "oracle_seconds": 7.169290299934801,
+    "oracle_errors": [],
+    "oracle_totals": {
+      "groups": 2112,
+      "time_checks": 1047200,
+      "feasible_times": 28615,
+      "event_candidates": 6736,
+      "feasible_set_mismatches": 0,
+      "group_optimum_mismatches": 0,
+      "deterministic_start_mismatches": 0,
+      "global_move_mismatches": 0
+    },
+    "compatibility": {
+      "group_map": {
+        "1.1": 1,
+        "2.1": 2,
+        "3.1": 3,
+        "4.1": 4,
+        "5.1": 5,
+        "6.1": 6,
+        "7.1": 7,
+        "8.1": 8,
+        "9.1": 9,
+        "10.1": 10,
+        "11.1": 11,
+        "12.1": 12,
+        "13.1": 13,
+        "14.1": 14,
+        "15.1": 15,
+        "6.2": 16
+      },
+      "machine_map": {
+        "1": 1,
+        "2": 2,
+        "4": 3,
+        "7": 4,
+        "8": 5,
+        "9": 6,
+        "10": 7,
+        "11": 8,
+        "12": 9,
+        "13": 10
+      },
+      "employee_map": {
+        "Employee 1": 1,
+        "Employee 2": 2,
+        "Employee 3": 3
+      },
+      "operations_compared": 164
+    },
+    "raw_xlsx_a1_o160_cell_differences": [
+      {
+        "row": 12,
+        "column": 2,
+        "old": null,
+        "current": 14
+      },
+      {
+        "row": 12,
+        "column": 3,
+        "old": null,
+        "current": "Employee"
+      },
+      {
+        "row": 12,
+        "column": 4,
+        "old": null,
+        "current": "Manual"
+      },
+      {
+        "row": 111,
+        "column": 15,
+        "old": "Mnaual",
+        "current": "Manual"
+      }
+    ],
+    "original_objective_errors": [],
+    "current_decoder_failed": 0,
+    "current_decoder_same_objectives": 66,
+    "current_decoder_same_schedule": 66,
+    "policies": {
+      "False": {
+        "oidt_improved": 54,
+        "mean_oidt_reduction": 17.545454545454547,
+        "all_candidates": 5412,
+        "boundary_candidates": 1694,
+        "checker_violations": 0,
+        "invariant_violations": 0
+      },
+      "True": {
+        "oidt_improved": 48,
+        "mean_oidt_reduction": 2.1818181818181817,
+        "all_candidates": 1324,
+        "boundary_candidates": 597,
+        "checker_violations": 0,
+        "invariant_violations": 0
+      }
+    }
+  },
+  "meta": {
+    "created": "2026-11-26T19:50:50",
+    "python": "3.12.0",
+    "git_rev": "4ac203a"
+  }
+}

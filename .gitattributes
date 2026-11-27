@@ -1,0 +1,7 @@
+# Preserve byte-level source/evidence hashes across checkout platforms.
+/src/bakery/retiming*.py -text
+/tests/test_retiming.py -text
+/experiments/stage4-retiming-*.py -text
+/repro/retiming-baseline/** -text
+/results/stage4-retiming-validation-20261126T105021665036Z/** -text
+/results/stage4-retiming-performance-20261127T153937355670Z/** -text

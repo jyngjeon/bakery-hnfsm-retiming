@@ -1,0 +1,4827 @@
+{
+  "config": {
+    "baseline": "scratch/retiming-performance-baseline-20261128",
+    "reference_results": "results/stage4-retiming-validation-20261126T105021665036Z",
+    "legacy_pilot": "scratch/retiming-source/pilot/optimization_pilot",
+    "seed": 20261128,
+    "warmup_passes": 1,
+    "repetitions": 5,
+    "profile_schedules_per_instance": 10,
+    "policies": [
+      false,
+      true
+    ],
+    "boundary_modes": [
+      false,
+      true
+    ],
+    "oidt": "per-compartment busy-union"
+  },
+  "schedules": 266,
+  "scope": {
+    "legacy_BK15": 66,
+    "new_BK15": 100,
+    "new_BK50": 100
+  },
+  "policies_per_schedule": 2,
+  "seconds": 87.06777860003058,
+  "group_policy_subproblems": 17712,
+  "integer_time_checks": 18606440,
+  "feasible_times": 113612,
+  "mismatches": [],
+  "records": [
+    {
+      "id": "legacy/hybrid_11_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 457,
+          "event_candidates": 92
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 33,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_11_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 326,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 30,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_22_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 344,
+          "event_candidates": 82
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 37,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_22_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7824,
+          "feasible_times": 341,
+          "event_candidates": 78
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7824,
+          "feasible_times": 55,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_22_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8096,
+          "feasible_times": 603,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8096,
+          "feasible_times": 62,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_33_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7744,
+          "feasible_times": 398,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7744,
+          "feasible_times": 22,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_33_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7728,
+          "feasible_times": 238,
+          "event_candidates": 80
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7728,
+          "feasible_times": 37,
+          "event_candidates": 23
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_33_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 252,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 27,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_44_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7936,
+          "feasible_times": 437,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7936,
+          "feasible_times": 21,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_44_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8768,
+          "feasible_times": 499,
+          "event_candidates": 109
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8768,
+          "feasible_times": 22,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_44_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 383,
+          "event_candidates": 58
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 29,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_44_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7776,
+          "feasible_times": 440,
+          "event_candidates": 62
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7776,
+          "feasible_times": 34,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_55_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7776,
+          "feasible_times": 312,
+          "event_candidates": 80
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7776,
+          "feasible_times": 40,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/hybrid_55_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7552,
+          "feasible_times": 188,
+          "event_candidates": 62
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7552,
+          "feasible_times": 24,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_11_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 287,
+          "event_candidates": 75
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 36,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_11_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7840,
+          "feasible_times": 270,
+          "event_candidates": 62
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7840,
+          "feasible_times": 45,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_11_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8032,
+          "feasible_times": 505,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8032,
+          "feasible_times": 60,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_11_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7632,
+          "feasible_times": 306,
+          "event_candidates": 60
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7632,
+          "feasible_times": 51,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_11_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8400,
+          "feasible_times": 814,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8400,
+          "feasible_times": 35,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_22_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7552,
+          "feasible_times": 321,
+          "event_candidates": 84
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7552,
+          "feasible_times": 33,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_22_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 429,
+          "event_candidates": 62
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 25,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_22_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7728,
+          "feasible_times": 487,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7728,
+          "feasible_times": 28,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_33_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7872,
+          "feasible_times": 293,
+          "event_candidates": 75
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7872,
+          "feasible_times": 33,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_33_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7664,
+          "feasible_times": 283,
+          "event_candidates": 65
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7664,
+          "feasible_times": 27,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_33_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 419,
+          "event_candidates": 60
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 47,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_33_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7728,
+          "feasible_times": 385,
+          "event_candidates": 80
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7728,
+          "feasible_times": 29,
+          "event_candidates": 23
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_33_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7936,
+          "feasible_times": 395,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7936,
+          "feasible_times": 56,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8800,
+          "feasible_times": 482,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8800,
+          "feasible_times": 26,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8016,
+          "feasible_times": 584,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8016,
+          "feasible_times": 38,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7808,
+          "feasible_times": 446,
+          "event_candidates": 82
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7808,
+          "feasible_times": 20,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9184,
+          "feasible_times": 514,
+          "event_candidates": 118
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9184,
+          "feasible_times": 24,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 244,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 26,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/5",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8160,
+          "feasible_times": 606,
+          "event_candidates": 75
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8160,
+          "feasible_times": 38,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/6",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8080,
+          "feasible_times": 578,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8080,
+          "feasible_times": 21,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/7",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7792,
+          "feasible_times": 354,
+          "event_candidates": 73
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7792,
+          "feasible_times": 34,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_44_pareto_schedules.json/8",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7824,
+          "feasible_times": 369,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7824,
+          "feasible_times": 24,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_55_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 275,
+          "event_candidates": 84
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 40,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_55_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 252,
+          "event_candidates": 64
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 56,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/nsga2_55_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7936,
+          "feasible_times": 380,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7936,
+          "feasible_times": 59,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_11_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 217,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 35,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_11_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7600,
+          "feasible_times": 440,
+          "event_candidates": 66
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7600,
+          "feasible_times": 47,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_11_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7664,
+          "feasible_times": 289,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7664,
+          "feasible_times": 29,
+          "event_candidates": 23
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_11_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8048,
+          "feasible_times": 506,
+          "event_candidates": 122
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8048,
+          "feasible_times": 22,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_11_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 418,
+          "event_candidates": 70
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 27,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_22_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8192,
+          "feasible_times": 664,
+          "event_candidates": 78
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8192,
+          "feasible_times": 41,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_22_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 519,
+          "event_candidates": 73
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 20,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_22_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8768,
+          "feasible_times": 692,
+          "event_candidates": 111
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8768,
+          "feasible_times": 39,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_22_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 437,
+          "event_candidates": 74
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 49,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_22_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 288,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 35,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_22_pareto_schedules.json/5",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7680,
+          "feasible_times": 182,
+          "event_candidates": 71
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7680,
+          "feasible_times": 23,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_33_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8000,
+          "feasible_times": 489,
+          "event_candidates": 97
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8000,
+          "feasible_times": 25,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_33_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 440,
+          "event_candidates": 66
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 22,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_33_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 300,
+          "event_candidates": 61
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 63,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_33_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 308,
+          "event_candidates": 100
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 32,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_33_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8928,
+          "feasible_times": 690,
+          "event_candidates": 107
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8928,
+          "feasible_times": 43,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7824,
+          "feasible_times": 340,
+          "event_candidates": 76
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7824,
+          "feasible_times": 27,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 292,
+          "event_candidates": 69
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7712,
+          "feasible_times": 29,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9392,
+          "feasible_times": 460,
+          "event_candidates": 112
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9392,
+          "feasible_times": 17,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7600,
+          "feasible_times": 346,
+          "event_candidates": 79
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7600,
+          "feasible_times": 29,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7840,
+          "feasible_times": 360,
+          "event_candidates": 72
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7840,
+          "feasible_times": 32,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/5",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8160,
+          "feasible_times": 431,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8160,
+          "feasible_times": 35,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_44_pareto_schedules.json/6",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9744,
+          "feasible_times": 675,
+          "event_candidates": 131
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9744,
+          "feasible_times": 25,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_55_pareto_schedules.json/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7696,
+          "feasible_times": 275,
+          "event_candidates": 72
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7696,
+          "feasible_times": 31,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_55_pareto_schedules.json/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 335,
+          "event_candidates": 91
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 18,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_55_pareto_schedules.json/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 281,
+          "event_candidates": 81
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7760,
+          "feasible_times": 35,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "legacy/random_search_55_pareto_schedules.json/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7680,
+          "feasible_times": 196,
+          "event_candidates": 79
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7680,
+          "feasible_times": 35,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/0",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8320,
+          "feasible_times": 485,
+          "event_candidates": 98
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8320,
+          "feasible_times": 24,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/1",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8672,
+          "feasible_times": 441,
+          "event_candidates": 126
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8672,
+          "feasible_times": 31,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/2",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9600,
+          "feasible_times": 787,
+          "event_candidates": 116
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9600,
+          "feasible_times": 21,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/3",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9536,
+          "feasible_times": 613,
+          "event_candidates": 121
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9536,
+          "feasible_times": 21,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/4",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 299,
+          "event_candidates": 71
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7616,
+          "feasible_times": 29,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/5",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10160,
+          "feasible_times": 719,
+          "event_candidates": 109
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10160,
+          "feasible_times": 37,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/6",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8896,
+          "feasible_times": 745,
+          "event_candidates": 119
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8896,
+          "feasible_times": 17,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "BK15/7",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9712,
+          "feasible_times": 438,
+          "event_candidates": 146
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9712,
+          "feasible_times": 31,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/8",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8000,
+          "feasible_times": 454,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8000,
+          "feasible_times": 30,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/9",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9216,
+          "feasible_times": 694,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9216,
+          "feasible_times": 59,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/10",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10736,
+          "feasible_times": 650,
+          "event_candidates": 151
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10736,
+          "feasible_times": 32,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/11",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9712,
+          "feasible_times": 610,
+          "event_candidates": 107
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9712,
+          "feasible_times": 17,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "BK15/12",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8288,
+          "feasible_times": 494,
+          "event_candidates": 100
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8288,
+          "feasible_times": 35,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/13",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9152,
+          "feasible_times": 522,
+          "event_candidates": 122
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9152,
+          "feasible_times": 21,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/14",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8224,
+          "feasible_times": 504,
+          "event_candidates": 97
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8224,
+          "feasible_times": 40,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/15",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9712,
+          "feasible_times": 689,
+          "event_candidates": 109
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9712,
+          "feasible_times": 27,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/16",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9696,
+          "feasible_times": 577,
+          "event_candidates": 94
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9696,
+          "feasible_times": 54,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/17",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9488,
+          "feasible_times": 672,
+          "event_candidates": 146
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9488,
+          "feasible_times": 28,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/18",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9872,
+          "feasible_times": 779,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9872,
+          "feasible_times": 38,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/19",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8064,
+          "feasible_times": 444,
+          "event_candidates": 110
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8064,
+          "feasible_times": 25,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/20",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8960,
+          "feasible_times": 801,
+          "event_candidates": 108
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8960,
+          "feasible_times": 38,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/21",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8736,
+          "feasible_times": 559,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8736,
+          "feasible_times": 32,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/22",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9088,
+          "feasible_times": 604,
+          "event_candidates": 138
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9088,
+          "feasible_times": 24,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/23",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7856,
+          "feasible_times": 303,
+          "event_candidates": 70
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7856,
+          "feasible_times": 20,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/24",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8672,
+          "feasible_times": 654,
+          "event_candidates": 107
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8672,
+          "feasible_times": 44,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/25",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8256,
+          "feasible_times": 372,
+          "event_candidates": 97
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8256,
+          "feasible_times": 20,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/26",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9472,
+          "feasible_times": 543,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9472,
+          "feasible_times": 26,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/27",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9888,
+          "feasible_times": 496,
+          "event_candidates": 93
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9888,
+          "feasible_times": 26,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/28",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8928,
+          "feasible_times": 657,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8928,
+          "feasible_times": 26,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/29",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 491,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7888,
+          "feasible_times": 65,
+          "event_candidates": 23
+        }
+      }
+    },
+    {
+      "id": "BK15/30",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9248,
+          "feasible_times": 519,
+          "event_candidates": 105
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9248,
+          "feasible_times": 39,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/31",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9328,
+          "feasible_times": 453,
+          "event_candidates": 118
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9328,
+          "feasible_times": 20,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/32",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8992,
+          "feasible_times": 455,
+          "event_candidates": 125
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8992,
+          "feasible_times": 19,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "BK15/33",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9184,
+          "feasible_times": 599,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9184,
+          "feasible_times": 32,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/34",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8944,
+          "feasible_times": 588,
+          "event_candidates": 125
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8944,
+          "feasible_times": 24,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/35",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8416,
+          "feasible_times": 500,
+          "event_candidates": 109
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8416,
+          "feasible_times": 19,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "BK15/36",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7952,
+          "feasible_times": 361,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7952,
+          "feasible_times": 31,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/37",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10480,
+          "feasible_times": 526,
+          "event_candidates": 154
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10480,
+          "feasible_times": 25,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/38",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8640,
+          "feasible_times": 481,
+          "event_candidates": 121
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8640,
+          "feasible_times": 43,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/39",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8416,
+          "feasible_times": 270,
+          "event_candidates": 99
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8416,
+          "feasible_times": 40,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/40",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9168,
+          "feasible_times": 507,
+          "event_candidates": 96
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9168,
+          "feasible_times": 31,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/41",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8160,
+          "feasible_times": 568,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8160,
+          "feasible_times": 37,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/42",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9392,
+          "feasible_times": 761,
+          "event_candidates": 131
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9392,
+          "feasible_times": 24,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/43",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9440,
+          "feasible_times": 517,
+          "event_candidates": 123
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9440,
+          "feasible_times": 20,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/44",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9504,
+          "feasible_times": 818,
+          "event_candidates": 116
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9504,
+          "feasible_times": 29,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/45",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9168,
+          "feasible_times": 747,
+          "event_candidates": 132
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9168,
+          "feasible_times": 33,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/46",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9472,
+          "feasible_times": 716,
+          "event_candidates": 110
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9472,
+          "feasible_times": 51,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/47",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10064,
+          "feasible_times": 676,
+          "event_candidates": 159
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10064,
+          "feasible_times": 40,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/48",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8880,
+          "feasible_times": 561,
+          "event_candidates": 121
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8880,
+          "feasible_times": 36,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/49",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8112,
+          "feasible_times": 466,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8112,
+          "feasible_times": 27,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/50",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9296,
+          "feasible_times": 763,
+          "event_candidates": 125
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9296,
+          "feasible_times": 32,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/51",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9264,
+          "feasible_times": 814,
+          "event_candidates": 145
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9264,
+          "feasible_times": 27,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/52",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9936,
+          "feasible_times": 543,
+          "event_candidates": 140
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9936,
+          "feasible_times": 26,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/53",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9072,
+          "feasible_times": 637,
+          "event_candidates": 115
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9072,
+          "feasible_times": 28,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/54",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9024,
+          "feasible_times": 585,
+          "event_candidates": 105
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9024,
+          "feasible_times": 27,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/55",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9120,
+          "feasible_times": 742,
+          "event_candidates": 136
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9120,
+          "feasible_times": 42,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/56",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9264,
+          "feasible_times": 658,
+          "event_candidates": 124
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9264,
+          "feasible_times": 38,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/57",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8656,
+          "feasible_times": 678,
+          "event_candidates": 102
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8656,
+          "feasible_times": 19,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/58",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9648,
+          "feasible_times": 307,
+          "event_candidates": 116
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9648,
+          "feasible_times": 32,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/59",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9680,
+          "feasible_times": 746,
+          "event_candidates": 122
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9680,
+          "feasible_times": 38,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/60",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9248,
+          "feasible_times": 565,
+          "event_candidates": 102
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9248,
+          "feasible_times": 19,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/61",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9120,
+          "feasible_times": 607,
+          "event_candidates": 99
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9120,
+          "feasible_times": 18,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/62",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9808,
+          "feasible_times": 563,
+          "event_candidates": 159
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9808,
+          "feasible_times": 20,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/63",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10368,
+          "feasible_times": 666,
+          "event_candidates": 151
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10368,
+          "feasible_times": 28,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/64",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8336,
+          "feasible_times": 388,
+          "event_candidates": 106
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8336,
+          "feasible_times": 30,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/65",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8496,
+          "feasible_times": 557,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8496,
+          "feasible_times": 65,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/66",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10096,
+          "feasible_times": 667,
+          "event_candidates": 129
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10096,
+          "feasible_times": 26,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/67",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8592,
+          "feasible_times": 572,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8592,
+          "feasible_times": 43,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/68",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9216,
+          "feasible_times": 579,
+          "event_candidates": 140
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9216,
+          "feasible_times": 25,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/69",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9600,
+          "feasible_times": 501,
+          "event_candidates": 121
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9600,
+          "feasible_times": 34,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/70",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8464,
+          "feasible_times": 504,
+          "event_candidates": 114
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8464,
+          "feasible_times": 29,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/71",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9248,
+          "feasible_times": 606,
+          "event_candidates": 136
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9248,
+          "feasible_times": 22,
+          "event_candidates": 17
+        }
+      }
+    },
+    {
+      "id": "BK15/72",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8096,
+          "feasible_times": 415,
+          "event_candidates": 70
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8096,
+          "feasible_times": 43,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/73",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10016,
+          "feasible_times": 635,
+          "event_candidates": 131
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10016,
+          "feasible_times": 25,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/74",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8864,
+          "feasible_times": 705,
+          "event_candidates": 110
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8864,
+          "feasible_times": 24,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/75",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8192,
+          "feasible_times": 586,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8192,
+          "feasible_times": 32,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/76",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9024,
+          "feasible_times": 680,
+          "event_candidates": 106
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9024,
+          "feasible_times": 24,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/77",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 7856,
+          "feasible_times": 375,
+          "event_candidates": 108
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 7856,
+          "feasible_times": 30,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/78",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9792,
+          "feasible_times": 796,
+          "event_candidates": 114
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9792,
+          "feasible_times": 30,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/79",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9072,
+          "feasible_times": 569,
+          "event_candidates": 115
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9072,
+          "feasible_times": 31,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/80",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8432,
+          "feasible_times": 552,
+          "event_candidates": 130
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8432,
+          "feasible_times": 22,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/81",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8256,
+          "feasible_times": 398,
+          "event_candidates": 84
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8256,
+          "feasible_times": 24,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/82",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8480,
+          "feasible_times": 511,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8480,
+          "feasible_times": 29,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/83",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9104,
+          "feasible_times": 712,
+          "event_candidates": 151
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9104,
+          "feasible_times": 34,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/84",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8336,
+          "feasible_times": 540,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8336,
+          "feasible_times": 23,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/85",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8240,
+          "feasible_times": 497,
+          "event_candidates": 112
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8240,
+          "feasible_times": 24,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/86",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9888,
+          "feasible_times": 722,
+          "event_candidates": 140
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9888,
+          "feasible_times": 29,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/87",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8336,
+          "feasible_times": 420,
+          "event_candidates": 108
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8336,
+          "feasible_times": 30,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/88",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8528,
+          "feasible_times": 524,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8528,
+          "feasible_times": 28,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/89",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9744,
+          "feasible_times": 708,
+          "event_candidates": 105
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9744,
+          "feasible_times": 22,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/90",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8320,
+          "feasible_times": 327,
+          "event_candidates": 91
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8320,
+          "feasible_times": 24,
+          "event_candidates": 18
+        }
+      }
+    },
+    {
+      "id": "BK15/91",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9280,
+          "feasible_times": 605,
+          "event_candidates": 105
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9280,
+          "feasible_times": 33,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/92",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10592,
+          "feasible_times": 377,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10592,
+          "feasible_times": 31,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/93",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9664,
+          "feasible_times": 774,
+          "event_candidates": 105
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9664,
+          "feasible_times": 31,
+          "event_candidates": 20
+        }
+      }
+    },
+    {
+      "id": "BK15/94",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9040,
+          "feasible_times": 622,
+          "event_candidates": 123
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9040,
+          "feasible_times": 35,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/95",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 10304,
+          "feasible_times": 794,
+          "event_candidates": 119
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 10304,
+          "feasible_times": 34,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/96",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 9904,
+          "feasible_times": 730,
+          "event_candidates": 134
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 9904,
+          "feasible_times": 35,
+          "event_candidates": 22
+        }
+      }
+    },
+    {
+      "id": "BK15/97",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8256,
+          "feasible_times": 394,
+          "event_candidates": 91
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8256,
+          "feasible_times": 19,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK15/98",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8320,
+          "feasible_times": 482,
+          "event_candidates": 98
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8320,
+          "feasible_times": 50,
+          "event_candidates": 21
+        }
+      }
+    },
+    {
+      "id": "BK15/99",
+      "instance": "BK15",
+      "policies": {
+        "False": {
+          "groups": 16,
+          "time_checks": 8880,
+          "feasible_times": 392,
+          "event_candidates": 126
+        },
+        "True": {
+          "groups": 16,
+          "time_checks": 8880,
+          "feasible_times": 27,
+          "event_candidates": 19
+        }
+      }
+    },
+    {
+      "id": "BK50/0",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 74586,
+          "feasible_times": 106,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 74586,
+          "feasible_times": 84,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/1",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80290,
+          "feasible_times": 131,
+          "event_candidates": 98
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80290,
+          "feasible_times": 88,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/2",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 75764,
+          "feasible_times": 124,
+          "event_candidates": 81
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 75764,
+          "feasible_times": 103,
+          "event_candidates": 79
+        }
+      }
+    },
+    {
+      "id": "BK50/3",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77190,
+          "feasible_times": 98,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77190,
+          "feasible_times": 86,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/4",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71548,
+          "feasible_times": 101,
+          "event_candidates": 91
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71548,
+          "feasible_times": 87,
+          "event_candidates": 80
+        }
+      }
+    },
+    {
+      "id": "BK50/5",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 73284,
+          "feasible_times": 139,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 73284,
+          "feasible_times": 98,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/6",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 82646,
+          "feasible_times": 249,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 82646,
+          "feasible_times": 111,
+          "event_candidates": 81
+        }
+      }
+    },
+    {
+      "id": "BK50/7",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 75392,
+          "feasible_times": 106,
+          "event_candidates": 82
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 75392,
+          "feasible_times": 88,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/8",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76942,
+          "feasible_times": 119,
+          "event_candidates": 80
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76942,
+          "feasible_times": 108,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/9",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80228,
+          "feasible_times": 109,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80228,
+          "feasible_times": 101,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/10",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 74958,
+          "feasible_times": 134,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 74958,
+          "feasible_times": 87,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/11",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71052,
+          "feasible_times": 98,
+          "event_candidates": 80
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71052,
+          "feasible_times": 78,
+          "event_candidates": 70
+        }
+      }
+    },
+    {
+      "id": "BK50/12",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72354,
+          "feasible_times": 127,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72354,
+          "feasible_times": 92,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/13",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 82584,
+          "feasible_times": 129,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 82584,
+          "feasible_times": 101,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/14",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 81158,
+          "feasible_times": 407,
+          "event_candidates": 106
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 81158,
+          "feasible_times": 82,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/15",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80724,
+          "feasible_times": 140,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80724,
+          "feasible_times": 118,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/16",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 83514,
+          "feasible_times": 156,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 83514,
+          "feasible_times": 94,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/17",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71734,
+          "feasible_times": 99,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71734,
+          "feasible_times": 84,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/18",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 81158,
+          "feasible_times": 91,
+          "event_candidates": 77
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 81158,
+          "feasible_times": 78,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/19",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80042,
+          "feasible_times": 152,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80042,
+          "feasible_times": 115,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/20",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 78988,
+          "feasible_times": 134,
+          "event_candidates": 100
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 78988,
+          "feasible_times": 104,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/21",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72106,
+          "feasible_times": 235,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72106,
+          "feasible_times": 100,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/22",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85126,
+          "feasible_times": 215,
+          "event_candidates": 106
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85126,
+          "feasible_times": 114,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/23",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72354,
+          "feasible_times": 102,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72354,
+          "feasible_times": 79,
+          "event_candidates": 71
+        }
+      }
+    },
+    {
+      "id": "BK50/24",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 75578,
+          "feasible_times": 245,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 75578,
+          "feasible_times": 161,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/25",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76012,
+          "feasible_times": 134,
+          "event_candidates": 92
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76012,
+          "feasible_times": 90,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/26",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 79112,
+          "feasible_times": 128,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 79112,
+          "feasible_times": 116,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/27",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 68634,
+          "feasible_times": 121,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 68634,
+          "feasible_times": 109,
+          "event_candidates": 80
+        }
+      }
+    },
+    {
+      "id": "BK50/28",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76074,
+          "feasible_times": 123,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76074,
+          "feasible_times": 92,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/29",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 83018,
+          "feasible_times": 221,
+          "event_candidates": 96
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 83018,
+          "feasible_times": 95,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/30",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72168,
+          "feasible_times": 118,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72168,
+          "feasible_times": 85,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/31",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 93992,
+          "feasible_times": 227,
+          "event_candidates": 111
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 93992,
+          "feasible_times": 96,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/32",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71486,
+          "feasible_times": 113,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71486,
+          "feasible_times": 97,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/33",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 93620,
+          "feasible_times": 163,
+          "event_candidates": 100
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 93620,
+          "feasible_times": 103,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/34",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 81592,
+          "feasible_times": 120,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 81592,
+          "feasible_times": 115,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/35",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71300,
+          "feasible_times": 92,
+          "event_candidates": 78
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71300,
+          "feasible_times": 85,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/36",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77004,
+          "feasible_times": 101,
+          "event_candidates": 82
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77004,
+          "feasible_times": 94,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/37",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 90396,
+          "feasible_times": 152,
+          "event_candidates": 91
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 90396,
+          "feasible_times": 119,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/38",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85188,
+          "feasible_times": 143,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85188,
+          "feasible_times": 118,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/39",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72850,
+          "feasible_times": 119,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72850,
+          "feasible_times": 84,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/40",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 78430,
+          "feasible_times": 236,
+          "event_candidates": 99
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 78430,
+          "feasible_times": 94,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/41",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71424,
+          "feasible_times": 106,
+          "event_candidates": 81
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71424,
+          "feasible_times": 103,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/42",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 82770,
+          "feasible_times": 121,
+          "event_candidates": 84
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 82770,
+          "feasible_times": 99,
+          "event_candidates": 71
+        }
+      }
+    },
+    {
+      "id": "BK50/43",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 75144,
+          "feasible_times": 106,
+          "event_candidates": 79
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 75144,
+          "feasible_times": 96,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/44",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 73780,
+          "feasible_times": 123,
+          "event_candidates": 81
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 73780,
+          "feasible_times": 107,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/45",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 81840,
+          "feasible_times": 116,
+          "event_candidates": 79
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 81840,
+          "feasible_times": 80,
+          "event_candidates": 70
+        }
+      }
+    },
+    {
+      "id": "BK50/46",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 78740,
+          "feasible_times": 165,
+          "event_candidates": 108
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 78740,
+          "feasible_times": 92,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/47",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80476,
+          "feasible_times": 186,
+          "event_candidates": 116
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80476,
+          "feasible_times": 92,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/48",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72912,
+          "feasible_times": 124,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72912,
+          "feasible_times": 106,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/49",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72664,
+          "feasible_times": 149,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72664,
+          "feasible_times": 113,
+          "event_candidates": 82
+        }
+      }
+    },
+    {
+      "id": "BK50/50",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80042,
+          "feasible_times": 224,
+          "event_candidates": 115
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80042,
+          "feasible_times": 90,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/51",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 82336,
+          "feasible_times": 123,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 82336,
+          "feasible_times": 88,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/52",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 84878,
+          "feasible_times": 136,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 84878,
+          "feasible_times": 98,
+          "event_candidates": 79
+        }
+      }
+    },
+    {
+      "id": "BK50/53",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 78058,
+          "feasible_times": 92,
+          "event_candidates": 76
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 78058,
+          "feasible_times": 91,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/54",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85498,
+          "feasible_times": 200,
+          "event_candidates": 105
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85498,
+          "feasible_times": 90,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/55",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 84258,
+          "feasible_times": 231,
+          "event_candidates": 98
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 84258,
+          "feasible_times": 120,
+          "event_candidates": 80
+        }
+      }
+    },
+    {
+      "id": "BK50/56",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76446,
+          "feasible_times": 205,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76446,
+          "feasible_times": 80,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/57",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 79546,
+          "feasible_times": 157,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 79546,
+          "feasible_times": 115,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/58",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85498,
+          "feasible_times": 114,
+          "event_candidates": 84
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85498,
+          "feasible_times": 82,
+          "event_candidates": 71
+        }
+      }
+    },
+    {
+      "id": "BK50/59",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72478,
+          "feasible_times": 107,
+          "event_candidates": 78
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72478,
+          "feasible_times": 103,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/60",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76260,
+          "feasible_times": 123,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76260,
+          "feasible_times": 88,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/61",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 75578,
+          "feasible_times": 210,
+          "event_candidates": 97
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 75578,
+          "feasible_times": 111,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/62",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 79670,
+          "feasible_times": 121,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 79670,
+          "feasible_times": 100,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/63",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 81034,
+          "feasible_times": 176,
+          "event_candidates": 98
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 81034,
+          "feasible_times": 93,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/64",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80290,
+          "feasible_times": 148,
+          "event_candidates": 92
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80290,
+          "feasible_times": 98,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/65",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 83142,
+          "feasible_times": 148,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 83142,
+          "feasible_times": 117,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/66",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 79422,
+          "feasible_times": 202,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 79422,
+          "feasible_times": 92,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/67",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76756,
+          "feasible_times": 137,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76756,
+          "feasible_times": 95,
+          "event_candidates": 71
+        }
+      }
+    },
+    {
+      "id": "BK50/68",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77686,
+          "feasible_times": 208,
+          "event_candidates": 102
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77686,
+          "feasible_times": 107,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/69",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 79174,
+          "feasible_times": 137,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 79174,
+          "feasible_times": 100,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/70",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 80848,
+          "feasible_times": 260,
+          "event_candidates": 103
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 80848,
+          "feasible_times": 101,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/71",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85064,
+          "feasible_times": 145,
+          "event_candidates": 104
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85064,
+          "feasible_times": 103,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/72",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71238,
+          "feasible_times": 110,
+          "event_candidates": 80
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71238,
+          "feasible_times": 99,
+          "event_candidates": 73
+        }
+      }
+    },
+    {
+      "id": "BK50/73",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 83142,
+          "feasible_times": 142,
+          "event_candidates": 100
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 83142,
+          "feasible_times": 96,
+          "event_candidates": 78
+        }
+      }
+    },
+    {
+      "id": "BK50/74",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 82336,
+          "feasible_times": 271,
+          "event_candidates": 92
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 82336,
+          "feasible_times": 116,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/75",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85622,
+          "feasible_times": 127,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85622,
+          "feasible_times": 93,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/76",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76074,
+          "feasible_times": 141,
+          "event_candidates": 92
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76074,
+          "feasible_times": 109,
+          "event_candidates": 81
+        }
+      }
+    },
+    {
+      "id": "BK50/77",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 82584,
+          "feasible_times": 170,
+          "event_candidates": 102
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 82584,
+          "feasible_times": 119,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/78",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 81344,
+          "feasible_times": 232,
+          "event_candidates": 103
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 81344,
+          "feasible_times": 90,
+          "event_candidates": 71
+        }
+      }
+    },
+    {
+      "id": "BK50/79",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72292,
+          "feasible_times": 121,
+          "event_candidates": 91
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72292,
+          "feasible_times": 92,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/80",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 79298,
+          "feasible_times": 154,
+          "event_candidates": 103
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 79298,
+          "feasible_times": 100,
+          "event_candidates": 75
+        }
+      }
+    },
+    {
+      "id": "BK50/81",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77066,
+          "feasible_times": 120,
+          "event_candidates": 78
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77066,
+          "feasible_times": 94,
+          "event_candidates": 71
+        }
+      }
+    },
+    {
+      "id": "BK50/82",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76942,
+          "feasible_times": 137,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76942,
+          "feasible_times": 94,
+          "event_candidates": 77
+        }
+      }
+    },
+    {
+      "id": "BK50/83",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 84320,
+          "feasible_times": 162,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 84320,
+          "feasible_times": 95,
+          "event_candidates": 79
+        }
+      }
+    },
+    {
+      "id": "BK50/84",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72974,
+          "feasible_times": 199,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72974,
+          "feasible_times": 97,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/85",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 71362,
+          "feasible_times": 115,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 71362,
+          "feasible_times": 105,
+          "event_candidates": 79
+        }
+      }
+    },
+    {
+      "id": "BK50/86",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72912,
+          "feasible_times": 111,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72912,
+          "feasible_times": 103,
+          "event_candidates": 81
+        }
+      }
+    },
+    {
+      "id": "BK50/87",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77562,
+          "feasible_times": 111,
+          "event_candidates": 86
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77562,
+          "feasible_times": 86,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/88",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 87482,
+          "feasible_times": 111,
+          "event_candidates": 90
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 87482,
+          "feasible_times": 84,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/89",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 72354,
+          "feasible_times": 126,
+          "event_candidates": 81
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 72354,
+          "feasible_times": 110,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/90",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76322,
+          "feasible_times": 184,
+          "event_candidates": 95
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76322,
+          "feasible_times": 90,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/91",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 89404,
+          "feasible_times": 126,
+          "event_candidates": 93
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 89404,
+          "feasible_times": 100,
+          "event_candidates": 79
+        }
+      }
+    },
+    {
+      "id": "BK50/92",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 87482,
+          "feasible_times": 116,
+          "event_candidates": 84
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 87482,
+          "feasible_times": 107,
+          "event_candidates": 76
+        }
+      }
+    },
+    {
+      "id": "BK50/93",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 85436,
+          "feasible_times": 142,
+          "event_candidates": 85
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 85436,
+          "feasible_times": 107,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/94",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 78244,
+          "feasible_times": 105,
+          "event_candidates": 83
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 78244,
+          "feasible_times": 83,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/95",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 84258,
+          "feasible_times": 189,
+          "event_candidates": 98
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 84258,
+          "feasible_times": 103,
+          "event_candidates": 81
+        }
+      }
+    },
+    {
+      "id": "BK50/96",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77748,
+          "feasible_times": 136,
+          "event_candidates": 87
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77748,
+          "feasible_times": 88,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/97",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77872,
+          "feasible_times": 117,
+          "event_candidates": 89
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77872,
+          "feasible_times": 88,
+          "event_candidates": 72
+        }
+      }
+    },
+    {
+      "id": "BK50/98",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 76942,
+          "feasible_times": 114,
+          "event_candidates": 88
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 76942,
+          "feasible_times": 89,
+          "event_candidates": 74
+        }
+      }
+    },
+    {
+      "id": "BK50/99",
+      "instance": "BK50",
+      "policies": {
+        "False": {
+          "groups": 62,
+          "time_checks": 77376,
+          "feasible_times": 116,
+          "event_candidates": 82
+        },
+        "True": {
+          "groups": 62,
+          "time_checks": 77376,
+          "feasible_times": 91,
+          "event_candidates": 75
+        }
+      }
+    }
+  ],
+  "meta": {
+    "created": "2026-11-28T00:52:05",
+    "python": "3.12.0",
+    "git_rev": "4ac203a"
+  }
+}

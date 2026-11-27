@@ -1,0 +1,17 @@
+path	bytes	reason
+BK15_NSGAII_pilot_verified%282%29.zip	2221187	local review ZIP or supplied duplicate external archive
+EventPoint_Retiming_%EC%B5%9C%EC%A2%85%EA%B2%80%ED%86%A0_%EA%B2%80%EC%A6%9D%EC%9E%90%EB%A3%8C.zip	26078	local review ZIP or supplied duplicate external archive
+retiming-implementation-review.zip	102345	local review ZIP or supplied duplicate external archive
+retiming-performance-review.zip	205683	local review ZIP or supplied duplicate external archive
+02_%EA%B8%B0%EC%A1%B4%EC%88%98%ED%96%89%EC%9E%91%EC%97%85_%EA%B2%80%EC%A6%9D%EA%B8%B0%EB%A1%9D_%EC%B5%9C%EC%A2%85.md	17154	supplied historical record; usage guide summarizes verified facts
+results/stage4-retiming-validation-20261126T104800021496Z/	590617	intermediate duplicate run; final run retained
+results/stage4-retiming-performance-20261127T153937355670Z/baseline-bk15.prof	102101	binary or redundant profiling/diff artifact; benchmark, paired stages and immutable baseline retained
+results/stage4-retiming-performance-20261127T153937355670Z/baseline-bk50.prof	102101	binary or redundant profiling/diff artifact; benchmark, paired stages and immutable baseline retained
+results/stage4-retiming-performance-20261127T153937355670Z/baseline-profile.json	23020	binary or redundant profiling/diff artifact; benchmark, paired stages and immutable baseline retained
+results/stage4-retiming-performance-20261127T153937355670Z/baseline-stage-profile.json	2804	binary or redundant profiling/diff artifact; benchmark, paired stages and immutable baseline retained
+results/stage4-retiming-performance-20261127T153937355670Z/source-comparison.patch	66252	binary or redundant profiling/diff artifact; benchmark, paired stages and immutable baseline retained
+.venv/	not-traversed	local environment, cache or private evidence; never a runtime dependency of repository-only checks
+scratch/	not-traversed	local environment, cache or private evidence; never a runtime dependency of repository-only checks
+external/	not-traversed	local environment, cache or private evidence; never a runtime dependency of repository-only checks
+__pycache__/	not-traversed	local environment, cache or private evidence; never a runtime dependency of repository-only checks
+.pytest_cache/	not-traversed	local environment, cache or private evidence; never a runtime dependency of repository-only checks

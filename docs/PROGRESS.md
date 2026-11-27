@@ -1,5 +1,7 @@
 # 진행 현황 (2026-11-24 기준)
 
+> 1–7절은 당시 기록을 유지한다. 2026-11-28 Retiming 독립 개발 완료 내역과 재현 경로는 마지막 절에 추가했다. 팀원 NSGA-II 후속 상태나 원격 문서를 이 분기에서 추측하여 갱신하지 않았다.
+
 근거는 원본 노트북(`1단계.ipynb`, 리팩토링 후 삭제)의 저장된 출력, `docs/notes/`의 전처리 노트, 리팩토링 후 `experiments/`와 `tests/`로 다시 실행한 결과다.
 
 > 현재 코드는 팀원이 `han/` 폴더로 전달한 자료다. 노트북은 팀원 개인 conda 환경에서 실행되었다. 제안서상 1단계 담당은 김성우다. 실제 작성자는 확인 필요.
@@ -11,7 +13,7 @@
 | 1. 데이터 정리, decoder, checker | 11/09–11/12 | **대부분 완료** | 전처리, HNFSM decoder, 독립 checker 동작. Table 1 예제는 테스트로 추가함. 미완: Gantt chart, makespan 하한 점검 |
 | 2. 알고리즘 연결 | 11/13–11/16 | **일부** | jMetalPy NSGA-II 연동 데모만 있음(Table 5 설정 아님). SPEA2·GDE3·OMOPSO·SMPSO 미연결 |
 | 3. 재현 실험 A | 11/17–11/20 | **미착수** | R0/R1/R2, 지표(PDS, MSF, DPF, RHA, HV, GMM), 통계 검정 없음 |
-| 4. Retiming 구현·부분문제 검증 | 11/19–11/25 | **이 저장소에 없음** | 명세는 `docs/proposal/`에 있음. 제안서의 BK15 예비 검증 코드 위치 확인 필요 |
+| 4. Retiming 구현·부분문제 검증 | 11/19–11/25 | **독립 구현·검증 완료 (2026-11-28 추가)** | BK15·BK50 공통 모듈, 66개 회귀·신규 200개, 독립 전수탐색·성능 최적화. NSGA-II 통합은 미수행 |
 | 5. B0 vs P1, Ablation | 11/26–11/30 | 미착수 | |
 | 6. 분석·보고서 | 12/1–12/7 | 미착수 | |
 
@@ -132,3 +134,16 @@ OIDT는 구획별 합집합 정의 기준이다.
 - 동작 변경은 UNLIMITED 버그 수정과 NSGA-II 데모 seed 고정 두 가지다.
 - 파일명 변경: `bk15_clean.*` → `bk15-clean.*`, 전처리 노트·제안서·Retiming 명세 파일명을 영문으로 바꿨다.
 - 환경: `pyproject.toml` + `uv.lock`, 프로젝트 루트 `.venv` 하나로 통일했다(`requirements.txt` 삭제). 설치 버전: numpy 2.5.5, pandas 2.3.3, ortools 9.15, jmetalpy 1.9.0.
+
+## Retiming 독립 구현·검증 완료 (2026-11-28)
+
+- `src/bakery/retiming.py`: BK15·BK50 공통 Group-Based Event-Point Retiming 최종 버전. 한 그룹 전체 이동, 고정 배정, Pareto 비악화, 결정적 동률 처리를 유지한다.
+- 기존 코드의 BK15 하드코딩·UNLIMITED 처리·절대경로·비결정적 동률 문제를 보완했다. 기존 66개에서 순서 변경 허용 54개, 고정 48개 개선과 최적 목적값을 재현했다.
+- 독립 전수탐색은 `src/bakery/retiming_audit.py`에 분리했다. 기존 66개 + 신규 BK15·BK50 각 100개 전체에서 17,712개 그룹·정책 부분문제와 18,606,440개 정수 시각을 검사했고 불일치 0건이었다.
+- 신규 100개씩에서 각각 96개 OIDT 개선, 평균 감소량은 58.69분·61.06분이었다. BK15 생성 실패 2건은 성공 표본과 별도로 기록했다. Checker·불변조건·Pareto 비악화 위반은 0건이었다.
+- 성능 최적화 전후 1,064개 정책·탐색 범위 조합의 목적값·선택 이동·시각·배정이 모두 일치했다. 기존 테스트를 유지하고 총 pytest 68개를 통과했다.
+- 준비 객체 재사용 시 평균 Retiming 비용은 BK15 21.92→9.97ms, BK50 72.26→24.63ms로 감소했다. 이는 구현 비용 비교이며 HNFSM 단독 대비 후처리 비용과 NSGA-II 탐색 성능 향상을 구분한다.
+- API는 `PreparedRetimingInstance(json_path)`, `prepared.instance`, `prepared.retime(schedule_df)`다. 입력 instance/JSON 불일치와 내용 변경을 검사한다. 저장·시각화 정렬은 `schedule_for_export()`에서 수행한다.
+- 최종 결과: `results/stage4-retiming-validation-20261126T105021665036Z/`, `results/stage4-retiming-performance-20261127T153937355670Z/`. 기존 JSON·CSV와 당시 code/data/revision 기록은 재작성하지 않는다.
+- 최적화 전 기준은 생산 패키지 밖의 `repro/retiming-baseline/`에, 외부 파일럿 원본·필수 파일 해시는 `repro/retiming-evidence.json`에 보존했다. 공유용 실행 경로와 scope 구분은 [retiming.md](retiming.md)를 따른다.
+- 원격 main에는 이 로컬 기준 이후 후속 변경이 있다. 원격 내용을 가져오지 않았고, NSGA-II 통합·B0/P1 평가 예산/시간 비교·통계 검증·다른 알고리즘·최종 보고서는 완료로 처리하지 않는다. 로컬 TODO (A) 및 BK50 Boxing 데이터도 변경하지 않았다.

@@ -1,0 +1,14 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.0, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\USER\Downloads\bakery-hnfsm-retiming
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0, platformdirs-4.14.8
+collected 68 items
+
+tests\test_decoder.py ......                                             [  8%]
+tests\test_preprocess.py ...                                             [ 13%]
+tests\test_retiming.py ................................................. [ 85%]
+..........                                                               [100%]
+
+============================= 68 passed in 2.32s ==============================

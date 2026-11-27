@@ -1,0 +1,645 @@
+{
+  "config": {
+    "baseline": "scratch/retiming-performance-baseline-20261128",
+    "reference_results": "results/stage4-retiming-validation-20261126T105021665036Z",
+    "legacy_pilot": "scratch/retiming-source/pilot/optimization_pilot",
+    "seed": 20261128,
+    "warmup_passes": 1,
+    "repetitions": 5,
+    "profile_schedules_per_instance": 10,
+    "policies": [
+      false,
+      true
+    ],
+    "boundary_modes": [
+      false,
+      true
+    ],
+    "oidt": "per-compartment busy-union"
+  },
+  "environment": {
+    "python": "3.12.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel"
+  },
+  "instances": {
+    "BK15": {
+      "schedules": 166,
+      "measurements_per_method": 830,
+      "retiming": {
+        "baseline": {
+          "n": 830,
+          "mean_ms": 21.917693855041772,
+          "median_ms": 21.68639999581501,
+          "p95_ms": 28.44755999976769
+        },
+        "optimized_direct": {
+          "n": 830,
+          "mean_ms": 12.091042048996314,
+          "median_ms": 11.69279997702688,
+          "p95_ms": 15.664160044980228
+        },
+        "optimized_prepared": {
+          "n": 830,
+          "mean_ms": 9.966167830791974,
+          "median_ms": 9.694650012534112,
+          "p95_ms": 12.653874992975027
+        }
+      },
+      "stage_timings": {
+        "baseline": {
+          "setup_seconds": {
+            "n": 830,
+            "mean_ms": 8.00956457626097,
+            "median_ms": 7.617799972649664,
+            "p95_ms": 10.366314981365573
+          },
+          "baseline_checker_seconds": {
+            "n": 830,
+            "mean_ms": 5.960107952880909,
+            "median_ms": 5.634050001390278,
+            "p95_ms": 7.648994986084287
+          },
+          "search_seconds": {
+            "n": 830,
+            "mean_ms": 1.0385151795414558,
+            "median_ms": 0.9556500008329749,
+            "p95_ms": 1.5599150297930462
+          },
+          "final_checker_seconds": {
+            "n": 830,
+            "mean_ms": 5.415369878966272,
+            "median_ms": 5.467799986945465,
+            "p95_ms": 7.45091998542193
+          },
+          "retime_seconds": {
+            "n": 830,
+            "mean_ms": 13.798701084858502,
+            "median_ms": 13.98694998351857,
+            "p95_ms": 18.67677001573611
+          }
+        },
+        "optimized_direct": {
+          "instance_preparation_seconds": {
+            "n": 830,
+            "mean_ms": 1.9693837348225873,
+            "median_ms": 1.8099999870173633,
+            "p95_ms": 2.811520014074631
+          },
+          "dataframe_copy_seconds": {
+            "n": 830,
+            "mean_ms": 0.07474023928719921,
+            "median_ms": 0.06960000609979033,
+            "p95_ms": 0.11789996642619371
+          },
+          "dataframe_conversion_seconds": {
+            "n": 830,
+            "mean_ms": 1.0241631330103131,
+            "median_ms": 0.9132500272244215,
+            "p95_ms": 1.505569997243583
+          },
+          "resource_preparation_seconds": {
+            "n": 830,
+            "mean_ms": 0.0430837342324835,
+            "median_ms": 0.03789999755099416,
+            "p95_ms": 0.06805502052884548
+          },
+          "oven_profiles_seconds": {
+            "n": 830,
+            "mean_ms": 0.04872349189055791,
+            "median_ms": 0.044599990360438824,
+            "p95_ms": 0.0715699628926813
+          },
+          "result_generation_seconds": {
+            "n": 830,
+            "mean_ms": 1.4891304824001952,
+            "median_ms": 1.4384500100277364,
+            "p95_ms": 2.326209985767491
+          },
+          "direct_objectives_seconds": {
+            "n": 830,
+            "mean_ms": 0.27107373658421796,
+            "median_ms": 0.2539500128477812,
+            "p95_ms": 0.461729965172708
+          },
+          "invariants_seconds": {
+            "n": 830,
+            "mean_ms": 1.6214759037857989,
+            "median_ms": 1.455900026485324,
+            "p95_ms": 2.422384961391799
+          },
+          "source_validation_seconds": {
+            "n": 830,
+            "mean_ms": 1.0241245784998747,
+            "median_ms": 0.9668499988038093,
+            "p95_ms": 1.4380299748154355
+          },
+          "setup_seconds": {
+            "n": 830,
+            "mean_ms": 5.474258192565225,
+            "median_ms": 5.109749996336177,
+            "p95_ms": 7.188389988732523
+          },
+          "baseline_checker_seconds": {
+            "n": 830,
+            "mean_ms": 1.8101548193252635,
+            "median_ms": 1.5133499982766807,
+            "p95_ms": 2.489474974572658
+          },
+          "search_seconds": {
+            "n": 830,
+            "mean_ms": 1.0277355412380342,
+            "median_ms": 0.9434500243514776,
+            "p95_ms": 1.5937799966195594
+          },
+          "final_checker_seconds": {
+            "n": 830,
+            "mean_ms": 1.4929092771805688,
+            "median_ms": 1.502500002970919,
+            "p95_ms": 2.3646899877348915
+          },
+          "retime_seconds": {
+            "n": 830,
+            "mean_ms": 6.455078313101914,
+            "median_ms": 6.47535000462085,
+            "p95_ms": 8.470364997629076
+          }
+        },
+        "optimized_prepared": {
+          "instance_preparation_seconds": {
+            "n": 830,
+            "mean_ms": 0.0,
+            "median_ms": 0.0,
+            "p95_ms": 0.0
+          },
+          "dataframe_copy_seconds": {
+            "n": 830,
+            "mean_ms": 0.057030843882204356,
+            "median_ms": 0.05129998316988349,
+            "p95_ms": 0.0866400194354355
+          },
+          "dataframe_conversion_seconds": {
+            "n": 830,
+            "mean_ms": 0.8778686746001154,
+            "median_ms": 0.7664500153623521,
+            "p95_ms": 1.3222100242273882
+          },
+          "resource_preparation_seconds": {
+            "n": 830,
+            "mean_ms": 0.0457000003493649,
+            "median_ms": 0.03890000516548753,
+            "p95_ms": 0.07660000119358301
+          },
+          "oven_profiles_seconds": {
+            "n": 830,
+            "mean_ms": 0.049701566227251685,
+            "median_ms": 0.04455001908354461,
+            "p95_ms": 0.0771000050008297
+          },
+          "result_generation_seconds": {
+            "n": 830,
+            "mean_ms": 1.4459960234873221,
+            "median_ms": 1.434050005627796,
+            "p95_ms": 2.2507750254590064
+          },
+          "direct_objectives_seconds": {
+            "n": 830,
+            "mean_ms": 0.27565879534077214,
+            "median_ms": 0.2560000284574926,
+            "p95_ms": 0.4472649976378304
+          },
+          "invariants_seconds": {
+            "n": 830,
+            "mean_ms": 1.6164745769396156,
+            "median_ms": 1.4623499591834843,
+            "p95_ms": 2.458509977441281
+          },
+          "source_validation_seconds": {
+            "n": 830,
+            "mean_ms": 1.128265543431268,
+            "median_ms": 1.080349989933893,
+            "p95_ms": 1.5436349698575211
+          },
+          "setup_seconds": {
+            "n": 830,
+            "mean_ms": 3.41436421717461,
+            "median_ms": 3.163049987051636,
+            "p95_ms": 4.429864991107023
+          },
+          "baseline_checker_seconds": {
+            "n": 830,
+            "mean_ms": 1.7779078304414155,
+            "median_ms": 1.5698500210419297,
+            "p95_ms": 2.425114982179366
+          },
+          "search_seconds": {
+            "n": 830,
+            "mean_ms": 1.067790843852156,
+            "median_ms": 0.9667000267654657,
+            "p95_ms": 1.6100500099128112
+          },
+          "final_checker_seconds": {
+            "n": 830,
+            "mean_ms": 1.4993932534357062,
+            "median_ms": 1.5114500129129738,
+            "p95_ms": 2.315944997826591
+          },
+          "retime_seconds": {
+            "n": 830,
+            "mean_ms": 6.46253445849148,
+            "median_ms": 6.427150015952066,
+            "p95_ms": 8.41568499454297
+          }
+        }
+      },
+      "checker_calls": {
+        "baseline": 1580,
+        "optimized_direct": 1580,
+        "optimized_prepared": 1580,
+        "pipeline_optimized_prepared": 1580,
+        "pipeline_baseline": 1580
+      },
+      "expected_checker_calls": {
+        "baseline": 1580,
+        "optimized_direct": 1580,
+        "optimized_prepared": 1580,
+        "pipeline_optimized_prepared": 1580,
+        "pipeline_baseline": 1580
+      },
+      "hnfsm": {
+        "False": {
+          "n": 830,
+          "mean_ms": 2.2244314453424323,
+          "median_ms": 2.16684999759309,
+          "p95_ms": 3.1893149745883416
+        },
+        "True": {
+          "n": 830,
+          "mean_ms": 3.7877562635365023,
+          "median_ms": 3.685749979922548,
+          "p95_ms": 4.9715750152245155
+        }
+      },
+      "hnfsm_true_plus_retiming_actual_wall": {
+        "baseline": {
+          "n": 830,
+          "mean_ms": 24.807155664367826,
+          "median_ms": 24.984550022054464,
+          "p95_ms": 30.68778998567722
+        },
+        "optimized_prepared": {
+          "n": 830,
+          "mean_ms": 13.532670602098623,
+          "median_ms": 13.408950006123632,
+          "p95_ms": 16.256555009749718
+        }
+      },
+      "hnfsm_true_plus_retiming_component_sum": {
+        "baseline": {
+          "n": 830,
+          "mean_ms": 25.705450118578273,
+          "median_ms": 25.590600009309128,
+          "p95_ms": 32.591610032250166
+        },
+        "optimized_direct": {
+          "n": 830,
+          "mean_ms": 15.878798312532815,
+          "median_ms": 15.515750012127683,
+          "p95_ms": 20.004540029913183
+        },
+        "optimized_prepared": {
+          "n": 830,
+          "mean_ms": 13.753924094328479,
+          "median_ms": 13.494899962097406,
+          "p95_ms": 16.921335010556504
+        }
+      },
+      "one_time_preparation": {
+        "json_loading_seconds": 0.001576000009663403,
+        "metadata_seconds": 4.2899977415800095e-05
+      },
+      "improvement": {
+        "optimized_direct": {
+          "speedup": 1.8127216633789787,
+          "reduction_percent": 44.83433280452091
+        },
+        "optimized_prepared": {
+          "speedup": 2.1992097892756495,
+          "reduction_percent": 54.52912201116709
+        }
+      }
+    },
+    "BK50": {
+      "schedules": 100,
+      "measurements_per_method": 500,
+      "retiming": {
+        "optimized_direct": {
+          "n": 500,
+          "mean_ms": 29.54654259898234,
+          "median_ms": 28.43114998540841,
+          "p95_ms": 36.70230999705381
+        },
+        "optimized_prepared": {
+          "n": 500,
+          "mean_ms": 24.63265459833201,
+          "median_ms": 23.642899992410094,
+          "p95_ms": 34.848239997518185
+        },
+        "baseline": {
+          "n": 500,
+          "mean_ms": 72.25688979949336,
+          "median_ms": 71.04255000012927,
+          "p95_ms": 89.02134002128149
+        }
+      },
+      "stage_timings": {
+        "optimized_direct": {
+          "instance_preparation_seconds": {
+            "n": 500,
+            "mean_ms": 4.796988398768008,
+            "median_ms": 4.556400002911687,
+            "p95_ms": 5.999785044696181
+          },
+          "dataframe_copy_seconds": {
+            "n": 500,
+            "mean_ms": 0.11108819965738803,
+            "median_ms": 0.1047999830916524,
+            "p95_ms": 0.15354494971688834
+          },
+          "dataframe_conversion_seconds": {
+            "n": 500,
+            "mean_ms": 2.393650999874808,
+            "median_ms": 2.2231999901123345,
+            "p95_ms": 3.354570042574778
+          },
+          "resource_preparation_seconds": {
+            "n": 500,
+            "mean_ms": 0.14640359941404313,
+            "median_ms": 0.12764998245984316,
+            "p95_ms": 0.24007002066355185
+          },
+          "oven_profiles_seconds": {
+            "n": 500,
+            "mean_ms": 0.15648919879458845,
+            "median_ms": 0.14509999891743064,
+            "p95_ms": 0.23929501476231954
+          },
+          "result_generation_seconds": {
+            "n": 500,
+            "mean_ms": 1.6765213999897242,
+            "median_ms": 1.5608000103384256,
+            "p95_ms": 2.3940300074173133
+          },
+          "direct_objectives_seconds": {
+            "n": 500,
+            "mean_ms": 0.8314776007318869,
+            "median_ms": 0.7710499921813607,
+            "p95_ms": 1.2833050393965082
+          },
+          "invariants_seconds": {
+            "n": 500,
+            "mean_ms": 2.1332798019284382,
+            "median_ms": 1.9462000054772943,
+            "p95_ms": 3.0222100089304136
+          },
+          "source_validation_seconds": {
+            "n": 500,
+            "mean_ms": 1.8055686010047793,
+            "median_ms": 1.7612999945413321,
+            "p95_ms": 2.2393149411072955
+          },
+          "setup_seconds": {
+            "n": 500,
+            "mean_ms": 14.82415239920374,
+            "median_ms": 14.196150004863739,
+            "p95_ms": 18.071454978780817
+          },
+          "baseline_checker_seconds": {
+            "n": 500,
+            "mean_ms": 6.2942067994736135,
+            "median_ms": 5.902450007852167,
+            "p95_ms": 7.760655003949068
+          },
+          "search_seconds": {
+            "n": 500,
+            "mean_ms": 2.447394600138068,
+            "median_ms": 2.2902500350028276,
+            "p95_ms": 3.532199995242989
+          },
+          "final_checker_seconds": {
+            "n": 500,
+            "mean_ms": 6.262314599822275,
+            "median_ms": 5.7622999884188175,
+            "p95_ms": 7.703500025672835
+          },
+          "retime_seconds": {
+            "n": 500,
+            "mean_ms": 14.26823780091945,
+            "median_ms": 13.726949982810766,
+            "p95_ms": 17.83623501250983
+          }
+        },
+        "optimized_prepared": {
+          "instance_preparation_seconds": {
+            "n": 500,
+            "mean_ms": 0.0,
+            "median_ms": 0.0,
+            "p95_ms": 0.0
+          },
+          "dataframe_copy_seconds": {
+            "n": 500,
+            "mean_ms": 0.08144299872219563,
+            "median_ms": 0.06839999696239829,
+            "p95_ms": 0.12643997324630613
+          },
+          "dataframe_conversion_seconds": {
+            "n": 500,
+            "mean_ms": 2.4513045999919996,
+            "median_ms": 2.2247499728109688,
+            "p95_ms": 3.251509965048171
+          },
+          "resource_preparation_seconds": {
+            "n": 500,
+            "mean_ms": 0.14654479967430234,
+            "median_ms": 0.1280000142287463,
+            "p95_ms": 0.23550998885184526
+          },
+          "oven_profiles_seconds": {
+            "n": 500,
+            "mean_ms": 0.16088099870830774,
+            "median_ms": 0.14650000957772136,
+            "p95_ms": 0.24787002184893914
+          },
+          "result_generation_seconds": {
+            "n": 500,
+            "mean_ms": 1.6560925990343094,
+            "median_ms": 1.5607999812345952,
+            "p95_ms": 2.4096200068015596
+          },
+          "direct_objectives_seconds": {
+            "n": 500,
+            "mean_ms": 0.8411514004692435,
+            "median_ms": 0.7693999796174467,
+            "p95_ms": 1.3219849963206796
+          },
+          "invariants_seconds": {
+            "n": 500,
+            "mean_ms": 2.138596400967799,
+            "median_ms": 1.9262499990873039,
+            "p95_ms": 3.0657700001029293
+          },
+          "source_validation_seconds": {
+            "n": 500,
+            "mean_ms": 1.9136909962398931,
+            "median_ms": 1.8663999799173325,
+            "p95_ms": 2.3122749611502504
+          },
+          "setup_seconds": {
+            "n": 500,
+            "mean_ms": 10.251173400669359,
+            "median_ms": 9.459750028327107,
+            "p95_ms": 13.06372002291027
+          },
+          "baseline_checker_seconds": {
+            "n": 500,
+            "mean_ms": 6.380889002350159,
+            "median_ms": 5.731049983296543,
+            "p95_ms": 8.049980053328902
+          },
+          "search_seconds": {
+            "n": 500,
+            "mean_ms": 2.4765176016371697,
+            "median_ms": 2.358400000957772,
+            "p95_ms": 3.5944850096711884
+          },
+          "final_checker_seconds": {
+            "n": 500,
+            "mean_ms": 6.119372200220823,
+            "median_ms": 5.823049985338002,
+            "p95_ms": 7.59370001615025
+          },
+          "retime_seconds": {
+            "n": 500,
+            "mean_ms": 14.15759739978239,
+            "median_ms": 13.822600012645125,
+            "p95_ms": 17.737209994811565
+          }
+        },
+        "baseline": {
+          "setup_seconds": {
+            "n": 500,
+            "mean_ms": 30.672273002332076,
+            "median_ms": 29.12895000190474,
+            "p95_ms": 43.87961999163961
+          },
+          "baseline_checker_seconds": {
+            "n": 500,
+            "mean_ms": 22.870673600700684,
+            "median_ms": 21.762999997008592,
+            "p95_ms": 29.564369950094257
+          },
+          "search_seconds": {
+            "n": 500,
+            "mean_ms": 2.4285683995112777,
+            "median_ms": 2.286550006829202,
+            "p95_ms": 3.475694978260435
+          },
+          "final_checker_seconds": {
+            "n": 500,
+            "mean_ms": 22.050133201293647,
+            "median_ms": 21.7246999964118,
+            "p95_ms": 28.808359970571466
+          },
+          "retime_seconds": {
+            "n": 500,
+            "mean_ms": 41.31733140128199,
+            "median_ms": 41.006549989106134,
+            "p95_ms": 52.87567501363809
+          }
+        }
+      },
+      "checker_calls": {
+        "optimized_direct": 980,
+        "optimized_prepared": 980,
+        "baseline": 980,
+        "pipeline_optimized_prepared": 980,
+        "pipeline_baseline": 980
+      },
+      "expected_checker_calls": {
+        "optimized_direct": 980,
+        "optimized_prepared": 980,
+        "baseline": 980,
+        "pipeline_optimized_prepared": 980,
+        "pipeline_baseline": 980
+      },
+      "hnfsm": {
+        "False": {
+          "n": 500,
+          "mean_ms": 30.459880197653547,
+          "median_ms": 30.118499998934567,
+          "p95_ms": 36.36020002304576
+        },
+        "True": {
+          "n": 500,
+          "mean_ms": 33.8649868008215,
+          "median_ms": 33.376249979482964,
+          "p95_ms": 40.585865010507405
+        }
+      },
+      "hnfsm_true_plus_retiming_actual_wall": {
+        "baseline": {
+          "n": 500,
+          "mean_ms": 102.59147559828125,
+          "median_ms": 101.94759999285452,
+          "p95_ms": 120.73842500685714
+        },
+        "optimized_prepared": {
+          "n": 500,
+          "mean_ms": 57.71711399813648,
+          "median_ms": 56.52019998524338,
+          "p95_ms": 71.9121449830709
+        }
+      },
+      "hnfsm_true_plus_retiming_component_sum": {
+        "optimized_direct": {
+          "n": 500,
+          "mean_ms": 63.41152939980384,
+          "median_ms": 62.347349972696975,
+          "p95_ms": 75.22173003235365
+        },
+        "optimized_prepared": {
+          "n": 500,
+          "mean_ms": 58.49764139915351,
+          "median_ms": 57.4371000402607,
+          "p95_ms": 71.09247994376345
+        },
+        "baseline": {
+          "n": 500,
+          "mean_ms": 106.12187660031486,
+          "median_ms": 105.7499999878928,
+          "p95_ms": 123.086625043652
+        }
+      },
+      "one_time_preparation": {
+        "json_loading_seconds": 0.003665599972009659,
+        "metadata_seconds": 0.00019039999460801482
+      },
+      "improvement": {
+        "optimized_direct": {
+          "speedup": 2.4455277485488973,
+          "reduction_percent": 59.109030736070366
+        },
+        "optimized_prepared": {
+          "speedup": 2.933378110387916,
+          "reduction_percent": 65.90961129563492
+        }
+      }
+    }
+  },
+  "checker_scope": "same unchanged verify_schedule function: baseline and every moved result",
+  "meta": {
+    "created": "2026-11-28T00:57:31",
+    "python": "3.12.0",
+    "git_rev": "4ac203a"
+  }
+}

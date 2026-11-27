@@ -27,6 +27,8 @@ bakery-hnfsm-retiming/
 │   ├── preprocess.py       # 원본 Excel → 정제 JSON/XLSX (BK15, BK50)
 │   ├── decoder.py          # SPV rule, instance 로드, HNFSM decoder, OIDT(합집합)
 │   ├── checker.py          # 독립 스케줄 검증기 (M1–M19)
+│   ├── retiming.py         # 독립 Event-Point Retiming, 준비 객체 API
+│   ├── retiming_audit.py   # 독립 전수탐색 및 기존 파일럿 매핑
 │   ├── cpsat.py            # CP-SAT 최소 makespan 모델
 │   ├── problem.py          # jMetalPy 문제 클래스 (벡터 → SPV → decoder)
 │   └── io.py               # 결과 저장/로드 (meta: 시각, Python, git rev)
@@ -82,6 +84,7 @@ uv run pytest                                         # 회귀 테스트
 - 할 일과 결정 사항: [docs/TODO.md](docs/TODO.md)
 - 원논문 적합성 검토: [docs/paper-conformance.md](docs/paper-conformance.md)
 - Retiming 개선안 명세: [docs/proposal/proposal-idea-01-event-point-retiming.md](docs/proposal/proposal-idea-01-event-point-retiming.md)
+- Retiming 최종 API·검증·재현 및 공유 범위: [docs/retiming.md](docs/retiming.md)
 
 ## 데이터 출처
 

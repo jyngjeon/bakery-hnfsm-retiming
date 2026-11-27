@@ -58,12 +58,14 @@
 - [ ] 논문 PF*와 경향을 비교한다(E1≠E2, front 모양, BK50 알고리즘 순위).
 
 **Stage 4: Retiming**
-- [ ] 명세(`proposal/proposal-idea-01-event-point-retiming.md`)대로 한 그룹 Event-Point Retiming을 구현한다.
-- [ ] 부분문제 검증: 소형 예제를 전수탐색해 비교한다.
-- [ ] 제안서의 BK15 예비 검증(66개 중 54개 개선) 코드와 자료 위치를 확인한다(확인 필요).
+- [x] 명세(`proposal/proposal-idea-01-event-point-retiming.md`)대로 한 그룹 Event-Point Retiming을 구현한다. (2026-11-28: BK15·BK50 공통 최종 모듈, 성능 최적화·API 보완 완료)
+- [x] 부분문제 검증: 소형 예제를 전수탐색해 비교한다. (266개 전체·두 정책, 17,712개 부분문제, 불일치 0건; pytest 68개 통과)
+- [x] 제안서의 BK15 예비 검증(66개 중 54개 개선) 코드와 자료 위치를 확인한다. (원본 ZIP 확보·체크섬 고정·66개 재현; 별도 공유 경로는 `retiming.md`, `repro/retiming-evidence.json`)
 
 **Stage 5: 개선안 비교**
+- [ ] NSGA-II와 최종 Retiming API를 통합하고 수정된 실제 스케줄·목적값을 함께 보존한다.
 - [ ] B0 vs P1: 같은 평가 횟수(15,000)와 같은 실행 시간 두 기준, seed 10개, Wilcoxon
+- [ ] 통합 후 B0·P1의 통계적 성능을 검증한다. Retiming 자체의 시간 감소를 Pareto front·HV 향상으로 해석하지 않는다.
 - [ ] Ablation(BK15): 자원 순서 변경 허용/고정, 경계 그룹만/전체 그룹
 
 **추가 실험**
