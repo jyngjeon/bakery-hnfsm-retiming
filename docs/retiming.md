@@ -1,6 +1,6 @@
 # Retiming 사용 및 검증 재현
 
-현재 `src/bakery/retiming.py`는 독립 구현·정확성 검증·성능 최적화를 마친 최종 Retiming 모듈이다. NSGA-II 통합과 B0·P1 최적화 성능 비교는 아직 수행하지 않았다. 이 문서는 로컬 기준 `4ac203adba09e3bf4d0c758f03f335be08e3dfd4` 위에서 검증한 코드와 보존된 결과를 설명한다. 이후 정상적인 commit에서도 아래 명령을 사용할 수 있으며, 과거 HEAD와 현재 HEAD가 같을 필요는 없다.
+현재 `src/bakery/retiming.py`는 독립 구현·정확성 검증·성능 최적화를 마친 최종 Retiming 모듈이다. NSGA-II 통합과 B0·P1 최적화 성능 비교는 아직 수행하지 않았다. 이 문서의 전체 정확성·성능 수치는 로컬 기준 `4ac203adba09e3bf4d0c758f03f335be08e3dfd4`에서 보존한 결과다. 2026-11-28에는 최신 main `1ec9e45`를 반영한 환경에서 아래의 제한된 호환성 검증을 별도로 마쳤다(PROGRESS.md 11절). 이후 정상적인 commit에서도 아래 명령을 사용할 수 있으며, 과거 HEAD와 현재 HEAD가 같을 필요는 없다.
 
 ## 1. 알고리즘과 정확성 범위
 
@@ -8,7 +8,7 @@
 
 기본 정책은 오븐의 최초 시작 또는 최종 종료를 결정하는 경계 그룹 선별, 자원 처리순서 변경 허용이다. 수락 조건은 makespan·OIDT 모두 비악화이고 하나 이상 엄격히 개선되는 것이다. 동률은 `(OIDT, makespan, g, T_g)` 순서로 결정한다. 개선이 없으면 원본과 내용이 같은 별도 DataFrame을 반환한다.
 
-OIDT는 구획별 점유구간 합집합 기준이며, 같은 그룹의 공동 베이킹과 UNLIMITED 용량 해석은 현재 팀 코드를 따른다. 이는 원저자 코드와 동일하다고 입증된 해석이 아니다. 모델 근거는 원논문 PDF p.5 M1–M2, p.6 M6·M8–M9·M12–M13·M17–M18이며, 기존 쟁점은 [paper-conformance.md](paper-conformance.md)와 [TODO.md](TODO.md)에 남긴다.
+OIDT는 구획별 점유구간 합집합 기준이며, 같은 그룹의 공동 베이킹과 UNLIMITED 용량 해석은 현재 팀 코드를 따른다. 이는 원저자 코드와 동일하다고 입증된 해석이 아니다. 모델 근거는 원논문 PDF p.5 M1–M2, p.6 M6·M8–M9·M12–M13·M17–M18이며, 팀의 확정 모델링 결정은 [PROGRESS.md](PROGRESS.md) 5절과 [decisions-A.md](decisions-A.md)에 있다. 논문 대비 해석 차이와 남은 작업은 [paper-conformance.md](paper-conformance.md)와 [TODO.md](TODO.md)를 따른다.
 
 정확성 보장은 **자원 배정과 다른 그룹 시각을 고정한 한 그룹 이동 부분문제**에 한정된다. 경계 그룹 선별은 최소 OIDT를 위한 것으로, 전체 그룹의 Makespan-only 개선이나 OIDT 동률에서 같은 makespan까지 보장하지 않는다. 전체 스케줄의 전역최적성, NSGA-II Pareto front·HV 향상을 주장하지 않는다.
 
@@ -51,6 +51,8 @@ else:
 - 반환 DataFrame은 입력 행 순서·index·열 순서를 유지한다. CSV 저장·간트 차트 생성 직전에만 `schedule_for_export()`로 `(ST,g,p,s)` 정렬한다.
 - 수정된 `result.schedule`과 목적값을 함께 보존한다. 그룹 순서로 HNFSM을 다시 실행하면 Retiming 이동 효과가 사라진다.
 - 기존 Checker 함수는 모든 규칙을 계속 검사한다. 내부 adapter는 현재 Checker가 `.columns`와 `.iterrows()`의 mapping 행을 사용한다는 규약에 의존한다. Checker가 다른 DataFrame 기능을 사용하도록 바뀌면 adapter 호환성을 다시 검증한다.
+
+최신 decoder의 기본값은 `oven_rule="first_fit", cobake="any", oidt="union"`이며 Retiming의 기존 모델과 일치한다. `BakerySchedulingProblem(..., **decode_kwargs)`에 옵션을 전달할 수 있어도 Retiming은 합집합 OIDT만 계산한다. `oidt="m2"` 결과를 같은 목적값으로 취급하거나 민감도 옵션 전체의 호환성이 검증되었다고 해석하지 않는다. 이번 작업에서는 problem에 Retiming을 연결하지 않았다.
 
 기본 순서의 예상 목적값은 BK15 `(519,273) → (519,272)`, BK50 `(1202,2409) → (1202,2357)`이다. 새 해를 보고할 때는 Checker 위반 0건을 확인한다.
 
@@ -168,9 +170,9 @@ uv run --locked python experiments/stage4-retiming-performance.py --phase all --
 
 알려진 제외 파일의 크기·이유는 [retiming-sharing-exclusions.tsv](retiming-sharing-exclusions.tsv)에 기록했다. 환경·캐시 폴더는 전체 순회하지 않았으므로 크기를 측정했다고 보고하지 않는다.
 
-이 분기의 로컬 기준은 오래된 `4ac203ad…`다. 2026-11-28 읽기 전용 확인 당시 원격 main은 `1ec9e4524d0139881b398b5b6aee7a80802acba6`였다. 원격 후속 기록은 가져오거나 덮어쓰지 않았다. 이후 사용자가 최신 main과 문서 충돌을 검토하고, 팀원 코드와 합친 환경에서 다시 회귀 검증해야 한다. 이 문서가 팀원의 NSGA-II 진행 상태를 대신 판정하지 않는다.
+2026-11-28 확정 공유 대상 34개를 보존 commit `3c9ac5a`에 저장하고, 원격 main의 후속 commit 6개(최신 `1ec9e4524d0139881b398b5b6aee7a80802acba6`)를 `feature/retiming`에 반영했다. 팀원의 최신 README·PROGRESS·TODO 기록과 Retiming 완료 내역을 함께 보존했다. 전체 pytest 78개와 BK15·BK50 기본 모델 API(각 원래 순서 스케줄 1개, 경계/전체 그룹 × 자원 순서 허용/고정)를 통과했다. 핵심 소스·알고리즘·검증 강도에 대한 호환성 수정은 필요하지 않았다. 원격 push·로컬 main 변경·PR 생성은 수행하지 않았다. 자세한 실제 범위는 PROGRESS.md 11절에 기록한다. 공유 파일 목록의 크기·해시는 이 문서 병합 후 상태로 갱신했으며 원래 34개 목록은 보존 commit에 남아 있다.
 
-남은 작업은 NSGA-II 평가기 통합, 동일 평가 횟수·동일 실행시간 B0/P1 비교, 통계 검증, 나머지 알고리즘 연결, 본 실험과 최종 보고서다. BK50 Boxing·OIDT 해석·예산 등 팀 결정 사항은 이 작업에서 바꾸지 않았다.
+남은 작업은 NSGA-II 평가기 통합, 동일 평가 횟수·동일 실행시간 B0/P1 비교, 통계 검증, 나머지 알고리즘 연결, 본 실험과 최종 보고서다. 기존 BK50 Boxing 데이터는 바꾸지 않았고, OIDT 해석·예산 등은 이번에 가져온 팀 확정 결정을 그대로 따른다.
 
 ## 8. 이번 공유 준비에서 실제 확인한 범위
 

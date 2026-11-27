@@ -5,6 +5,10 @@ reference for BK15. OIDT is only evaluated afterwards, not optimised.
 
 Bug fix vs the notebook: operations on UNLIMITED machines (M13) no longer get a
 NoOverlap constraint.
+
+`cobake` selects the same-group oven rule (docs/TODO.md A4): "any" (default,
+any overlap allowed), "same_start", or "same_start_end" (Fig. 3 form). Under the
+last two, overlapping same-group bakes on one compartment must share ST (and CT).
 """
 
 from __future__ import annotations
@@ -16,11 +20,11 @@ from pathlib import Path
 import pandas as pd
 from ortools.sat.python import cp_model
 
-from bakery.decoder import oidt_union
+from bakery.decoder import oidt_m2, oidt_union
 
 
 def solve_min_makespan(json_path: str | Path, horizon: int = 1000, time_limit: float = 30.0,
-                       workers: int = 8, seed: int | None = None) -> dict:
+                       workers: int = 8, seed: int | None = None, cobake: str = "any") -> dict:
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     machines = {m["k"]: m for m in data["machines"]}
@@ -88,9 +92,21 @@ def solve_min_makespan(json_path: str | Path, horizon: int = 1000, time_limit: f
             key_i = (op_i["g"], op_i["p"], op_i["s"])
             for j in range(i + 1, n):
                 op_j, v_j = op_list[j]
-                if op_i["g"] == op_j["g"]:
-                    continue
                 key_j = (op_j["g"], op_j["p"], op_j["s"])
+                if op_i["g"] == op_j["g"]:
+                    if cobake == "any":
+                        continue
+                    # same group: i before j, j before i, or baked together
+                    bf = model.NewBoolVar(f"oven_{k}_{key_i}_bf_{key_j}")
+                    af = model.NewBoolVar(f"oven_{k}_{key_i}_af_{key_j}")
+                    tg = model.NewBoolVar(f"oven_{k}_{key_i}_tg_{key_j}")
+                    model.AddExactlyOne([bf, af, tg])
+                    model.Add(CT[key_i] <= ST[key_j]).OnlyEnforceIf([v_i, v_j, bf])
+                    model.Add(CT[key_j] <= ST[key_i]).OnlyEnforceIf([v_i, v_j, af])
+                    model.Add(ST[key_i] == ST[key_j]).OnlyEnforceIf([v_i, v_j, tg])
+                    if cobake == "same_start_end":
+                        model.Add(CT[key_i] == CT[key_j]).OnlyEnforceIf([v_i, v_j, tg])
+                    continue
                 b_ij = model.NewBoolVar(f"oven_{k}_{key_i}_before_{key_j}")
                 model.Add(CT[key_i] <= ST[key_j]).OnlyEnforceIf([v_i, v_j, b_ij])
                 model.Add(CT[key_j] <= ST[key_i]).OnlyEnforceIf([v_i, v_j, b_ij.Not()])
@@ -136,6 +152,8 @@ def solve_min_makespan(json_path: str | Path, horizon: int = 1000, time_limit: f
         "status": status_name,
         "elapsed_s": elapsed,
         "makespan": int(solver.Value(makespan)),
+        "best_bound": int(solver.BestObjectiveBound()),
         "oidt_union": oidt_union(oven_intervals),
+        "oidt_m2": oidt_m2(oven_intervals),
         "schedule": sched_df,
     }

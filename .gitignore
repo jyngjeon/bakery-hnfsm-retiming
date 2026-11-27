@@ -32,3 +32,7 @@ external/
 /results/stage4-retiming-performance-*/baseline-profile.json
 /results/stage4-retiming-performance-*/baseline-stage-profile.json
 /results/stage4-retiming-performance-*/source-comparison.patch
+
+# Claude Code (personal use only)
+CLAUDE.md
+.claude/

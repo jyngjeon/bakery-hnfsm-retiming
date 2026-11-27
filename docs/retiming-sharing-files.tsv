@@ -1,10 +1,10 @@
 path	bytes	sha256	reason
-.gitignore	734	ccd12f5e2fd964e4c62a5b3079245612fea27ca3f8d7a3798a80b6a0f2dabf83	external/cache/intermediate exclusions
+.gitignore	792	555aa2ecce08a1d7578381d6b4efb27027e5a5639cfd575093c194af687230a2	external/cache/intermediate exclusions
 .gitattributes	344	0512066e5e162cfecbeaa1c50589cec0bace49cc931a183641eb5a821459c891	preserve source and evidence byte hashes
-README.md	6440	1940071f40749598ec0dc5e01a6e0ae0410f5ae145b9678e3fb7a62960027594	entry link
-docs/PROGRESS.md	13221	68d304da7208288f8379f9bdcf78cff2c861e5aec68493cd744b6f05347850f6	Retiming completion record
-docs/TODO.md	6003	84168bf821b1fe61faa480033a1f03efe7136a92f694ddbe045da158480fa2d0	completed Retiming checklist only
-docs/retiming.md	18165	3dc19ff6feef38516ea5ff755f4775bce0e0eef72d2ad1486f41a833a6e5cd15	API, reproduction, evidence and limits
+README.md	6379	d264ba5a5169f629a3b340c3c4d50c3e6c528d6d556149a37a84615702f916a4	entry link
+docs/PROGRESS.md	23793	7d7916389796e484d80d516f348e061b0c2a2dd94edd07cfb17352d3d9aeab79	Retiming completion record
+docs/TODO.md	10485	ed221a27de960a1ce8ee78819e5f7435b2c1ef90dfb13005222459e3fa03b108	completed Retiming checklist only
+docs/retiming.md	19545	fb96bead29010fb3a5e5107253410f0f5fe8bdd6a97a590faaec748863b37bd7	API, reproduction, evidence and limits
 src/bakery/retiming.py	25461	70c71465527e00bb7071da0d6e136d93606042ea29860b9ae4ef5bff435b55d3	final runtime module or independent oracle
 src/bakery/retiming_audit.py	11165	5759294561b1bd1d90f7d22e13a6ff5f77c2a28e208f7e120d9ae0818206f669	final runtime module or independent oracle
 tests/test_retiming.py	18427	f2b7cfa3cc3282527d936712a85ef5e9f0c13c796c1403196a3e73520c15bb83	regression suite
@@ -32,4 +32,4 @@ results/stage4-retiming-performance-20261127T153937355670Z/pytest-output.txt	717
 results/stage4-retiming-performance-20261127T153937355670Z/baseline-manifest.json	12305	62f8f27d4e949be26236a59eb97489f614e815b8d171a0cf85d5e502a9e98b7f	immutable final evidence and settings
 repro/retiming-sharing-checks.json	4312	e20abfed87ae5fb476efb67b00c19cf96efb53feedd693e5ab14f121082c0845	sharing-time execution evidence; full benchmark not rerun
 docs/retiming-sharing-exclusions.tsv	2342	d41b064ab67a05d023103a29a103be0564392120960705788d57e200cacf3daa	excluded file sizes and reasons
-docs/retiming-sharing-files.tsv	5428	self-not-hashed	file inventory (self-size included)
+docs/retiming-sharing-files.tsv	5429	self-not-hashed	file inventory (self-size included)

@@ -31,13 +31,13 @@
 | 17 | "products that are placed first in the order will get priority in occupying the machines and employees. The following products are scheduled according to machine availability" (p.4) | 그룹 순서대로 가장 이른 실행가능 `T_g`에 배치하고, 앞 그룹 배정은 고정 | MATCH (가장 자연스러운 해석) | – |
 | 18 | SPV: 값이 작은 순서로 인덱스 정렬 (p.8, Table 3) | `np.argsort(kind="mergesort")` | MATCH | [1.22, −1.08, 1.90] → {2,1,3} 재현 |
 | 19 | 벡터 길이 = 제품 그룹 수 (p.8) | 16(BK15), 62(BK50), batch 전개 후 | AMBIGUOUS | 논문에 batch 언급 없음(3e) |
-| 20 | Table 5 (p.20): population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament. GDE3 CR=1, F=0.4. OMOPSO/SMPSO 계수 | cell 23: population 20, SBX 0.9, 평가 200회, seed 없음 | DEVIATION (데모) | Table 5로 맞추고 seed 고정. 나머지 4종 미연결 |
-| 21 | 예산: iteration 50/100/200/300, 인스턴스·알고리즘별 1 run (pp.10–14) | 없음 | NOT IMPL | iteration 정의 결정 필요(TODO A6) |
-| 22 | 지표: PDS (Eq. 2), MSF (Eq. 3), DPF (Eq. 4), HV/RHA (Eq. 5–6, reference vector RV), PCA + GMM (p.13) | 없음 | NOT IMPL | RV 값은 논문에 없음 |
+| 20 | Table 5 (p.20): population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament. GDE3 CR=1, F=0.4. OMOPSO/SMPSO 계수 | `experiments/stage2-nsga2.py` (2026-11-27). 원본 cell 23 데모는 population 20, SBX 0.9 | NSGA-II MATCH (distribution index 20은 논문에 없음) | 나머지 4종 미연결 |
+| 21 | 예산: iteration 50/100/200/300, 인스턴스·알고리즘별 1 run (pp.10–14) | `stage2-nsga2.py`: 300세대 1 run에서 50/100/200/300세대 snapshot, seed 10개 | NSGA-II MATCH (iteration = 세대, A6) | seed 1이 논문 방식. 초기 population을 1세대로 셈(PROGRESS 9절) |
+| 22 | 지표: PDS (Eq. 2), MSF (Eq. 3), DPF (Eq. 4), HV/RHA (Eq. 5–6, reference vector RV), PCA + GMM (p.13) | `src/bakery/metrics.py` (PDS, MSF, DPF, HV, RHA) | PDS·MSF·DPF·RHA MATCH, PCA + GMM NOT IMPL | RV와 정규화는 논문에 없음(A6). MSF는 인쇄된 식 그대로 |
 | 23 | BK15: "three employees, eight machines, and two ovens with four compartments". BK50: "ten employees, fourteen machines, and three ovens, and ten compartments" (p.3) | BK15: 작업자 3, 비오븐 6 + 오븐 2 = 8, 구획 4. BK50: 작업자 10, 비오븐 14, 오븐 3종, **구획 9** | BK50 구획 수만 DEVIATION | 공개 데이터에서 Oven 7(id 20) 누락. 수정 불가, 문서화 |
 | 24 | "BK15 has only 3 groups with more than one product" (p.9) | 정제 BK15: 15그룹, 21제품, 다제품 그룹 3개 | MATCH | BK15의 "15"는 그룹 수로 보는 것이 맞다 |
 | 25 | Table 1 예제 (p.4), Fig. 2 Gantt (p.3) | 재현(3h), `tests/test_decoder.py::test_paper_table1_worked_example` | MATCH | – |
-| 26 | PF* (Fig. 7, p.9): BK15 E1≈(471, 93), E2≈(480, 72), "9 min … 21 min". BK50 E2 OIDT 1243, E1→E2 +61 / −1348 | CP-SAT BK15 최소 471, decoder 최선 474–475, BK50 random 최선 1057 | 부분 일치 | BK15 makespan 하한은 논문과 일치. BK50은 최적화 후 비교 필요 |
+| 26 | PF* (Fig. 7, p.9; Fig. 10a, p.11): BK15 E1≈(471, 93), E2≈(480, 72), "9 min … 21 min". BK50 E1≈(934, 2590), E2 OIDT 1243, E1→E2 +61 / −1348 | CP-SAT BK15 471, BK50 931. NSGA-II Table 5 seed 10개 PF*: BK15 (471, 119)–(491, 74), BK50 (960, 1956)–(1022, 1208) | 부분 일치 | BK15 makespan 하한 일치. 재현 PF*의 대부분이 논문 PF*에 지배됨(BK15 2/3, BK50 6/7). PROGRESS 9절 |
 
 ## 2. 쟁점별 판단 (3a–3i)
 

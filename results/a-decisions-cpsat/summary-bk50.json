@@ -1,0 +1,72 @@
+{
+  "instance": "BK50",
+  "config": {
+    "horizon": 2500,
+    "time_limit": 600.0,
+    "workers": 8,
+    "seed": 0,
+    "cases": [
+      [
+        "expanded",
+        "any"
+      ],
+      [
+        "g18_once",
+        "any"
+      ],
+      [
+        "no_batch",
+        "any"
+      ]
+    ]
+  },
+  "results": [
+    {
+      "batch": "expanded",
+      "cobake": "any",
+      "groups": 62,
+      "operations": 679,
+      "status": "FEASIBLE",
+      "elapsed_s": 600.1,
+      "makespan": 931,
+      "best_bound": 547,
+      "oidt_union": 3540,
+      "oidt_m2": 2630,
+      "checker_valid": true,
+      "cobake_violations": 0
+    },
+    {
+      "batch": "g18_once",
+      "cobake": "any",
+      "groups": 62,
+      "operations": 677,
+      "status": "FEASIBLE",
+      "elapsed_s": 600.0,
+      "makespan": 969,
+      "best_bound": 540,
+      "oidt_union": 3807,
+      "oidt_m2": 2795,
+      "checker_valid": true,
+      "cobake_violations": 0
+    },
+    {
+      "batch": "no_batch",
+      "cobake": "any",
+      "groups": 40,
+      "operations": 448,
+      "status": "FEASIBLE",
+      "elapsed_s": 600.0,
+      "makespan": 569,
+      "best_bound": 423,
+      "oidt_union": 1531,
+      "oidt_m2": 990,
+      "checker_valid": true,
+      "cobake_violations": 0
+    }
+  ],
+  "meta": {
+    "created": "2026-11-26T17:57:59",
+    "python": "3.12.9",
+    "git_rev": "85e18e2"
+  }
+}

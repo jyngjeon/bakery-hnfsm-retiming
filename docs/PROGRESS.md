@@ -1,23 +1,23 @@
-# 진행 현황 (2026-11-24 기준)
-
-> 1–7절은 당시 기록을 유지한다. 2026-11-28 Retiming 독립 개발 완료 내역과 재현 경로는 마지막 절에 추가했다. 팀원 NSGA-II 후속 상태나 원격 문서를 이 분기에서 추측하여 갱신하지 않았다.
+# 진행 현황 (2026-11-28 기준)
 
 근거는 원본 노트북(`1단계.ipynb`, 리팩토링 후 삭제)의 저장된 출력, `docs/notes/`의 전처리 노트, 리팩토링 후 `experiments/`와 `tests/`로 다시 실행한 결과다.
 
-> 현재 코드는 팀원이 `han/` 폴더로 전달한 자료다. 노트북은 팀원 개인 conda 환경에서 실행되었다. 제안서상 1단계 담당은 김성우다. 실제 작성자는 확인 필요.
+> 현재 코드는 팀원이 `han/` 폴더로 전달한 자료다. 노트북은 팀원 개인 conda 환경에서 실행되었다.
 
 ## 1. 단계별 상태 (제안서 6.4 일정 대비)
 
 | 단계 | 계획 기간 | 상태 | 내용 |
 |---|---|---|---|
 | 1. 데이터 정리, decoder, checker | 11/09–11/12 | **대부분 완료** | 전처리, HNFSM decoder, 독립 checker 동작. Table 1 예제는 테스트로 추가함. 미완: Gantt chart, makespan 하한 점검 |
-| 2. 알고리즘 연결 | 11/13–11/16 | **일부** | jMetalPy NSGA-II 연동 데모만 있음(Table 5 설정 아님). SPEA2·GDE3·OMOPSO·SMPSO 미연결 |
-| 3. 재현 실험 A | 11/17–11/20 | **미착수** | R0/R1/R2, 지표(PDS, MSF, DPF, RHA, HV, GMM), 통계 검정 없음 |
+| 2. 알고리즘 연결 | 11/13–11/16 | **일부** | NSGA-II를 Table 5 설정으로 연결(2026-11-27, 9절). SPEA2·GDE3·OMOPSO·SMPSO 미연결 |
+| 3. 재현 실험 A | 11/17–11/20 | **일부** | NSGA-II R1/R2 완료, 지표 PDS·MSF·DPF·RHA 구현(9절). 나머지 4종, PCA + GMM, 통계 검정 없음 |
 | 4. Retiming 구현·부분문제 검증 | 11/19–11/25 | **독립 구현·검증 완료 (2026-11-28 추가)** | BK15·BK50 공통 모듈, 66개 회귀·신규 200개, 독립 전수탐색·성능 최적화. NSGA-II 통합은 미수행 |
 | 5. B0 vs P1, Ablation | 11/26–11/30 | 미착수 | |
 | 6. 분석·보고서 | 12/1–12/7 | 미착수 | |
 
 일정 대비 약 1단계 지연이다.
+
+2026-11-27 계획 변경: NSGA-II로 구현·검증 → Retiming → B0 vs P1을 먼저 마치고, 나머지 알고리즘 4종은 그 뒤에 덧붙인다(PROJECT.md 7절, TODO.md (C)).
 
 ## 2. 현재 있는 것
 
@@ -33,7 +33,7 @@
 
 **CP-SAT (`src/bakery/cpsat.py`, `experiments/stage1-cpsat-bk15.py`)**
 - BK15 전체 모델을 OR-Tools CP-SAT로 makespan만 최소화했다. 결과는 **OPTIMAL, makespan 471**이고 checker PASS다.
-- OIDT는 최적화 대상이 아니라 해마다 달라진다(원본 노트북 281, 리팩토링 후 seed 0 실행 206).
+- OIDT는 최적화 대상이 아니라 실행마다 달라진다(원본 노트북 281, 리팩토링 후 seed 0 실행 206, 재실행 357). workers 8의 병렬 탐색 때문에 seed를 고정해도 같은 해가 나오지 않는다. makespan 471은 매번 같다.
 
 **HNFSM decoder (`src/bakery/decoder.py`)**
 - 구성: `spv_to_group_order`, `load_hnfsm_instance`, `hnfsm_decode`
@@ -65,10 +65,11 @@ OIDT는 구획별 합집합 정의 기준이다.
 | 원래 순서 OIDT, 논문 M2 그대로 계산 | 187 | 1362 |
 | CP-SAT 최소 makespan | 471 (OPTIMAL) | 미실행 |
 | NSGA-II 데모 front (seed 2001) | (475, 300) … (503, 142), 5개 | – |
+| NSGA-II Table 5, seed 10개 합친 front (9절) | (471, 119), (474, 86), (491, 74) | (960, 1956) … (1022, 1208), 7개 |
 | random search 최소 makespan (검토 시 별도 재실행) | 474 (3000회) | 1057 (300회) |
 | random 순서 중 infeasible 비율 | 3.4% (102/3000) | 0% (0/300) |
 | decoder 1회 평가 시간 | 약 1.5 ms | 약 21 ms |
-| 논문 PF* (Fig. 7, p.9) | E1≈(471, 93), E2≈(480, 72) | E2 OIDT 1243, E1→E2: makespan +61 / OIDT −1348, E1 makespan ≈ 940–960 (그림 판독) |
+| 논문 PF* (Fig. 7, p.9) | E1≈(471, 93), E2≈(480, 72) | E2 OIDT 1243, E1→E2: makespan +61 / OIDT −1348, E1 ≈ (934, 2590) (Fig. 10a 판독, 본문 수치와 일치. 이전 판독 940–960) |
 
 ## 4. 데이터 처리 결정 (팀원 전처리)
 
@@ -95,13 +96,22 @@ OIDT는 구획별 합집합 정의 기준이다.
 
 ## 5. 모델링 가정 (논문에 명시되지 않음)
 
-1. **OIDT는 구획별 점유구간 합집합 기준**으로 계산한다(제안서 5.3). 논문 M2를 그대로 쓰면 같은 그룹이 같이 굽는 작업의 PT가 두 번 차감된다. 근거는 `paper-conformance.md` 3a.
-2. **batch는 서로 독립된 그룹으로 전개**한다. 근거는 데이터셋 Description 시트의 "batches of same group do not depend on each other"이고, 논문에는 batch 언급이 없다.
-3. **자원 선택은 first-fit(가장 낮은 인덱스)** 이다. 논문은 "based on availability"라고만 쓴다.
-4. **같은 그룹 오븐 공동 사용은 겹침 형태에 제한이 없다.** 동시 시작을 요구하지 않는다.
+2026-11-26 팀 결정으로 확정했다(TODO (A) A1–A6). 근거는 `docs/decisions-A.md`에 있다.
+
+1. **OIDT는 구획별 점유구간 합집합 기준**으로 계산한다(제안서 5.3, A1).
+   - 논문 M2를 그대로 쓰면 같은 그룹이 같이 굽는 작업의 PT가 두 번 차감되어, 최적화하면 OIDT가 음수까지 내려간다(BK15 −28).
+   - 보고서에는 M2 그대로의 값을 병기한다.
+2. **batch는 서로 독립된 그룹으로 전개**한다(A5).
+   - 근거는 데이터셋 Description 시트의 "batches of same group do not depend on each other"이고, 논문에는 batch 언급이 없다.
+   - 전개하지 않으면 BK50 makespan이 논문 E1과 규모부터 다르다(638 vs ≈ 940–960).
+3. **자원 선택은 first-fit(가장 낮은 인덱스)** 이다(A3). 논문은 "based on availability"라고만 쓴다. 오븐 used_first·min_idle은 민감도 실험으로만 쓴다. B0·P1은 같은 규칙을 쓴다.
+4. **같은 그룹 오븐 공동 사용은 겹침 형태에 제한이 없다**(A4). 동시 시작을 요구하지 않는다.
 5. **`T_g`는 1분 단위로 탐색**하고 가장 이른 시각을 고른다.
-6. **배치할 수 없는 순서는 `(1e9, 1e9)` penalty**를 준다. 논문에는 언급이 없다.
-7. **Group 18 Dough C를 2회 전개**하고, **Group 31을 p=3으로 분리**했다.
+6. **배치할 수 없는 순서는 `(1e9, 1e9)` penalty**를 준다(A2). 논문에는 언급이 없다. 알고리즘별 infeasible 발생률을 함께 보고한다.
+7. **Group 18 Dough C를 2회 전개**하고(A5), **Group 31을 p=3으로 분리**했다.
+8. **iteration은 세대 수**다(A6). population 50 × 300세대 = 15,000회 평가이고, 50·100·200·300세대 시점의 front를 저장한다.
+9. **성능 비교 주 지표는 RHA**다(A6, 논문 Eq. 6). PF*는 같은 인스턴스에서 모든 알고리즘의 해를 합친 nondominated set이다. HV reference point는 [0, 1] 정규화 후 (1.1, 1.1)이다.
+10. SBX와 polynomial mutation의 **distribution index는 20**(jMetalPy 기본값)이다. Table 5에 값이 없다.
 
 ## 6. 알려진 문제
 
@@ -114,6 +124,7 @@ OIDT는 구획별 합집합 정의 기준이다.
 - **[문서] 전처리 docx 3건**은 모두 2절부터 시작한다(1절 없음). 「결과판단」은 문서에 없는 "위 코드"를 언급한다.
 - **[참고] decoder 내부 자원 선택**은 그룹 안 작업을 (p, s) 순서로 배정한다. 다른 배정이면 들어갈 수 있는 시각을 놓쳐 `T_g`가 늦어질 수 있다. 영향은 작다.
 - **[참고] BK50 makespan 격차**: random search 최소 1057은 논문 E1(약 940–960)과 차이가 크다. 실제 최적화 후 다시 비교해야 한다.
+  - 2026-11-27: NSGA-II Table 5(seed 10개) 최소 makespan은 960, seed 중앙값 986.5다. 논문 E1 ≈ 934(Fig. 10a 판독)보다 26분 길다. CP-SAT은 931(9절, 8절).
 
 ## 7. 코드 리팩토링 (2026-11-24)
 
@@ -135,6 +146,70 @@ OIDT는 구획별 합집합 정의 기준이다.
 - 파일명 변경: `bk15_clean.*` → `bk15-clean.*`, 전처리 노트·제안서·Retiming 명세 파일명을 영문으로 바꿨다.
 - 환경: `pyproject.toml` + `uv.lock`, 프로젝트 루트 `.venv` 하나로 통일했다(`requirements.txt` 삭제). 설치 버전: numpy 2.5.5, pandas 2.3.3, ortools 9.15, jmetalpy 1.9.0.
 
+## 8. TODO (A) 결정 자료 실험 (2026-11-26)
+
+- 목적: TODO (A) 항목별로 어느 선택이 논문 표현과 논문 PF*에 맞는지 확인했다. 결과와 판단은 `docs/decisions-A.md`에 있다. 결정은 아직 하지 않았다.
+- 코드 추가. 기본값은 기존 동작과 같고, 회귀 테스트 14개가 통과한다(기존 9개 + 새 옵션 5개).
+  - `decoder.hnfsm_decode(..., oven_rule, cobake, oidt)`
+    - `oven_rule`: `first_fit` / `used_first` / `min_idle`
+    - `cobake`: `any` / `same_start` / `same_start_end`
+    - `oidt`: `union` / `m2`
+    - `oidt_m2()`를 추가했다.
+  - `cpsat.solve_min_makespan(..., cobake)`, 반환값에 `best_bound`와 `oidt_m2`를 추가했다.
+  - `problem.BakerySchedulingProblem(path, **decode_kwargs)`
+  - `bakery.variants`: batch 미전개와 BK50 Group 18 Dough C 1회 변형 인스턴스. `results/`에 쓰고 `data/processed/`는 건드리지 않는다.
+- 실험: `experiments/a-decisions-cpsat.py`, `experiments/a-decisions-nsga2.py`(Table 5 설정, 15,000회 평가, BK15 seed 1–10, BK50 seed 1–3)
+- 주요 수치:
+  - M2를 최적화하면 BK15 OIDT가 음수(−28)가 된다.
+  - BK50 base NSGA-II 최소 OIDT는 1243으로 논문 E2와 같다.
+  - BK50 batch 미전개 시 makespan 638(NSGA-II), 569(CP-SAT)로 논문 E1 ≈ 940–960과 맞지 않는다.
+  - BK50 CP-SAT(전개, 600초)는 makespan 931이다. 논문 E1보다 낮은 해가 있다.
+  - NSGA-II(Table 5) 실행 중 infeasible 비율은 BK15 0.02%, BK50 0%다.
+  - 1회 실행 시간(8 프로세스 병렬): BK15 약 50초, BK50 약 5–8분
+- Table 5에는 SBX와 polynomial mutation의 distribution index가 없어 jMetalPy 기본값 20을 썼다.
+
+## 9. Stage 2: NSGA-II Table 5 실행과 논문 대조 (2026-11-27)
+
+- 스크립트 `experiments/stage2-nsga2.py`, 결과 `results/stage2-nsga2/`(`summary.json`, `fronts.csv`, `metrics.csv`, `trace.csv`), 보기 `notebooks/stage2-nsga2.ipynb`.
+- 설정: Table 5(p.20) population 50, SBX rate 1, polynomial mutation 1/NG, binary tournament, distribution index 20. seed 1–10. 300세대 = 15,000회 평가. 50·100·200·300세대의 population nondominated front를 snapshot으로 저장했다.
+  - **iteration 경계 정의(새 가정)**: 초기 population을 1세대로 센다. 따라서 g세대 = 50·g회 평가다(50세대 = 2,500회). `a-decisions-nsga2.py`의 15,000회 예산과 맞추기 위한 선택이고, 1세대 차이라 영향은 작다.
+  - seed 1의 snapshot이 논문 방식(iteration별 1 run, R1)에 해당한다. 같은 seed로 50세대만 돌린 결과와 같다.
+  - decoder 설정은 PROGRESS 5절 결정 그대로(OIDT 합집합, first-fit, 겹침 자유, batch 전개, 1e9 penalty).
+- 새 코드
+  - `src/bakery/metrics.py`: PDS(Eq. 2), MSF(Eq. 3), DPF(Eq. 4), HV(Eq. 5), RHA(Eq. 6). MSF는 논문에 인쇄된 식 그대로(분모가 후보 front 범위)다. Table 4의 1 초과 값(1.84 등)은 이 식이라야 나온다. 후보 front가 점 하나면 항을 0으로 둔다(논문 BK40 SPEA2의 0.00과 같은 처리).
+  - `src/bakery/paper_ref.py`: 논문 기준값. Table 4와 본문 수치는 정확값이고 Fig. 7a, 10a, 11, 12 값은 300 dpi 그림 판독값이다.
+  - `tests/test_metrics.py`: 지표 손계산 테스트 5개. 전체 19개 통과.
+- 지표 기준: PF*는 NSGA-II front 전체(seed 10 × snapshot 4)의 nondominated 합집합이다(잠정). RHA와 DPF_norm은 그 front들의 min/max로 [0, 1] 정규화하고 RV = (1.1, 1.1)을 쓴다. DPF는 논문 Fig. 11 축이 분 단위이므로 원 단위 값(DPF_raw)으로 비교한다.
+- 실행 점검: infeasible 비율 BK15 0.022%, BK50 0%. front에 오른 해는 모두 checker PASS다. 같은 seed로 두 번 실행해 지표가 같음을 확인했다.
+
+**논문 대조**
+
+| 항목 | BK15 논문 | BK15 재현 | BK50 논문 | BK50 재현 |
+|---|---|---|---|---|
+| PF* | (471, 93), (478, 84), (480, 72) | (471, 119), (474, 86), (491, 74) | (934, 2590) … (995, 1243), 7개 | (960, 1956) … (1022, 1208), 7개 |
+| 최소 makespan | 471 | 471 (seed 7/10) | ≈ 934 | 960 (seed 중앙값 986.5) |
+| 최소 OIDT | 72 | 74 (seed 중앙값 95) | 1243 | **1208** (seed 중앙값 1330) |
+| E1→E2 | +9 / −21 | +20 / −45 | +61 / −1348 | +62 / −748 |
+| 재현 점 중 논문 PF*에 지배되는 점 | – | 2/3 | – | 6/7 |
+| RHA 50→300 (NSGA-II) | 67 → 97 | 중앙값 74 → 84, seed 1 59 → 69 | 66 → 97.5 | 중앙값 65 → 88, seed 1 71 → 89 |
+| DPF 50→300 (분) | 44 → 11 | 중앙값 22 → 13 | 258 → 78 | 중앙값 283 → 91 |
+| PDS 300 (Table 4) | 0.00 | 중앙값 0.33 | −0.09 | 중앙값 0.14 |
+| 50 iteration 시간 | 13분 | 약 4초 | 342분 | 약 54초 |
+
+- **맞는 점**: BK15 최소 makespan 471, iteration에 따라 RHA가 오르고 DPF가 내리는 경향, BK50 DPF의 규모(수백 분 → 수십 분), BK50 front 개수(7)와 OIDT 범위(≈1200–2000).
+- **다른 점**: BK50 낮은 makespan 쪽(< 960)에 도달하지 못한다. 논문 PF*가 재현 PF*를 대부분 지배한다. E1 부근 OIDT가 논문보다 BK15 +26, BK50은 논문 E1 OIDT 2590보다 오히려 낮지만 makespan이 26분 길다.
+- **해석 시 주의**:
+  - 논문 PF*는 5종 × iteration 4종의 합집합이고, 재현 PF*는 NSGA-II만의 합집합이다. PDS, MSF, DPF, RHA의 절대값은 비교 대상이 아니다. 5종을 모두 돌린 뒤 다시 계산한다.
+  - 논문은 run 하나라서 seed 간 편차가 크다. 논문 값 다수가 재현 seed 분포 안에 든다(BK50 RHA, BK15·BK50 DPF).
+  - BK50 최소 OIDT 1208이 논문 E2 1243보다 낮다. 오븐 구획 수 차이(9 vs 10, 4절)와 OIDT 정의 차이가 원인일 수 있다(확인 필요).
+  - 계산 시간은 하드웨어와 구현이 달라 비교하지 않는다. 논문의 decoder가 훨씬 느렸던 것으로 보인다.
+- 논문 BK50 E1 판독을 940–960에서 **≈ 934**로 고친다. Fig. 10a의 PF* 첫 점이 (934, 2590)이고, 본문의 E1→E2 +61 / −1348과 E2 OIDT 1243이 함께 맞는다(934 + 61 = 995, 1243 + 1348 = 2591). CP-SAT 931(8절)과도 모순이 없다.
+
+## 10. 팀 공유용 현황판 (2026-11-27)
+
+- `status/index.html`: 진행 순서(단계별 진행 막대), 다음 할일, 팀 확인 필요 항목, NSGA-II 논문 대조, 전체 할일을 한 쪽에 모았다. 외부 자원 없이 브라우저로 바로 열린다.
+- `status/build-status.py`가 생성한다. 할일 목록은 `docs/TODO.md` (B)(C)의 체크박스를, NSGA-II 수치는 `results/stage2-nsga2/summary.json`을 읽는다. "다음 할일"과 "팀 확인 필요"는 스크립트 안의 목록이라 TODO와 함께 고친다.
+
 ## Retiming 독립 구현·검증 완료 (2026-11-28)
 
 - `src/bakery/retiming.py`: BK15·BK50 공통 Group-Based Event-Point Retiming 최종 버전. 한 그룹 전체 이동, 고정 배정, Pareto 비악화, 결정적 동률 처리를 유지한다.
@@ -146,4 +221,16 @@ OIDT는 구획별 합집합 정의 기준이다.
 - API는 `PreparedRetimingInstance(json_path)`, `prepared.instance`, `prepared.retime(schedule_df)`다. 입력 instance/JSON 불일치와 내용 변경을 검사한다. 저장·시각화 정렬은 `schedule_for_export()`에서 수행한다.
 - 최종 결과: `results/stage4-retiming-validation-20261126T105021665036Z/`, `results/stage4-retiming-performance-20261127T153937355670Z/`. 기존 JSON·CSV와 당시 code/data/revision 기록은 재작성하지 않는다.
 - 최적화 전 기준은 생산 패키지 밖의 `repro/retiming-baseline/`에, 외부 파일럿 원본·필수 파일 해시는 `repro/retiming-evidence.json`에 보존했다. 공유용 실행 경로와 scope 구분은 [retiming.md](retiming.md)를 따른다.
-- 원격 main에는 이 로컬 기준 이후 후속 변경이 있다. 원격 내용을 가져오지 않았고, NSGA-II 통합·B0/P1 평가 예산/시간 비교·통계 검증·다른 알고리즘·최종 보고서는 완료로 처리하지 않는다. 로컬 TODO (A) 및 BK50 Boxing 데이터도 변경하지 않았다.
+- 위 검증·성능 수치는 기존 로컬 기준 `4ac203ad…`에서 보존한 결과다. NSGA-II 통합·B0/P1 평가 예산/시간 비교·통계 검증·다른 알고리즘·최종 보고서는 완료로 처리하지 않는다. 최신 main 반영과 별도의 호환성 검증 범위는 아래에 기록한다.
+
+## 11. 최신 main 병합 및 Retiming 호환성 확인 (2026-11-28)
+
+- 확정 공유 대상 34개를 로컬 commit `3c9ac5a`로 보존했다. `origin/main`의 후속 commit 6개(최신 `1ec9e4524d0139881b398b5b6aee7a80802acba6`)를 `feature/retiming`에 반영했다. 로컬 main과 원격 브랜치는 변경하지 않았다.
+- `.gitignore`, 이 문서, `TODO.md`의 충돌은 양쪽 내용을 합쳤다. README는 자동 병합되었고, 팀원의 NSGA-II R1/R2·지표·논문 대조, TODO (A) 확정 결정, 수행 순서, 현황판 기록을 유지했다.
+- decoder에 민감도 옵션이 추가되었지만 기본값은 `oven_rule="first_fit", cobake="any", oidt="union"`으로 그대로다. instance 구조·상세 스케줄 열·기본 반환형은 유지되었다. problem의 `**decode_kwargs` 전달과 기본/명시적 기본값의 단일 평가를 확인했다. Retiming을 problem에 연결하지 않았다.
+- 현재 팀 결정인 합집합 OIDT·자유로운 같은 그룹 co-baking·batch 전개·first-fit·infeasible penalty는 기존 Retiming 가정과 일치한다. Checker·전처리·정제 데이터·의존성 설정은 upstream에서 바뀌지 않았다. Retiming 소스·탐색 정책·검증 강도에 대한 호환성 수정은 필요하지 않았다.
+- 병합 작업 트리에서 `uv run --locked pytest`: **78개 통과**(2.11초). 기존 Retiming 테스트의 기대값은 변경하지 않았다.
+- BK15·BK50 원래 순서 스케줄 각 1개에 대해 경계/전체 그룹 × 자원 순서 변경 허용/고정의 4개 조합, 준비 객체와 기존 `retime_schedule` API, 입력 불변성·저장 정렬을 확인했다. 독립 Checker·불변조건·Pareto 비악화 위반은 모두 0건이었다.
+- 기본 API 결과: BK15 `(519,273) → (519,272)`, `g=12`, `T_g: 0→1`; BK50 `(1202,2409) → (1202,2357)`, `g=1`, `T_g: 0→52`.
+- 이 확인은 팀 기본 모델에 대한 호환성 검증이다. `oidt="m2"` 목적값의 Retiming이나 민감도 모델 전체에 대한 지원을 추가·검증하지 않았다. Retiming은 계속 합집합 OIDT를 계산하므로 후속 통합에서 목적함수 설정을 함께 확인한다.
+- 이번에는 전체 전수탐색·성능 benchmark·기존 실험 전체 재실행·NSGA-II 통합을 수행하지 않았다. 이전 Retiming 검증 결과와 리뷰 ZIP은 보존했으며, stage-1/2 결과의 변경은 원격 팀원 commit을 가져온 것이다. 이번 검증 로그는 로컬 `scratch/retiming-main-compatibility/`에 따로 두었다.

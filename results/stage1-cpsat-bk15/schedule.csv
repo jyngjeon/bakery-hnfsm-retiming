@@ -1,165 +1,165 @@
 g,orig_group,batch,p,product_name,s,stage_name,ST,CT,PT,assigned_k,assigned_l
+1,1,1,1,Product 1A,1,Preparation,0,5,5,,2.0
 13,13,1,1,Product 13,1,Preparation,0,5,5,,1.0
+1,1,1,1,Product 1A,2,Kneading,5,26,21,2.0,
 13,13,1,1,Product 13,2,Load kneader,5,7,2,,2.0
 13,13,1,1,Product 13,3,Kneading,7,21,14,1.0,
-9,9,1,1,Product 9,1,Preparation,18,22,4,,1.0
-13,13,1,1,Product 13,4,Kneading disch.,21,23,2,,2.0
-9,9,1,1,Product 9,2,Kneading,22,33,11,1.0,
-13,13,1,1,Product 13,5,Dividing,23,27,4,,2.0
+5,5,1,1,Product 5,1,Preparation,10,21,11,,2.0
+5,5,1,1,Product 5,2,Kneading,21,31,10,1.0,
+13,13,1,1,Product 13,4,Kneading disch.,21,23,2,,1.0
+13,13,1,1,Product 13,5,Dividing,23,27,4,,1.0
+1,1,1,1,Product 1A,3,Dividing,26,42,16,3.0,
+6,6,1,1,Product 6,1,Preparation,26,31,5,,2.0
 13,13,1,1,Product 13,6,Dough rest,27,57,30,,
-9,9,1,1,Product 9,3,Dividing,33,45,12,3.0,
-2,2,1,1,Product 2A,1,Preparation,35,44,9,,2.0
-2,2,1,1,Product 2A,2,Load kneader,44,46,2,,2.0
-9,9,1,1,Product 9,4,Dough rest,45,64,19,,
+5,5,1,1,Product 5,3,Dough rest,31,66,35,,
+6,6,1,1,Product 6,2,Kneading,31,40,9,1.0,
+2,2,1,1,Product 2A,1,Preparation,35,44,9,,1.0
+6,6,1,1,Product 6,3,Dough rest,40,66,26,,
+1,1,1,1,Product 1A,4,Proofing,42,147,105,,
+2,2,1,1,Product 2A,2,Load kneader,44,46,2,,1.0
 2,2,1,1,Product 2A,3,Kneading,46,64,18,1.0,
-13,13,1,1,Product 13,7,Load baking,57,58,1,,1.0
+13,13,1,1,Product 13,7,Load baking,57,58,1,,2.0
 13,13,1,1,Product 13,8,Baking,58,103,45,10.0,
-10,10,1,1,Product 10,1,Preparation,60,64,4,,2.0
+15,15,1,1,Product 15,1,Preparation,59,62,3,,2.0
+15,15,1,1,Product 15,2,Load kneader,62,64,2,,2.0
 2,2,1,1,Product 2A,4,Kneading disch.,64,66,2,,2.0
-9,9,1,1,Product 9,5,Shaping,64,69,5,,1.0
-10,10,1,1,Product 10,2,Kneading,64,80,16,1.0,
+15,15,1,1,Product 15,3,Kneading,64,79,15,1.0,
 2,2,1,1,Product 2A,5,Dividing,66,75,9,,2.0
-9,9,1,1,Product 9,6,Proofing,69,189,120,,
-1,1,1,1,Product 1A,1,Preparation,71,76,5,,1.0
+5,5,1,1,Product 5,4,Dividing,66,68,2,,1.0
+6,6,1,1,Product 6,4,Dividing,66,76,10,3.0,
+5,5,1,1,Product 5,5,Shaping,68,70,2,5.0,
+5,5,1,1,Product 5,6,Transfer to Proofing,70,71,1,,
+5,5,1,1,Product 5,7,Proofing,71,171,100,,
 2,2,1,1,Product 2A,6,Dough rest,75,100,25,,
 2,2,1,2,Product 2B,1,Dividing,75,85,10,,2.0
-1,1,1,1,Product 1A,2,Kneading,76,97,21,2.0,
-10,10,1,1,Product 10,3,Cutting-forming,80,136,56,4.0,
+10,10,1,1,Product 10,1,Preparation,75,79,4,,1.0
+6,6,1,1,Product 6,5,Freezing,76,77,1,,
+10,10,1,1,Product 10,2,Kneading,79,95,16,1.0,
+15,15,1,1,Product 15,4,Kneading disch.,79,81,2,,1.0
+15,15,1,1,Product 15,5,Dividing,81,86,5,,1.0
+1,1,1,2,Product 1A-2,1,Baking,82,138,56,9.0,
+1,1,1,3,Product 1A-3,1,Baking,82,138,56,9.0,
 2,2,1,2,Product 2B,2,Dough rest,85,115,30,,
 2,2,1,3,Product 2C,1,Dividing,85,100,15,,2.0
-1,1,1,1,Product 1A,3,Dividing,97,113,16,3.0,
+15,15,1,1,Product 15,6,Dough rest,86,106,20,,
+9,9,1,1,Product 9,1,Preparation,91,95,4,,1.0
+9,9,1,1,Product 9,2,Kneading,95,106,11,1.0,
+10,10,1,1,Product 10,3,Cutting-forming,95,151,56,4.0,
 2,2,1,1,Product 2A,7,Load baking,100,103,3,,1.0
 2,2,1,3,Product 2C,2,Dough rest,100,145,45,,
+16,6,2,1,Product 6,1,Preparation,101,106,5,,2.0
 2,2,1,1,Product 2A,8,Baking,103,153,50,10.0,
 13,13,1,1,Product 13,9,Discharge baking,103,105,2,,1.0
 13,13,1,1,Product 13,10,Cooling,105,125,20,,
-1,1,1,1,Product 1A,4,Proofing,113,218,105,,
+9,9,1,1,Product 9,3,Dividing,106,118,12,3.0,
+15,15,1,1,Product 15,7,Shaping,106,121,15,5.0,
+16,6,2,1,Product 6,2,Kneading,106,115,9,1.0,
 2,2,1,2,Product 2B,3,Proofing,115,195,80,,
+16,6,2,1,Product 6,3,Dough rest,115,141,26,,
+9,9,1,1,Product 9,4,Dough rest,118,137,19,,
+15,15,1,1,Product 15,8,Proofing,121,211,90,,
 13,13,1,1,Product 13,11,Unmolding,125,129,4,,1.0
 4,4,1,1,Product 4,1,Preparation,126,133,7,,2.0
 4,4,1,1,Product 4,2,Kneading,133,151,18,1.0,
-10,10,1,1,Product 10,4,Dough rest,136,160,24,,
+9,9,1,1,Product 9,5,Shaping,137,142,5,,1.0
+16,6,2,1,Product 6,4,Dividing,141,151,10,3.0,
+9,9,1,1,Product 9,6,Proofing,142,262,120,,
 2,2,1,3,Product 2C,3,Proofing,145,260,115,,
-5,5,1,1,Product 5,1,Preparation,145,156,11,,2.0
+1,1,1,1,Product 1A,5,Load baking,147,161,14,,2.0
 4,4,1,1,Product 4,3,Dividing,151,162,11,3.0,
-1,1,1,2,Product 1A-2,1,Baking,153,209,56,9.0,
-1,1,1,3,Product 1A-3,1,Baking,153,209,56,9.0,
+10,10,1,1,Product 10,4,Dough rest,151,175,24,,
+16,6,2,1,Product 6,5,Freezing,151,152,1,,
 2,2,1,1,Product 2A,9,Discharge baking,153,156,3,,1.0
 2,2,1,1,Product 2A,10,Cooling,156,181,25,,
-5,5,1,1,Product 5,2,Kneading,156,166,10,1.0,
-10,10,1,1,Product 10,5,Shaping,160,172,12,,1.0
+1,1,1,1,Product 1A,6,Baking,161,217,56,9.0,
+7,7,1,1,Product 7,1,Preparation,161,166,5,,2.0
 4,4,1,1,Product 4,4,Cutting-forming,162,197,35,4.0,
-5,5,1,1,Product 5,3,Dough rest,166,201,35,,
-10,10,1,1,Product 10,6,Proofing,172,252,80,,
-2,2,1,1,Product 2A,11,Unmolding,181,185,4,,1.0
-9,9,1,1,Product 9,7,Load baking,189,192,3,,1.0
-9,9,1,1,Product 9,8,Baking,192,234,42,7.0,
-2,2,1,2,Product 2B,4,Load baking,195,197,2,,2.0
+7,7,1,1,Product 7,2,Kneading,166,176,10,1.0,
+5,5,1,1,Product 5,8,Load baking,171,177,6,,
+10,10,1,1,Product 10,5,Shaping,175,187,12,,1.0
+7,7,1,1,Product 7,3,Dough rest,176,197,21,,
+5,5,1,1,Product 5,9,Baking,177,219,42,8.0,
+2,2,1,1,Product 2A,11,Unmolding,181,185,4,,2.0
+12,12,1,1,Product 12A,1,Defrost,184,264,80,,
+10,10,1,1,Product 10,6,Proofing,187,267,80,,
+2,2,1,2,Product 2B,4,Load baking,195,197,2,,1.0
 2,2,1,2,Product 2B,5,Baking,197,257,60,10.0,
-4,4,1,1,Product 4,5,Transfer to Proofing,197,198,1,,1.0
+4,4,1,1,Product 4,5,Transfer to Proofing,197,198,1,,2.0
+7,7,1,1,Product 7,4,Cutting-forming,197,245,48,4.0,
 4,4,1,1,Product 4,6,Proofing,198,318,120,,
-5,5,1,1,Product 5,4,Dividing,201,203,2,,1.0
-5,5,1,1,Product 5,5,Shaping,203,205,2,5.0,
-5,5,1,1,Product 5,6,Transfer to Proofing,205,206,1,,
-5,5,1,1,Product 5,7,Proofing,206,306,100,,
-7,7,1,1,Product 7,1,Preparation,209,214,5,,1.0
-7,7,1,1,Product 7,2,Kneading,214,224,10,1.0,
-1,1,1,1,Product 1A,5,Load baking,218,232,14,,1.0
-7,7,1,1,Product 7,3,Dough rest,224,245,21,,
-1,1,1,1,Product 1A,6,Baking,232,288,56,9.0,
-9,9,1,1,Product 9,9,Unload baking,234,238,4,,1.0
-9,9,1,1,Product 9,10,Cold-storage,238,240,2,,1.0
-15,15,1,1,Product 15,1,Preparation,242,245,3,,1.0
-7,7,1,1,Product 7,4,Cutting-forming,245,293,48,4.0,
-15,15,1,1,Product 15,2,Load kneader,245,247,2,,2.0
-3,3,1,1,Product 3A,1,Preparation,246,250,4,,1.0
-15,15,1,1,Product 15,3,Kneading,247,262,15,1.0,
-3,3,1,1,Product 3A,2,Kneading,250,257,7,2.0,
-10,10,1,1,Product 10,7,Load baking,252,257,5,,1.0
-2,2,1,2,Product 2B,6,Discharge baking,257,259,2,,2.0
-3,3,1,1,Product 3A,3,Discharge kneading,257,259,2,,1.0
-10,10,1,1,Product 10,8,Baking,257,299,42,7.0,
+15,15,1,1,Product 15,9,Load baking,211,213,2,,2.0
+15,15,1,1,Product 15,10,Baking,213,251,38,7.0,
+1,1,1,1,Product 1A,7,Unload baking,217,234,17,,2.0
+5,5,1,1,Product 5,10,Unload baking,219,222,3,,1.0
+5,5,1,1,Product 5,11,Cooling,222,254,32,,
+1,1,1,1,Product 1A,8,Cooling,234,235,1,,1.0
+7,7,1,1,Product 7,5,Proofing,245,350,105,,
+15,15,1,1,Product 15,11,Discharge baking,251,253,2,,1.0
+15,15,1,1,Product 15,12,Cooling,253,281,28,,
+5,5,1,1,Product 5,12,Packaging,254,257,3,,1.0
+2,2,1,2,Product 2B,6,Discharge baking,257,259,2,,1.0
 2,2,1,2,Product 2B,7,Cooling,259,295,36,,
-3,3,1,1,Product 3A,4,Load dividing,259,277,18,3.0,
-2,2,1,3,Product 2C,4,Load baking,260,263,3,,2.0
-15,15,1,1,Product 15,4,Kneading disch.,262,264,2,,1.0
+2,2,1,3,Product 2C,4,Load baking,260,263,3,,1.0
+3,3,1,1,Product 3A,1,Preparation,260,264,4,,3.0
+9,9,1,1,Product 9,7,Load baking,262,265,3,,2.0
 2,2,1,3,Product 2C,5,Baking,263,321,58,10.0,
-15,15,1,1,Product 15,5,Dividing,264,269,5,,1.0
-6,6,1,1,Product 6,1,Preparation,268,273,5,,3.0
-15,15,1,1,Product 15,6,Dough rest,269,289,20,,
-6,6,1,1,Product 6,2,Kneading,273,282,9,1.0,
-3,3,1,1,Product 3A,5,Dividing,277,290,13,3.0,
-6,6,1,1,Product 6,3,Dough rest,282,308,26,,
-8,8,1,1,Product 8,1,Preparation,282,288,6,,3.0
-1,1,1,1,Product 1A,7,Unload baking,288,305,17,,3.0
-8,8,1,1,Product 8,2,Kneading,288,311,23,1.0,
-15,15,1,1,Product 15,7,Shaping,289,304,15,5.0,
-3,3,1,1,Product 3A,6,Dough rest,290,322,32,,
-7,7,1,1,Product 7,5,Proofing,293,398,105,,
+3,3,1,1,Product 3A,2,Kneading,264,271,7,2.0,
+12,12,1,1,Product 12A,2,Load baking,264,267,3,,3.0
+9,9,1,1,Product 9,8,Baking,265,307,42,9.0,
+10,10,1,1,Product 10,7,Load baking,267,272,5,,1.0
+12,12,1,1,Product 12A,3,Baking,267,285,18,7.0,
+12,12,1,2,Product 12B,1,Load baking,267,270,3,,2.0
+12,12,1,2,Product 12B,2,Baking,270,288,18,7.0,
+12,12,1,3,Product 12C,1,Load baking,270,273,3,,2.0
+3,3,1,1,Product 3A,3,Discharge kneading,271,273,2,,3.0
+10,10,1,1,Product 10,8,Baking,272,314,42,8.0,
+3,3,1,1,Product 3A,4,Load dividing,273,291,18,3.0,
+8,8,1,1,Product 8,1,Preparation,273,279,6,,3.0
+12,12,1,3,Product 12C,2,Baking,273,291,18,7.0,
+8,8,1,1,Product 8,2,Kneading,279,302,23,1.0,
+15,15,1,1,Product 15,13,Unmolding,281,283,2,,1.0
+12,12,1,1,Product 12A,4,Unload baking,285,288,3,,2.0
+12,12,1,2,Product 12B,3,Unload baking,288,291,3,,1.0
+3,3,1,1,Product 3A,5,Dividing,291,304,13,3.0,
+12,12,1,3,Product 12C,3,Unload baking,291,294,3,,1.0
 2,2,1,2,Product 2B,8,Unmolding,295,302,7,,1.0
-10,10,1,1,Product 10,9,Unload baking,299,304,5,,2.0
-10,10,1,1,Product 10,10,Cooling,304,384,80,,
-15,15,1,1,Product 15,8,Proofing,304,394,90,,
-1,1,1,1,Product 1A,8,Cooling,305,306,1,,1.0
-5,5,1,1,Product 5,8,Load baking,306,312,6,,
-16,6,2,1,Product 6,1,Preparation,306,311,5,,3.0
-6,6,1,1,Product 6,4,Dividing,308,318,10,3.0,
-14,14,1,1,Product 14,1,Preparation,310,322,12,,1.0
-8,8,1,1,Product 8,3,Cutting-forming,311,341,30,4.0,
-16,6,2,1,Product 6,2,Kneading,311,320,9,1.0,
-5,5,1,1,Product 5,9,Baking,312,354,42,9.0,
+8,8,1,1,Product 8,3,Cutting-forming,302,332,30,4.0,
+3,3,1,1,Product 3A,6,Dough rest,304,336,32,,
+9,9,1,1,Product 9,9,Unload baking,307,311,4,,1.0
+14,14,1,1,Product 14,1,Preparation,310,322,12,,2.0
+9,9,1,1,Product 9,10,Cold-storage,311,313,2,,1.0
+10,10,1,1,Product 10,9,Unload baking,314,319,5,,1.0
 4,4,1,1,Product 4,7,Load baking,318,321,3,,3.0
-6,6,1,1,Product 6,5,Freezing,318,319,1,,
-16,6,2,1,Product 6,3,Dough rest,320,346,26,,
-2,2,1,3,Product 2C,6,Discharge baking,321,323,2,,2.0
+10,10,1,1,Product 10,10,Cooling,319,399,80,,
+2,2,1,3,Product 2C,6,Discharge baking,321,323,2,,3.0
 4,4,1,1,Product 4,8,Baking,321,391,70,10.0,
-3,3,1,1,Product 3A,7,Load baking,322,333,11,,1.0
-14,14,1,1,Product 14,2,Load kneader,322,324,2,,3.0
+14,14,1,1,Product 14,2,Load kneader,322,324,2,,1.0
 2,2,1,3,Product 2C,7,Cooling,323,353,30,,
 14,14,1,1,Product 14,3,Kneading,324,334,10,1.0,
-3,3,1,1,Product 3A,8,Baking,333,387,54,7.0,
+11,11,1,1,Product 11,1,Preparation,328,334,6,,3.0
+8,8,1,1,Product 8,4,Dough rest,332,368,36,,
+11,11,1,1,Product 11,2,Kneading,334,357,23,1.0,
 14,14,1,1,Product 14,4,Kneading disch.,334,336,2,,1.0
-14,14,1,1,Product 14,5,Dividing,336,343,7,,3.0
-11,11,1,1,Product 11,1,Preparation,339,345,6,,1.0
-8,8,1,1,Product 8,4,Dough rest,341,377,36,,
+3,3,1,1,Product 3A,7,Load baking,336,347,11,,1.0
+14,14,1,1,Product 14,5,Dividing,336,343,7,,2.0
 14,14,1,1,Product 14,6,Dough rest,343,389,46,,
-11,11,1,1,Product 11,2,Kneading,345,368,23,1.0,
-16,6,2,1,Product 6,4,Dividing,346,356,10,3.0,
+3,3,1,1,Product 3A,8,Baking,347,401,54,9.0,
+7,7,1,1,Product 7,6,Load baking,350,354,4,,2.0
 2,2,1,3,Product 2C,8,Unmolding,353,356,3,,3.0
-5,5,1,1,Product 5,10,Unload baking,354,357,3,,2.0
-16,6,2,1,Product 6,5,Freezing,356,357,1,,
-5,5,1,1,Product 5,11,Cooling,357,389,32,,
-12,12,1,1,Product 12A,1,Defrost,361,441,80,,
-11,11,1,1,Product 11,3,Cutting-forming,368,418,50,4.0,
-8,8,1,1,Product 8,5,Load baking,377,387,10,,1.0
-10,10,1,1,Product 10,11,Packaging,384,389,5,,2.0
-8,8,1,1,Product 8,6,Baking,387,402,15,7.0,
-5,5,1,1,Product 5,12,Packaging,389,392,3,,2.0
-14,14,1,1,Product 14,7,Load baking,389,391,2,,1.0
-4,4,1,1,Product 4,9,Unload baking,391,393,2,,1.0
+7,7,1,1,Product 7,7,Baking,354,379,25,8.0,
+11,11,1,1,Product 11,3,Cutting-forming,357,407,50,4.0,
+8,8,1,1,Product 8,5,Load baking,368,378,10,,2.0
+8,8,1,1,Product 8,6,Baking,378,393,15,7.0,
+7,7,1,1,Product 7,8,Unload baking,379,382,3,,2.0
+7,7,1,1,Product 7,9,Cooling,382,402,20,,
+14,14,1,1,Product 14,7,Load baking,389,391,2,,2.0
+4,4,1,1,Product 4,9,Unload baking,391,393,2,,3.0
 14,14,1,1,Product 14,8,Baking,391,439,48,10.0,
 4,4,1,1,Product 4,10,Cooling,393,424,31,,
-15,15,1,1,Product 15,9,Load baking,394,396,2,,1.0
-15,15,1,1,Product 15,10,Baking,396,434,38,9.0,
-7,7,1,1,Product 7,6,Load baking,398,402,4,,3.0
-7,7,1,1,Product 7,7,Baking,402,427,25,7.0,
-8,8,1,1,Product 8,7,Unload baking,402,412,10,,3.0
-11,11,1,1,Product 11,4,Tr. To Cold-storage,418,419,1,,2.0
-4,4,1,1,Product 4,11,Packaging,424,434,10,,1.0
-7,7,1,1,Product 7,8,Unload baking,427,430,3,,2.0
-7,7,1,1,Product 7,9,Cooling,430,450,20,,
-15,15,1,1,Product 15,11,Discharge baking,434,436,2,,1.0
-15,15,1,1,Product 15,12,Cooling,436,464,28,,
-14,14,1,1,Product 14,9,Discharge baking,439,441,2,,1.0
-12,12,1,1,Product 12A,2,Load baking,441,444,3,,1.0
+8,8,1,1,Product 8,7,Unload baking,393,403,10,,2.0
+10,10,1,1,Product 10,11,Packaging,399,404,5,,3.0
+11,11,1,1,Product 11,4,Tr. To Cold-storage,407,408,1,,1.0
+4,4,1,1,Product 4,11,Packaging,424,434,10,,2.0
+14,14,1,1,Product 14,9,Discharge baking,439,441,2,,2.0
 14,14,1,1,Product 14,10,Cooling,441,469,28,,
-12,12,1,1,Product 12A,3,Baking,444,462,18,9.0,
-12,12,1,2,Product 12B,1,Load baking,444,447,3,,2.0
-12,12,1,2,Product 12B,2,Baking,447,465,18,9.0,
-12,12,1,3,Product 12C,1,Load baking,447,450,3,,1.0
-12,12,1,3,Product 12C,2,Baking,450,468,18,9.0,
-12,12,1,1,Product 12A,4,Unload baking,462,465,3,,1.0
-15,15,1,1,Product 15,13,Unmolding,464,466,2,,3.0
-12,12,1,2,Product 12B,3,Unload baking,465,468,3,,1.0
-12,12,1,3,Product 12C,3,Unload baking,468,471,3,,3.0
 14,14,1,1,Product 14,11,Unmolding,469,471,2,,2.0
