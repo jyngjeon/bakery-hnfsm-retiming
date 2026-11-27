@@ -11,7 +11,7 @@
 - **팀 목표**:
   1. BK15·BK50 공개 데이터로 논문 결과를 재현한다.
   2. HNFSM 출력 스케줄에 그룹 단위 시각 이동 후처리(Group-Based Event-Point Retiming)를 추가해, makespan을 악화시키지 않고 OIDT를 줄이는지 검증한다(B0 vs P1).
-- **팀원**: 김성우, 전제영, 한준희. 역할 분담은 [docs/PROJECT.md](docs/PROJECT.md) 참고.
+- **팀원**: 김성우, 전제영, 한준희.
 
 ## 폴더 구조
 
@@ -42,7 +42,7 @@ bakery-hnfsm-retiming/
 │   ├── s41598-022-26866-9.pdf                           # 원논문 (기준 문서)
 │   └── babor2023-bakery-scheduling-makespan-oven-idle.md  # 편의용 md 변환본
 └── docs/
-    ├── PROJECT.md          # 과제 요구 목차, 팀 범위·실험 계획·일정·역할, Retiming 아이디어 요약
+    ├── PROJECT.md          # 과제 요구 목차, 팀 범위·실험 계획·수행 순서, Retiming 아이디어 요약
     ├── PROGRESS.md         # 진행 현황, 핵심 수치, 알려진 문제, 전처리 결정
     ├── TODO.md             # 팀 결정 사항, Stage 2 전 필수 수정, 남은 작업
     ├── paper-conformance.md  # 원논문 대비 구현 적합성 검토

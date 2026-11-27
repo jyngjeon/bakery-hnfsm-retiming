@@ -17,7 +17,7 @@
 - `tests/`: pytest 회귀 테스트, `tests/data/`에 테스트용 소형 instance
 - `data/raw/`: Mendeley 원본 Excel, `data/processed/`: 정제본(`*-clean.json`, `*-clean.xlsx`)
 - `paper/`: 원논문 PDF(기준 문서)와 편의용 md 변환본
-- `docs/PROJECT.md`: 과제 목차, 범위, 실험 계획, 일정, 역할
+- `docs/PROJECT.md`: 과제 목차, 범위, 실험 계획, 수행 순서
 - `docs/PROGRESS.md`: 진행 현황, 모델링 가정, 데이터 처리 결정, 알려진 문제
 - `docs/TODO.md`: 팀 결정 대기 항목, 필수 수정, 남은 작업
 - `docs/paper-conformance.md`: 원논문 대비 구현 적합성 검토

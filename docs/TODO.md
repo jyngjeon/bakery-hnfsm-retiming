@@ -51,43 +51,49 @@
 - [ ] **B5.** 모델링 가정(PROGRESS.md 5절)을 보고서용 문서로 확정한다. 대상은 OIDT 정의, batch, tie-break, co-baking, infeasible 처리다.
   - 2026-11-26: 내용은 팀 결정으로 확정했다(PROGRESS.md 5절, `decisions-A.md`). 보고서 문안 작성이 남았다.
 
-## (C) 남은 작업 (제안서 기준)
+## (C) 남은 작업 (2026-11-27 계획 변경)
 
-**Stage 1 마무리**
+**계획 변경(2026-11-27)**: 제안서 일정은 알고리즘 5종을 먼저 모두 연결하는 순서였다. NSGA-II가 기준 알고리즘이고 B0 vs P1도 NSGA-II만 쓰므로, 순서를 다음처럼 바꾼다.
+1. NSGA-II로 구현과 검증을 끝낸다.
+2. Retiming을 구현하고 검증한다.
+3. B0 vs P1 비교까지 마친다.
+4. 그 다음에 나머지 알고리즘 4종(SPEA2 → OMOPSO → GDE3 → SMPSO)을 연결해 재현 실험 A에 덧붙인다.
+
+**1. NSGA-II 구현·검증 마무리**
 - [x] 논문 Table 1 손계산 예제를 대조한다. makespan 244, oven idle 53 (`tests/data/paper-table1-example.json`, `tests/test_decoder.py`)
 - [ ] Gantt chart를 시각화하고 oven idle 구간과 OIDT 값을 대조한다.
 - [ ] makespan 하한과 baseline을 점검한다. random search보다 좋은지 확인한다.
-
-**Stage 2: 알고리즘 연결**
-- [x] NSGA-II를 Table 5 설정으로 정식 연결한다. (2026-11-27, `experiments/stage2-nsga2.py`)
-- [ ] SPEA2를 연결한다.
-- [ ] OMOPSO를 연결한다(uniform + non-uniform mutation, Table 5 계수).
-- [ ] GDE3를 연결한다(CR=1, F=0.4).
-- [ ] SMPSO를 연결한다(Table 5 계수).
-
-**Stage 3: 재현 실험 A**
 - [ ] R0: random search와 원래 순서를 비교한다.
-- [ ] R1: BK15·BK50 × 5종 × iteration 4종, 각 1 run (NSGA-II 완료: R2의 seed 1 snapshot)
-- [ ] R2: BK15·BK50 × 5종 × seed 10개, 300 iteration까지 실행하고 50·100·200·300 시점 결과를 저장 (NSGA-II 완료, `results/stage2-nsga2/`)
-- [ ] 지표: PDS, MSF, DPF, HV/RHA, PCA + GMM cluster
-  - 2026-11-27: PDS·MSF·DPF·RHA는 `src/bakery/metrics.py`(`tests/test_metrics.py`). 현재 PF*는 NSGA-II만으로 만든 잠정값이다. 5종이 모이면 PF*를 다시 만들고 지표를 재계산한다. PCA + GMM은 미구현.
-- [ ] 통계 검정: Kruskal–Wallis, Wilcoxon, Holm
-- [ ] 논문 PF*와 경향을 비교한다(E1≠E2, front 모양, BK50 알고리즘 순위).
-  - 2026-11-27 NSGA-II 단독 비교: `notebooks/stage2-nsga2.ipynb`, PROGRESS.md 9절. 논문 그림 판독값은 `src/bakery/paper_ref.py`.
+- [x] NSGA-II를 Table 5 설정으로 정식 연결한다. (2026-11-27, `experiments/stage2-nsga2.py`)
+- [x] NSGA-II R1·R2: BK15·BK50 × seed 10개, 300세대까지 실행하고 50·100·200·300세대 front 저장. R1은 seed 1 snapshot (2026-11-27, `results/stage2-nsga2/`)
+- [x] 지표 PDS·MSF·DPF·HV/RHA 구현 (2026-11-27, `src/bakery/metrics.py`, `tests/test_metrics.py`)
+- [x] NSGA-II 단독으로 논문 PF*·Table 4·Fig. 10–12와 대조한다. (2026-11-27, `notebooks/stage2-nsga2.ipynb`, PROGRESS.md 9절. 논문 그림 판독값은 `src/bakery/paper_ref.py`)
+- [ ] BK50 최소 OIDT 1208이 논문 E2 1243보다 낮은 원인을 확인한다(오븐 구획 9 vs 10, OIDT 정의). 해당 스케줄을 Gantt로 본다.
 
-**Stage 4: Retiming**
+**2. Retiming**
 - [ ] 명세(`proposal/proposal-idea-01-event-point-retiming.md`)대로 한 그룹 Event-Point Retiming을 구현한다.
 - [ ] 부분문제 검증: 소형 예제를 전수탐색해 비교한다.
 - [ ] 제안서의 BK15 예비 검증(66개 중 54개 개선) 코드와 자료 위치를 확인한다(확인 필요).
 
-**Stage 5: 개선안 비교**
+**3. 개선안 비교 (B0 vs P1)**
 - [ ] B0 vs P1: 같은 평가 횟수(15,000)와 같은 실행 시간 두 기준, seed 10개, Wilcoxon
 - [ ] Ablation(BK15): 자원 순서 변경 허용/고정, 경계 그룹만/전체 그룹
+
+**4. 나머지 알고리즘과 재현 실험 A 완성**
+- [ ] SPEA2를 연결한다.
+- [ ] OMOPSO를 연결한다(uniform + non-uniform mutation, Table 5 계수).
+- [ ] GDE3를 연결한다(CR=1, F=0.4).
+- [ ] SMPSO를 연결한다(Table 5 계수).
+- [ ] 4종 R1·R2: `experiments/stage2-nsga2.py`와 같은 seed·snapshot·출력 형식
+- [ ] 5종 합집합으로 PF*를 다시 만들고 PDS·MSF·DPF·RHA를 재계산한다. 현재 PF*는 NSGA-II만으로 만든 잠정값이다.
+- [ ] PCA + GMM cluster
+- [ ] 통계 검정: Kruskal–Wallis, Wilcoxon, Holm
+- [ ] 논문과 경향을 비교한다(E1≠E2, front 모양, BK50 알고리즘 순위).
 
 **추가 실험**
 - [ ] 가정 민감도: batch, oven 선택 규칙, OIDT 정의
 - [ ] 평가 횟수에 따른 HV 수렴, 알고리즘별 계산 시간
 - [ ] BK20 적용. 추가 열(`Fixed_position`, `machines_ employees2_ME`, `extended_time`, `Employee_required`)에 맞는 전처리와 제약 확장이 필요하다.
 
-**Stage 6**
+**5. 결과 분석·보고서**
 - [ ] 결과 분석, 시각화, 보고서 작성
